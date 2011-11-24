@@ -1,7 +1,4 @@
-*, html, body {
-	margin: 0;
-	padding: 0;
-}
+*, html, body { margin: 0; padding: 0; }
 
 h1 {
 	margin-bottom: 30px;
@@ -11,9 +8,7 @@ h1 {
 	color: black;
 }
 
-.clear {
-	clear: both;
-}
+.clear { clear: both; }
 
 /* Logo */
 #headerContainer {
@@ -29,10 +24,7 @@ h1 {
 
 }
 
-.logo {
-	width: 140px;
-	margin: 0 auto;
-}
+.logo { width: 140px; margin: 0 auto; }
 
 .logoTop {
 	margin-left: 23px;
@@ -56,7 +48,7 @@ h1 {
 	opacity: 0;
 }
 
-/* Line */
+
 hr {
 	border-top: none;
 	border-right: none;
@@ -64,7 +56,7 @@ hr {
 	border-left: none;	
 }
 
-/* Content */
+
 #content {
 	width: 980px;
 	margin: 0 auto;
@@ -73,23 +65,10 @@ hr {
 }
 
 
-/* Content - Skills */ 
-.skills {
-	padding-bottom: 40px;	
-}
-
-.skills .box {
-	float: left;
-	width: 194px;
-	height: 160px;
-}
-.skills .linux {
-	margin-left: 90px;
-}
-
-.skills .desktop {
-	margin-left: 50px;
-}
+.skills { padding-bottom: 40px;	}
+.skills .box { float: left; width: 194px; height: 160px; }
+.skills .linux { margin-left: 90px; }
+.skills .desktop { margin-left: 50px; }
 
 .skills .box h2 {
 	font-size: 18px;
@@ -97,11 +76,7 @@ hr {
 	font-weight: normal;
 	color: #464646;
 }
-
-.skills .box ul {
-	margin-top: 10px;
-}
-
+.skills .box ul { margin-top: 10px; }
 .skills .box ul li {
 	margin-left: 15px;
 	list-style-image: url("../images/listImage.png");
@@ -120,11 +95,7 @@ hr {
 	background: url("../images/membersBG.png") repeat-x;
 }
 
-.members {
-	width: 980px;
-	margin: 0 auto;
-	padding-top: 30px;
-}
+.members { width: 980px; margin: 0 auto; padding-top: 30px; }
 .members .memberBox {
 	width: 240px;
 	float: left;
@@ -132,11 +103,7 @@ hr {
 	cursor: default;
 }
 
-.members .memberBox img {
-	float: left;
-	padding-right: 10px;
-}
-
+.members .memberBox img { float: left; padding-right: 10px; }
 .members .memberBox .name {
 	margin-top: 10px;
 	margin-bottom: -15px;
@@ -192,18 +159,10 @@ hr {
 	height: 178px;
 	background: url("../images/footerBG.png") repeat-x;
 }
-
-.footer {
-	width: 980px;
-	margin: 0 auto;
-}
+.footer { width: 980px; margin: 0 auto; }
 
 /* Partners */
-.partners {
-	margin-top: 60px;
-	float: left;
-}
-
+.partners { margin-top: 60px; float: left; }
 .partners span {
 	font-family: "Maven Pro";
 	float: left;
@@ -273,9 +232,7 @@ hr {
 	text-shadow: 0 1px 2px #000;
 }
 
-.contactUs .mail {
-	color: #98f2ff;
-}
+.contactUs .mail { color: #98f2ff; }
 
 /* Copyright */
 .copyright {
@@ -345,7 +302,7 @@ hr {
 	font-weight:normal;
 	color:black;
 }
-.write_us_form .greyinputs:focus, .write_us_form .greytextarea:focus{border-color:#a1a1a1;}
+.write_us_form .greyinputs:focus, .write_us_form .greytextarea:focus{ border-color:#a1a1a1; }
 .write_us_form .greyinputs, .write_us_form .greytextarea{
 	display:block;
 	width:207px;
