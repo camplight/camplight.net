@@ -3,7 +3,7 @@ $(document).ready(function(){
   $(".logoShadow").animate({ opacity: "1" }, 600);
   $(".logoTypo").delay(600).animate({ opacity: "1" }, 600);
 
-  $(".shtrak").hover(function(){
+  /* $(".shtrak").hover(function(){
     $(this).append("<div class='toolboxShtrak'></div>");
     $(".toolboxShtrak").animate({ opacity: "0.8", marginTop: "-70px"});
   }, function() { $(".toolboxShtrak").fadeOut(200); });	
@@ -17,5 +17,6 @@ $(document).ready(function(){
     $(this).append("<div class='toolboxSr'></div>");
     $(".toolboxSr").animate({ opacity: "0.8", marginTop: "-62px"});
   }, function() { $(".toolboxSr").fadeOut(200);});	
+  */
 
 });
