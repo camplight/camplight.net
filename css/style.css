@@ -198,9 +198,9 @@ hr {
 	margin-left: 56px;
 	float: left;
 	position: relative;
-	top: -8px;
-	width: 42px;
-	height: 42px;
+	top: -16px;
+	width: 56px;
+	height: 56px;
 	background: url("../images/partners/sr.png");
 	z-index: 4;
 }
