@@ -3,6 +3,11 @@ $(document).ready(function(){
   $(".logoShadow").animate({ opacity: "1" }, 600);
   $(".logoTypo").delay(600).animate({ opacity: "1" }, 600);
 
+  $(".contactUsMainButton").click(function(){
+      $(this).animate({marginTop: '-5px', opacity: '0'});
+      $(".contactUs").css("display", "block").animate({paddingTop: '60px', opacity: '1'});
+  });
+
   /* $(".shtrak").hover(function(){
     $(this).append("<div class='toolboxShtrak'></div>");
     $(".toolboxShtrak").animate({ opacity: "0.8", marginTop: "-70px"});
