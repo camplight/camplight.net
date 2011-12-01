@@ -1,6 +1,5 @@
 *.*~
 *.~
-
-.DS_Store
-
+rsync.yml
+*~
 .DS_Store
