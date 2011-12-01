@@ -5,7 +5,7 @@
 require "rubygems"
 require 'yaml'
 
-YAML::ENGINE.yamler = 'syck'
+#YAML::ENGINE.yamler = 'syck'
 rsync = open('rsync.yml') {|f| YAML.load(f) }
 
 ssh_user       = rsync['user']
