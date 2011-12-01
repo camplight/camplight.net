@@ -2,3 +2,4 @@
 *.~
 rsync.yml
 *~
+.DS_Store
