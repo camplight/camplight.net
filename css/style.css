@@ -111,10 +111,6 @@ hr {
 	height: 160px;
 }
 
-.skills .desktop {
-	margin-right: 50px;
-}
-
 .skills .box h2 {
 	font-size: 18px;
 	font-family: "MavenProRegular";
@@ -283,7 +279,7 @@ hr {
 /* Contact Us Main Button */
 .contactUsMainButton {
 	position: absolute;
-	margin: 60px 0 0 600px;
+	margin: 63px 0 0 600px;
 	cursor: pointer;
 }
 

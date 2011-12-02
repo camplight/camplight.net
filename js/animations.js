@@ -5,7 +5,7 @@ $(document).ready(function(){
 
   $(".contactUsMainButton").click(function(){
       $(this).animate({marginTop: '-5px', opacity: '0'});
-      $(".contactUs").css("display", "block").animate({paddingTop: '60px', opacity: '1'});
+      $(".contactUs").css("display", "block").animate({paddingTop: '63px', opacity: '1'});
   });
 
   /* $(".shtrak").hover(function(){
