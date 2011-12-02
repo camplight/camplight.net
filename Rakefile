@@ -28,7 +28,7 @@ def deploy(env, ssh_user , document_root)
 end
 
 
-desc "Deploy website via rsync"
+desc "Deploy website via rsync , needs env parameter : rake deploy[dev]"
 task :deploy , :env  do |t,args|
   if args[:env]
     ['dev', 'staging', 'prod'].each do |e|  
@@ -37,4 +37,9 @@ task :deploy , :env  do |t,args|
   
   else puts 'No env parameter , try rake deploy[dev]' end
  
+end
+
+desc "Deploy website via rsync in dev : rake d"
+task :d  do 
+  deploy('dev', ssh_user , document_root) 
 end
