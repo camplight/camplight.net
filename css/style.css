@@ -2,7 +2,7 @@
     font-family: 'MavenProRegular';
     src: url('fonts/maven_pro_regular-webfont.eot');
     src: url('fonts/maven_pro_regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/maven_pro_regular-webfont.woff') format('woff'),
+         url('fonts/maven_pro_regular-webfont.woff') format('font/woff'),
          url('fonts/maven_pro_regular-webfont.ttf') format('truetype'),
          url('fonts/maven_pro_regular-webfont.svg#MavenProRegular') format('svg');
     font-weight: normal;
@@ -14,7 +14,7 @@
     font-family: 'MavenProMedium';
     src: url('fonts/maven_pro_medium-webfont.eot');
     src: url('fonts/maven_pro_medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/maven_pro_medium-webfont.woff') format('woff'),
+         url('fonts/maven_pro_medium-webfont.woff') format('font/woff'),
          url('fonts/maven_pro_medium-webfont.ttf') format('truetype'),
          url('fonts/maven_pro_medium-webfont.svg#MavenProMedium') format('svg');
     font-weight: normal;
