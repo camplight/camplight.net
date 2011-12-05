@@ -43,6 +43,10 @@ html {
 	clear: both;
 }
 
+.whatis {
+	margin: 5px;
+}
+
 /* Logo */
 #headerContainer {
 	width: 100%;
