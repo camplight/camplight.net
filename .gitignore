@@ -3,3 +3,6 @@
 rsync.yml
 *~
 .DS_Store
+.pydevproject
+.project
+*.pyc
