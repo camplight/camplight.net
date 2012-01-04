@@ -4,8 +4,9 @@ $(document).ready(function(){
   $(".logoTypo").delay(600).animate({ opacity: "1" }, 600);
 
   $(".contactUsMainButton").click(function(){
-      $(this).animate({marginTop: '-5px', opacity: '0'});
-      $(".contactUs").css("display", "block").animate({paddingTop: '63px', opacity: '1'});
+      $(this).animate({top: '-5px', opacity: '0'});
+      $(".contactUs").css("display", "block")
+        .animate({top: '48px', opacity: '1', easing:"swing"});
   });
 
   /* $(".shtrak").hover(function(){
