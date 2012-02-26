@@ -294,7 +294,7 @@ input[type=image] {vertical-align: middle}
  * @region Header
  */
 #header {
-	height: 12em;
+	height: 14em;
 	border-bottom: 1px solid #dddddd;
 	background: #f9f9f9;
 }
@@ -335,7 +335,32 @@ input[type=image] {vertical-align: middle}
 	100% { opacity: 1; }
 }
 
+.logo {
+	width: 140px;
+	margin: 0 auto;
+}
 
+.logoTop {
+	margin-left: 23px;
+	display: block;
+	z-index: 3;
+	position: relative;
+	opacity: 0;
+}
+
+.logoShadow {
+	margin-left: 33px;
+	top: 14px;
+	display: block;
+	position: relative;
+	opacity: 0;
+}
+
+.logoCamplightText {
+	top: 20px;
+	position: relative;
+	opacity: 0;
+}
 
 
 /** @endregion */
@@ -531,12 +556,14 @@ input[type=image] {vertical-align: middle}
 	}
 	#partners li {
 		margin: 0 10px;
+		margin-bottom: 10px;
 		width: 140px;
+
 	}
 
 
 	#partners a {
-		line-height: 3em;
+		line-height: 3.6em;
 		background-position: center center;
 		background-repeat: no-repeat;
 		text-indent: -999em;
@@ -554,7 +581,9 @@ input[type=image] {vertical-align: middle}
 	#partners .sourcerealms a {
 		background-image: url("../images/partners/sourcerealms.png");
 	}
-
+	#partners .crystalplay a {
+		background-image: url("../images/partners/crystalplay.png");	
+	}
 
 
 
