@@ -1,39 +1,45 @@
+<!doctype html>
 <html>
 <head>
-	<link rel="author" href="humans.txt" />
 	<title>CampLight Ltd.</title>
-	<meta charset="utf-8">
-	<link href="css/style.css" rel="stylesheet" type="text/css"></link>
-	<link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700' rel='stylesheet' type='font/woff'>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js" type="text/javascript"></script>
-	<script src="js/animations.js" type="text/javascript"></script>
-	<script src="js/flybox.js" type="text/javascript"></script>
-	<script src="js/ga.js" type="text/javascript"></script>
-	<link rel="SHORTCUT ICON" href="http://camplight.net/favicon.ico">
+	<meta charset="utf-8" />
+	<link rel="author" href="humans.txt" />
+	<link rel="stylesheet" href="css/camplight.css" />
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Maven+Pro:400,500,700" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<script src="js/ga.js"></script>
 </head>
 <body>
-	<div id="headerContainer">
-		<div id="header">
-			<div class="logo">
-				<img class="logoTop" src="images/logo/icon.png"></img>
-				<img class="logoShadow" src="images/logo/shadow.png"></img>
-				<img class="logoTypo" src="images/logo/typo.png"></img>
-			</div>	
+
+
+	<!-- >> Header -->
+	<div id="header">
+		<div class="wrap">
+
+			<h1 id="logo">
+				CampLight
+			</h1>
+
 		</div>
 	</div>
-	<hr>
-		<div id="content">
-			<div class="skills">
-				<div class="box">
+	<!-- << Header -->
+
+
+	<!-- >> Skills -->
+	<div id="skills">
+		<div class="wrap">
+
+			<ul>
+				<li class="area">
 					<h2>Frontend</h2>
 					<ul>
 						<li>HTML 5</li>
 						<li>CSS 3</li>
 						<li>Javascript</li>
 						<li>Flash/Flex</li>
-					</ul>	
-				</div>
-				<div class="box">
+					</ul>
+				</li>
+				<li class="area">
 					<h2>Backend</h2>
 					<ul>
 						<li>Node.js</li>
@@ -41,9 +47,9 @@
 						<li>Python</li>
 						<li>Java</li>
 						<li>PHP</li>
-					</ul>	
-				</div>
-				<div class="box">
+					</ul>
+				</li>
+				<li class="area">
 					<h2>Database</h2>
 					<ul>
 						<li>SQL</li>
@@ -51,18 +57,18 @@
 						<li>CouchDB</li>
 						<li>Redis</li>
 						<li>Neo4j</li>
-					</ul>	
-				</div>
-				<div class="box">
+					</ul>
+				</li>
+				<li class="area">
 					<h2>Mobile</h2>
 					<ul>
 						<li>iOS/Objective C</li>
 						<li>Android</li>
 						<li>AS3/Flash/Air</li>
 						<li>J2ME</li>
-					</ul>	
-				</div>
-				<div class="box desktop">
+					</ul>
+				</li>
+				<li class="area">
 					<h2>Desktop</h2>
 					<ul>
 						<li>Java</li>
@@ -70,8 +76,8 @@
 						<li>C++</li>
 						<li>AS3/Air</li>
 					</ul>
-				</div>
-				<div class="box">
+				</li>
+				<li class="area">
 					<h2>Design</h2>
 					<ul>
 						<li>Web</li>
@@ -79,188 +85,188 @@
 						<li>Print</li>
 						<li>Illustration</li>
 					</ul>
-				</div>
-				<div class="box linux">
+				</li>
+				<li class="area">
 					<h2>Linux</h2>
 					<ul>
 						<li>System Administration</li>
 						<li>Optimization</li>
-					</ul>	
-				</div>
-			</div>
-		</div>
-		<div class="clear"></div>
-		<div class="membersContainer" id="membersContainer">
-			<div class="members">
-				<div class="memberBox">
-					<img src="images/member.png" />
-					<span class="name">Alex Kuklin</span>
-					<br>
-					<span class="job">Administrator</span>
-				</div>
-				<div class="memberBox">
-					<img src="images/member.png" />
-					<span class="name">Anastas Kalkov</span>
-					<br>
-					<span class="job">CAD Designer</span>
-				</div>
-				<div class="memberBox">
-					<img src="images/member.png" />
-					<span class="name">Andriyan Ivanov</span>
-					<br>
-					<span class="job">Client Relationships</span>
-				</div>
-				<div class="memberBox">
-					<img src="images/member.png" />
-					<span class="name">Angel Angelov</span>
-					<br>
-					<span class="job">Client Relationships</span>
-				</div>
-				<div class="memberBox">
-					<img src="images/member.png" />
-					<span class="name">Boris Filipov</span>
-					<br>
-					<span class="job">Developer</span>
-				</div>
-				<div class="memberBox">
-					<img src="images/member.png" />
-					<span class="name">Diana Sotirova</span>
-					<br>
-					<span class="job">Graphic Designer</span>
-				</div>
-				<div class="memberBox">
-					<img src="images/member.png" />
-					<span class="name">Emiliyan Kalinov</span>
-					<br>
-					<span class="job">Client Relationships</span>
-				</div>
-				<div class="memberBox">
-					<img src="images/member.png" />
-					<span class="name">Ivan Valentinov</span>
-					<br>
-					<span class="job">Developer</span>
-				</div>
-				<div class="memberBox">
-					<img src="images/member.png" />
-					<span class="name">Ivan Zhekov</span>
-					<br>
-					<span class="job">Developer</span>
-				</div>
-				<div class="memberBox">
-					<img src="images/member.png" />
-					<span class="name">Genadi Samokovarov</span>
-					<br>
-					<span class="job">Developer</span>
-				</div>
-				<div class="memberBox">
-					<img src="images/member.png" />
-					<span class="name">Kiril Momchilov</span>
-					<br>
-					<span class="job">Developer</span>
-				</div>
-				<div class="memberBox">
-					<img src="images/member.png" />
-					<span class="name">Lachezar Todorov</span>
-					<br>
-					<span class="job">Developer</span>
-				</div>
-				<div class="memberBox">
-					<img src="images/member.png" />
-					<span class="name">Marta Kostova</span>
-					<br>
-					<span class="job">Developer</span>
-				</div>
-			    <div class="memberBox">
-					<img src="images/member.png" />
-					<span class="name">Miroslav Rachev</span>
-					<br>
-					<span class="job">Developer</span>
-				</div>
-				<div class="memberBox">
-					<img src="images/member.png" />
-					<span class="name">Mladen Gorchev</span>
-					<br>
-					<span class="job">Graphic Designer</span>
-				</div>
-				<div class="memberBox">
-					<img src="images/member.png" />
-					<span class="name">Nevena Ivanova</span>
-					<br>
-					<span class="job">Graphic Designer</span>
-				</div>
-				<div class="memberBox">
-					<img src="images/member.png" />
-					<span class="name">Nikolai Angelov</span>
-					<br>
-					<span class="job">Developer</span>
-				</div>
-				<div class="memberBox">
-					<img src="images/member.png" />
-					<span class="name">Nikolay Dyankov</span>
-					<br>
-					<span class="job">Developer</span>
-				</div>
-				<div class="memberBox">
-					<img src="images/member.png" />
-					<span class="name">Pavel Dobrev</span>
-					<br>
-					<span class="job">Developer</span>
-				</div>
-				<div class="memberBox">
-					<img src="images/member.png" />
-					<span class="name">Simeon Nikolov</span>
-					<br>
-					<span class="job">Developer</span>
-				</div>
-				<div class="memberBox">
-					<img src="images/member.png" />
-					<span class="name">Sonel Mahmud</span>
-					<br>
-					<span class="job">Graphic Designer</span>
-				</div>
-				<div class="memberBox">
-					<img src="images/member.png" />
-					<span class="name">Tihomil Kulev</span>
-					<br>
-					<span class="job">Developer</span>
-				</div>
-				<div class="memberBox">
-					<img src="images/member.png" />
-					<span class="name">Vasil Kalkov</span>
-					<br>
-					<span class="job">Developer</span>
-				</div>
-				<div class="memberBox">
-					<img src="images/member.png" />
-					<span class="name">Veronika Mihaylova</span>
-					<br>
-					<span class="job">Art Designer</span>
-				</div>
-			</div>
-		</div>
-		<div class="clear"></div>
-		<div id="footerContainer">
-			<div class="footer">
-				<div class="partners">
-					<span>Partners:</span>
-					<a href="http://game-craft.com/"><div class="gamecraft"></div></a>
-					<a href="http://shtrak.eu/it"><div class="shtrak"></div></a>
-					<a href="http://sourcerealms.net/"><div class="sr"></div></a>
-				</div>
-				<div class="separator"></div>
-				<div class="contactUsMainButton">
-					<a>About Us</a>
-				</div>
-				<div class="contactUs">
-					<a href="http://twitter.com/#!/campenlightment">twitter</a>
-					<a href="http://facebook.com/camplight">facebook</a>
-					<a href="http://github.com/camplight">github</a>
-					<a href="mailto:team@camplight.net" class="mail">team at camplight.net</a>
-				</div>
-				<div class="clear"></div>
-				<div class="copyright">Copyright &copy; 2011. CampLight Ltd. All rights reserved.</div>
-			</div>
+					</ul>
+				</li>
+			</ul>
+
 		</div>
 	</div>
+	<!-- << skills -->
+
+
+	<!-- >> Team -->
+	<div id="team">
+		<div class="wrap">
+
+			<h2>Team</h2>
+			<ul>
+				<li class="vcard">
+					<h3 class="fn">Alex Kuklin</h3>
+					<span class="role">Administrator</span>
+				</li>
+				<li class="vcard">
+					<h3 class="fn">Anastas Kalkov</h3>
+					<span class="role">CAD Designer</span>
+				</li>
+				<li class="vcard">
+					<h3 class="fn">Andriyan Ivanov</h3>
+					<span class="role">Client Relations</span>
+				</li>
+				<li class="vcard">
+					<h3 class="fn">Angel Angelov</h3>
+					<span class="role">Client Relations</span>
+				</li>
+				<li class="vcard">
+					<h3 class="fn">Boris Filipov</h3>
+					<span class="role">Developer</span>
+				</li>
+				<li class="vcard">
+					<h3 class="fn">Diana Sotirova</h3>
+					<span class="role">Graphic Designer</span>
+				</li>
+				<li class="vcard">
+					<h3 class="fn">Emiliyan Kalinov</h3>
+					<span class="role">Client Relations</span>
+				</li>
+				<li class="vcard">
+					<h3 class="fn">Ivan Valentinov</h3>
+					<span class="role">Developer</span>
+				</li>
+				<li class="vcard">
+					<h3 class="fn">Ivan Zhekov</h3>
+					<span class="role">Developer</span>
+				</li>
+				<li class="vcard">
+					<h3 class="fn">Genadi Samokovarov</h3>
+					<span class="role">Developer</span>
+				</li>
+				<li class="vcard">
+					<h3 class="fn">Kiril Momchilov</h3>
+					<span class="role">Developer</span>
+				</li>
+				<li class="vcard">
+					<h3 class="fn">Lachezar Todorov</h3>
+					<span class="role">Developer</span>
+				</li>
+				<li class="vcard">
+					<h3 class="fn">Marta Kostova</h3>
+					<span class="role">Developer</span>
+				</li>
+				<li class="vcard">
+					<h3 class="fn">Miroslav Rachev</h3>
+					<span class="role">Developer</span>
+				</li>
+				<li class="vcard">
+					<h3 class="fn">Mladen Gorchev</h3>
+					<span class="role">Graphic Designer</span>
+				</li>
+				<li class="vcard">
+					<h3 class="fn">Nevena Ivanova</h3>
+					<span class="role">Graphic Designer</span>
+				</li>
+				<li class="vcard">
+					<h3 class="fn">Nikolai Angelov</h3>
+					<span class="role">Developer</span>
+				</li>
+				<li class="vcard">
+					<h3 class="fn">Nikolay Dyankov</h3>
+					<span class="role">Developer</span>
+				</li>
+				<li class="vcard">
+					<h3 class="fn">Pavel Dobrev</h3>
+					<span class="role">Developer</span>
+				</li>
+				<li class="vcard">
+					<h3 class="fn">Simeon Nikolov</h3>
+					<span class="role">Developer</span>
+				</li>
+				<li class="vcard">
+					<h3 class="fn">Sonel Mahmud</h3>
+					<span class="role">Graphic Designer</span>
+				</li>
+				<li class="vcard">
+					<h3 class="fn">Tihomil Kulev</h3>
+					<span class="role">Developer</span>
+				</li>
+				<li class="vcard">
+					<h3 class="fn">Vasil Kalkov</h3>
+					<span class="role">Developer</span>
+				</li>
+				<li class="vcard">
+					<h3 class="fn">Veronika Mihaylova</h3>
+					<span class="role">Art Designer</span>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+	<!-- << Team -->
+
+
+	<!-- >> Bottom -->
+	<div id="bottom">
+		<div class="wrap">
+
+			<!-- >> Partners -->
+			<div id="partners">
+				<h2>Partners</h2>
+				<ul>
+					<li class="gamecraft">
+						<a href="http://game-craft.com/" rel="co-worker">GameCraft</a>
+					</li>
+					<li class="shtrak">
+						<a href="http://shtrak.eu/it" rel="co-worker">Shtrak!</a>
+					</li>
+					<li class="sourcerealms">
+						<a href="http://sourcerealms.net/" rel="co-worker">Source Realms</a>
+					</li>
+				</ul>
+			</div>
+			<!-- >> Partners -->
+
+			<!-- >> About -->
+			<div id="about">
+				<h2>About us</h2>
+				<ul>
+					<li>
+						<a href="http://twitter.com/campenlightment" rel="me">twitter</a>
+					</li>
+					<li>
+						<a href="http://facebook.com/camplight" rel="me">facebook</a>
+					</li>
+					<li>
+						<a href="http://github.com/camplight" rel="me">github</a>
+					</li>
+					<li class="mail">
+						<a href="mailto:team@camplight.net">email</a>
+					</li>
+				</ul>
+			</div>
+			<!-- << About -->
+
+		</div>
+	</div>
+	<!-- << Bottom -->
+
+
+	<!-- >> Footer -->
+	<div id="footer">
+		<div id="wrap">
+
+			<p class="copy">
+				&copy; 2011 CampLight Ltd.
+			</p>
+
+		</div>
+	</div>
+	<!-- << Footer -->
+
+
 </body>
 </html>

@@ -1,0 +1,381 @@
+/**
+ * Styles
+ */
+
+
+
+
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/**
+ * @region Common
+ */
+.wrap {
+	margin: 0 auto;
+	width: 960px;
+	min-height: 0;
+	_zoom: 1;
+}
+.wrap:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+
+
+
+/** @endregion */
+
+
+
+
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/**
+ * @region Header
+ */
+#header {
+	height: 12em;
+	border-bottom: 1px solid #dddddd;
+	background: #f9f9f9;
+}
+
+
+
+/** Logo */
+#logo {
+	margin: 0;
+	padding: 130px 0 0 0;
+	background: url("../images/camplight-logo.png") center 10px no-repeat;
+	font-size: 18px;
+	font-weight: 500;
+	text-align: center;
+}
+
+
+:root #logo {
+	background:
+		url("../images/camplight-logo.png") center 10px no-repeat,
+		url("../images/camplight-logo-shadow.png") center 117px no-repeat;
+	-ms-animation: header-anim 2s;
+	-moz-animation: header-anim 2s;
+	-webkit-animation: header-anim 2s;
+}
+
+
+@-ms-keyframes header-anim {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@-moz-keyframes header-anim {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@-webkit-keyframes header-anim {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+
+
+
+/** @endregion */
+
+
+
+
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/**
+ * @region Services
+ */
+#skills {
+	margin: 3em 0 0 0;
+}
+
+
+	#skills ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		min-height: 0;
+		_zoom: 1;
+	}
+	#skills ul:after {
+		content: "";
+		clear: both;
+		display: block;
+	}
+	#skills li.area {
+		margin: 0 10px;
+		width: 220px;
+		float: left;
+		display: inline;
+	}
+
+
+	#skills li ul {
+		min-height: 9em;
+		_height: 9em;
+	}
+	#skills li li {
+		padding: 0 0 0 15px;
+	}
+	#skills li li:before {
+		margin: 0 0 0 -15px;
+		content: "-";
+		float: left;
+	}
+
+
+	#skills h2 {
+		margin: 0;
+		font-size: 18px;
+		line-height: 21px;
+	}
+
+
+
+
+/** @endregion */
+
+
+
+
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/**
+ * @region Team
+ */
+#team {
+	border-top: 1px solid #bbbbbb;
+	background: #dddddd url("../images/team-tile.png");
+}
+
+
+	#team h2 {
+		display: none;
+	}
+
+
+	#team ul {
+		margin: 0;
+		padding: 1.5em 0;
+		list-style: none;
+		min-height: 0;
+		_zoom: 1;
+	}
+	#team ul:after {
+		content: "";
+		clear: both;
+		display: block;
+	}
+	#team li {
+		margin: .75em 10px;
+		padding: .5em 0 1em 40px;
+		width: 180px;
+		background: url("../images/team-icon.png") 0 0 no-repeat;
+		float: left;
+		display: inline;
+	}
+
+
+	#team h3 {
+		margin: 0;
+		font-size: 16px;
+		line-height: 21px;
+		font-weight: 500;
+		text-shadow: 1px 1px 0 #ffffff;
+	}
+	#team .role {
+		font-size: 12px;
+		line-height: 21px;
+		text-shadow: 1px 1px 0 #ffffff;
+	}
+
+
+
+
+/** @endregion */
+
+
+
+
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/**
+ * @region Bottom
+ */
+#bottom {
+	min-height: 7.5em;
+	_height: 7.5em;
+	padding: 1.5em 0 0 0;
+	color: #ffffff;
+	background: #444444 url("../images/bottom-tile.png") repeat-x;
+}
+
+
+	#bottom h2 {
+		margin: 0 0 .75em 0;
+		color: #cccccc;
+		font-size: 18px;
+		line-height: 21px;
+		text-shadow: 0 0 2px #333333;
+	}
+
+
+	#bottom ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		min-height: 0;
+		_zoom: 1;
+	}
+	#bottom ul:after {
+		content: "";
+		clear: both;
+		display: block;
+	}
+	#bottom li {
+		float: left;
+		display: inline;
+	}
+
+
+	#bottom a {
+		color: #ffffff;
+	}
+
+
+
+
+/** Partners */
+#partners {
+	margin: 0 10px;
+	width: 460px;
+	float: left;
+	display: inline;
+}
+
+
+	#partners ul {
+		margin: 0 -10px;
+	}
+	#partners li {
+		margin: 0 10px;
+		width: 140px;
+	}
+
+
+	#partners a {
+		line-height: 3em;
+		background-position: center center;
+		background-repeat: no-repeat;
+		text-indent: -999em;
+		display: block;
+		overflow: hidden;
+	}
+
+
+	#partners .gamecraft a {
+		background-image: url("../images/partners/gamecraft.png");
+	}
+	#partners .shtrak a {
+		background-image: url("../images/partners/shtrak.png");
+	}
+	#partners .sourcerealms a {
+		background-image: url("../images/partners/sourcerealms.png");
+	}
+
+
+
+
+/** Partners */
+#about {
+	margin: 0 10px;
+	width: 460px;
+	float: right;
+	display: inline
+}
+
+
+	#about ul {
+		margin: 0 -10px;
+	}
+	#about li {
+		margin: 0 10px;
+		/*width: 140px;*/
+	}
+
+
+	#about .mail a {
+		color: #99ffff;
+	}
+
+
+
+
+/** @endregion */
+
+
+
+
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/**
+ * @region Footer
+ */
+#footer {
+	padding: .75em 0;
+	color: #999999;
+	background: #000000;
+	font-size: 12px;
+	line-height: 21px;
+}
+
+
+	#footer p {
+		margin: 0;
+	}
+
+
+	#footer .copy {
+		text-align: center;
+	}
+
+
+
+
+/** @endregion */
+
+
+
+
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/**
+ * @region Fixes
+ */
+/** @endregion */
