@@ -148,11 +148,11 @@ q {quotes: "\201c" "\201d" "\2018" "\2019"}
 
 
 /** Links */
-a {color: #0055aa; text-decoration: none;}
-a:visited {color: #990099}
-a:hover {color: #cc0000; text-decoration: underline;}
-a:focus {}
-a:active {}
+a {color: #333333; text-decoration: none;}
+a:visited {text-decoration: none;}
+a:hover {color: #211b12; text-decoration: underline;}
+a:focus {text-decoration: none;}
+a:active {text-decoration: none;}
 
 
 
@@ -477,7 +477,23 @@ input[type=image] {vertical-align: middle}
 		font-weight: 500;
 		text-shadow: 1px 1px 0 #ffffff;
 	}
-	#team .role {
+
+    #team .membername {
+        display: block;
+        font-size: 16px;
+        line-height: 21px;
+        margin: 0px;
+        font-weight: 500;
+        text-shadow: 1px 1px 0 #ffffff;
+
+    }
+    a.membername:visited {
+        text-decoration: none;
+        text-decoration-color: #ffffff;
+
+    }
+
+    #team .role {
 		font-size: 12px;
 		line-height: 21px;
 		text-shadow: 1px 1px 0 #ffffff;
@@ -545,7 +561,7 @@ input[type=image] {vertical-align: middle}
 /** Partners */
 #partners {
 	margin: 0 10px;
-	width: 460px;
+	width: 700px;
 	float: left;
 	display: inline;
 }
@@ -590,7 +606,7 @@ input[type=image] {vertical-align: middle}
 /** Partners */
 #about {
 	margin: 0 10px;
-	width: 460px;
+	width: 220px;
 	float: right;
 	display: inline
 }
