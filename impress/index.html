@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com.">
+    <meta name="author" content="Bartek Szopka" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="css/style.css" rel="stylesheet" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div id="impress" class="impress-not-supported">
+
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+
+    <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
+        <q>Aren't you just <b>bored</b> with all those standard business models?</q>
+    </div>
+
+    <div class="step slide" data-x="0" data-y="-1500">
+        <q>Don't you think that salaries given <strong>in modern companies</strong> shouldn't <strong>copy the limits</strong> of 'classic' Ltd's?</q>
+    </div>
+
+    <div class="step slide" data-x="1000" data-y="-1500">
+        <q>Would you like to <strong>participate</strong> with <strong>stunning skills</strong> of your own?</q>
+    </div>
+
+    <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
+        <span class="try">then you should try</span>
+        <h1>Camplight<sup>*</sup></h1>
+        <span class="footnote"><sup>*</sup> @Campenlightment in twitter</span>
+    </div>
+
+    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="45" data-scale="5">
+        <p>It's an <strong>open company</strong> <br/>
+        inspired by the idea behind <a href="http://en.wikipedia.org/wiki/Open_business">Open business</a> <br/>
+        and based on the <strong>power of people</strong> in modern ages. There you could </p>
+    </div>
+
+    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="0" data-scale="6">
+        <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
+    </div>
+
+    <div id="tiny" class="step" data-x="2825" data-y="2225" data-z="-3000" data-rotate="360" data-scale="1">
+        <p>and <b>tiny</b> ideas</p>
+    </div>
+
+    <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
+        <p>by <b class="positioning">talking</b>, <b class="rotating">doing</b> and <b class="scaling">coding</b> them on an infinite canvas</p>
+    </div>
+
+    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
+        <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
+    </div>
+
+    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
+        <p>want to join?</p>
+        <q><a href="mailto:team@camplight.net">find us at</a> Camplight<img src="img/g24750.png" class="flame"></img></q>
+    </div>
+
+    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
+        <p>one more thing...</p>
+    </div>
+
+    <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-200" data-rotate-x="-70" data-rotate-y="10" data-scale="2">
+        <br />
+        <br />
+        <input type="text" placeholder="enter your name" class="input textfield" id="name"/>
+        <input type="text" placeholder="enter your email" class="input2 textfield" id="email"/>
+        <input type="text" placeholder="enter your web site" class="input3 textfield" id="website"/>
+        <div style="padding-bottom: 25px; text-align: center; margin-right: 85px">
+            <input type="submit" value="ping Camplight" class="input4 submitbutton" id="submitbutton"/>
+        </div>
+        <p><span class="have">And</span> <span class="you">we</span> <span class="noticed">will</span> <span class="its">contact</span> <span class="in">you</span> <b><sup>in realtime*</sup></b></p>
+        <span class="footnote">special credits for this experiment go to <a href="https://github.com/bartaz/impress.js">impress.js</a> </span>
+    </div>
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use arrow keys or mouse wheel to navigate</p>
+</div>
+
+<div class="resultBox" style="display: none">
+    <p>Thank you, {name}. Your request {status}</p>
+</div>
+
+<script src="js/impress.js"></script>
+<script src="js/camplight.js"></script>
+<script>
+    $("#submitbutton").click(function(){
+        var name = $("#name").val();
+        camplight.recieveMemberRequest({
+            "name": name,
+            "email": $("#email").val(),
+            "link": $("#website").val()
+        }, function(response){
+            var resultBox = $(".resultBox");
+            resultBox.show();
+            resultBox.css("opacity", "1");
+            var message = $(".resultBox p");
+            message.html(message.html().replace("{name}", name).replace("{status}", response.status));
+            resultBox.animate({ opacity: "0" }, 3500); // animate has issue with re-occuring animate events :?
+        });
+    });
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28349696-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
