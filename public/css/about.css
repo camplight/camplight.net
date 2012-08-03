@@ -1,0 +1,548 @@
+/**
+ * Camplight
+ */
+
+
+
+
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/**
+ * @region Elements
+ */
+
+
+
+
+/** Root elements */
+html {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+body {
+  margin: 0;
+  padding: 0;
+  color: #666666;
+  background: transparent;
+  font: 14px/1.5 "Maven Pro", "Segoe UI", "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, Lucida, sans-serif;
+}
+
+
+
+
+/** Block elements */
+div {}
+
+
+p {margin: 1.5em 0}
+pre {margin: 1.5em 0; font-family: monospace; white-space: pre}
+address {margin: 1.5em 0; font-style: italic}
+blockquote {margin: 1.5em 40px}
+
+
+header, nav, footer, article, aside {display: block}
+
+
+
+
+/** Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #333333;
+  font-weight: normal;
+}
+h1 {
+  margin: 0 0 0.6em;
+  font-size: 2.5em;
+  line-height: 1.2;
+}
+h2 {
+  margin: .75em 0;
+  font-size: 2em;
+  line-height: 1.5;
+}
+h3 {
+  margin: 1em 0;
+  font-size: 1.5em;
+  line-height: 1;
+}
+h4 {
+  margin: 1.2em 0;
+  font-size: 1.25em;
+  line-height: 1.2;
+}
+h5 {
+  margin: 1.5em 0;
+  font-size: 1em;
+  line-height: 1.5;
+  font-weight: bold;
+}
+h6 {
+  margin: 1.5em 0;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+
+
+
+/** Tables */
+table {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-spacing: 2px;
+  border-collapse: separate;
+}
+caption {
+  text-align: center;
+}
+thead, tbody ,tfoot {
+  vertical-align: top;
+}
+th, td {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  vertical-align: inherit;
+}
+th {
+  font-weight: bold;
+}
+td {}
+
+
+
+
+/** Lists */
+ol, ul {
+  margin: 1.5em 0;
+  padding: 0 0 0 40px;
+}
+ol ol, ol ul,
+ul ul, ul ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+li {margin: 0;padding: 0}
+
+
+dl {margin: 1.5em 0}
+dt {}
+dd {margin: 0 0 0 40px}
+
+
+
+
+/** Quotes */
+blockquote {quotes: ""; quotes: none}
+cite {font-style: italic}
+q {quotes: "\201c" "\201d" "\2018" "\2019"}
+
+
+
+
+/** Links */
+a {color: #333333; text-decoration: none;}
+a:visited {text-decoration: none;}
+a:hover {color: #211b12; text-decoration: underline;}
+a:focus {text-decoration: none;}
+a:active {text-decoration: none;}
+
+
+
+
+/** Phrase elements */
+i, em {font-style: italic}
+b, strong {font-weight: bold}
+small {font-size: smaller}
+big {font-size: bigger}
+
+
+sub, sup {font-size: smaller; line-height: normal}
+sub {vertical-align: sub}
+sup {vertical-align: super}
+
+
+tt, code, kbd, samp {font-family: monospace}
+
+
+
+
+/** Images */
+img, a img {
+  border: none;
+  vertical-align: baseline;
+}
+
+
+
+
+/** @endregion */
+
+
+
+
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/**
+ * @region Form elements
+ */
+form {margin: 0; padding: 0}
+input, textarea, button, option, select {margin: 0; padding: 0}
+
+
+
+
+/** Fieldsets */
+fieldset {border: 1px solid #cccccc}
+fieldset > legend {}
+
+
+
+
+/** Textboxes */
+textarea,
+input[type=text],
+input[type=password] {
+  padding: 3px;
+  color: #000000;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  font: inherit;
+}
+
+
+
+
+/** Single / Multiple choice */
+input[type=radio],
+input[type=checkbox] {
+  margin: 0 3px 0 0;
+  vertical-align: middle;
+}
+
+
+
+
+/** Dropdowns */
+select {}
+option {}
+
+
+
+
+/** Buttons */
+button,
+input[type=reset],
+input[type=button],
+input[type=submit] {}
+
+
+input[type=image] {vertical-align: middle}
+
+
+
+
+/** @endregion */
+
+
+
+
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/**
+ * @region Common
+ */
+.wrap {
+  margin: 0 auto;
+  width: 960px;
+  min-height: 0;
+  _zoom: 1;
+}
+.wrap:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+
+
+
+/** @endregion */
+
+
+
+
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/**
+ * @region Header
+ */
+#header {
+  height: 14em;
+  border-bottom: 1px solid #dddddd;
+  background: #f9f9f9;
+}
+
+
+
+/** Logo */
+#logo {
+  margin: 0;
+  padding: 130px 0 0 0;
+  background: url("../images/camplight-logo.png") center 10px no-repeat;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+}
+
+
+:root #logo {
+  background:
+    url("../images/camplight-logo.png") center 10px no-repeat,
+    url("../images/camplight-logo-shadow.png") center 117px no-repeat;
+  -ms-animation: header-anim 2s;
+  -moz-animation: header-anim 2s;
+  -webkit-animation: header-anim 2s;
+}
+
+
+@-ms-keyframes header-anim {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes header-anim {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-webkit-keyframes header-anim {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.logo {
+  width: 140px;
+  margin: 0 auto;
+}
+
+.logoTop {
+  margin-left: 23px;
+  display: block;
+  z-index: 3;
+  position: relative;
+  opacity: 0;
+}
+
+.logoShadow {
+  margin-left: 33px;
+  top: 14px;
+  display: block;
+  position: relative;
+  opacity: 0;
+}
+
+.logoCamplightText {
+  top: 20px;
+  position: relative;
+  opacity: 0;
+}
+
+
+/** @endregion */
+
+
+/**
+ * @region Content
+ */
+
+ #content {
+  display: none;
+ }
+
+/** @endregion */ 
+
+
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/**
+ * @region Bottom
+ */
+#bottom {
+  min-height: 5.5em;
+  _height: 5.5em;
+  padding: 2.5em 0 0 0;
+  color: #ffffff;
+  background: #444444 url("../images/bottom-tile.png") repeat-x;
+}
+
+
+  #bottom h2 {
+    margin: 0 0 .75em 0;
+    color: #cccccc;
+    font-size: 18px;
+    line-height: 21px;
+    text-shadow: 0 0 2px #333333;
+  }
+
+
+  #bottom ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    min-height: 0;
+    _zoom: 1;
+  }
+  #bottom ul:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  #bottom li {
+    float: left;
+    display: inline;
+  }
+
+
+  #bottom a {
+    color: #ffffff;
+  }
+
+
+
+
+/** Partners */
+#partners {
+  margin: 0 10px;
+  width: 700px;
+  float: left;
+  display: inline;
+}
+
+
+  #partners ul {
+    margin: 0 -10px;
+  }
+  #partners li {
+    margin: 0 5px;
+    margin-bottom: 10px;
+    width: 145px;
+
+  }
+
+
+  #partners a {
+    line-height: 3.6em;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-indent: -999em;
+    display: block;
+    overflow: hidden;
+  }
+
+
+  #partners .gamecraft a {
+    background-image: url("../images/partners/gamecraft.png");
+  }
+  #partners .shtrak a {
+    background-image: url("../images/partners/shtrak.png");
+  }
+  #partners .sourcerealms a {
+    background-image: url("../images/partners/sourcerealms.png");
+  }
+  #partners .crystalplay a {
+    background-image: url("../images/partners/crystalplay.png");  
+  }
+
+
+
+/** Partners */
+#about {
+  margin: 0 10px;
+  width: 220px;
+  float: right;
+  display: inline
+}
+
+
+  #about ul {
+    margin: 0 -10px;
+  }
+  #about li {
+    margin: 0 10px;
+    /*width: 140px;*/
+  }
+
+
+  #about .mail a {
+    color: #99ffff;
+  }
+
+
+
+
+/** @endregion */
+
+
+
+
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/**
+ * @region Footer
+ */
+#footer {
+  padding: .75em 0;
+  color: #999999;
+  background: #000000;
+  font-size: 12px;
+  line-height: 21px;
+}
+
+
+  #footer p {
+    margin: 0;
+  }
+
+
+  #footer .copy {
+    text-align: center;
+  }
+
+
+
+
+/** @endregion */
+
+
+
+
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/**
+ * @region Fixes
+ */
+/** @endregion */

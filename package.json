@@ -1,0 +1,22 @@
+{
+  "name": "camplight.net",
+  "version": "0.0.0",
+  "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "organic": "~0.0.0",
+    "express": "latest",
+    "consolidate": "latest",
+    "jade": "latest",
+    "github-flavored-markdown": "latest"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/camplight/camplight.net.git"
+  },
+  "license": "BSD"
+}

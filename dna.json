@@ -1,0 +1,21 @@
+{
+  "membrane":[
+    {
+      "path": "/membrane/httpServer",
+      "port": "8001",
+      "staticFolder": "/public"
+    }
+  ],
+  "plasma": [
+    "/plasma/PageRouter",
+    {
+      "path": "/plasma/pages/IndexPageDataFetcher",
+      "store": "/data/members.json"
+    },
+    {
+      "path":"/plasma/PageRender",
+      "templates": "/templates"
+    },
+    "/plasma/ErrorHandler"
+  ]
+}

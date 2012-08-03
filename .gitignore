@@ -6,3 +6,4 @@ rsync.yml
 .pydevproject
 .project
 *.pyc
+node_modules
