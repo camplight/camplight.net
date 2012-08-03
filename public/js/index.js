@@ -1,5 +1,17 @@
 $(document).ready(function(){
 
+  $("#bottom").css({
+    opacity: "0"
+  }).delay(1400).animate({
+    opacity: "1"
+  }, 200);
+
+  $("#footer").css({
+    opacity: "0"
+  }).delay(1600).animate({
+    opacity: "1"
+  }, 200);
+
   $("#header").css({
     height: "0px"
   }).show().animate({
