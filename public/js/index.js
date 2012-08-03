@@ -2,13 +2,13 @@ $(document).ready(function(){
 
   $("#bottom").css({
     opacity: "0"
-  }).delay(1400).animate({
+  }).show().delay(1400).animate({
     opacity: "1"
   }, 200);
 
   $("#footer").css({
     opacity: "0"
-  }).delay(1600).animate({
+  }).show().delay(1600).animate({
     opacity: "1"
   }, 200);
 

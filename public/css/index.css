@@ -526,6 +526,7 @@ input[type=image] {vertical-align: middle}
 	padding: 2.5em 0 0 0;
 	color: #ffffff;
 	background: #444444 url("../images/bottom-tile.png") repeat-x;
+	display: none;
 }
 
 
@@ -652,6 +653,7 @@ input[type=image] {vertical-align: middle}
 	background: #000000;
 	font-size: 12px;
 	line-height: 21px;
+	display: none;
 }
 
 
