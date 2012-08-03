@@ -30,6 +30,7 @@ module.exports.prototype.render = function(chemical) {
   var self = this;
   return function(err, renderedData){
     if(err) {
+      err.message += " while trying to render "+chemical.page;
       self.emit(err);
       return;
     }

@@ -297,6 +297,7 @@ input[type=image] {vertical-align: middle}
 	height: 14em;
 	border-bottom: 1px solid #dddddd;
 	background: #f9f9f9;
+	display: none;
 }
 
 
@@ -378,6 +379,8 @@ input[type=image] {vertical-align: middle}
  */
 #skills {
 	margin: 3em 0 0 0;
+	display: none;
+	overflow: hidden;
 }
 
 
@@ -440,6 +443,8 @@ input[type=image] {vertical-align: middle}
 #team {
 	border-top: 1px solid #bbbbbb;
 	background: #dddddd url("../images/team-tile.png");
+	display: none;
+	overflow: hidden;
 }
 
 
