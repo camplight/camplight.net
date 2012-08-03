@@ -1,5 +1,11 @@
 $(document).ready(function(){
 
+  $("#header").css({
+    height: "0px"
+  }).show().animate({
+    height: "224px"
+  });
+
   $("#bottom").css({
     opacity: "0"
   }).show().delay(1400).animate({
@@ -12,21 +18,15 @@ $(document).ready(function(){
     opacity: "1"
   }, 200);
 
-  $("#header").css({
-    height: "0px"
-  }).show().animate({
-    height: "224px"
-  });
-
   $("#skills").css({
     height: "0px"
   }).delay(1800).show().animate({
     height: "300px"
-  });
+  }, 600);
 
   $("#team").css({
     height: "0px"
-  }).delay(3600).show().animate({
+  }).delay(2600).show().animate({
     height: "300px"
-  });
+  }, 600);
 });
