@@ -4,7 +4,7 @@ var Chemical = require("organic").Chemical;
 
 var fs = require("fs");
 
-module.exports = function PageCode(plasma, config){
+module.exports = function PageStyle(plasma, config){
   Organel.call(this, plasma);
 
   var self = this;
@@ -13,11 +13,13 @@ module.exports = function PageCode(plasma, config){
     fs.exists(process.cwd()+config.root+chemical.page+".css", function(exists){
       if(exists) {
         fs.readFile(process.cwd()+config.root+chemical.page+".css", function(err, data){
-          chemical.style = data.toString();
+          chemical.style = "<style>"+data.toString()+"</style>";
           self.emit(chemical);
         });
-      } else
+      } else {
+        chemical.style = "<link rel='stylesheet' href='/default.css' />";
         self.emit(chemical);
+      }
     });
   });
 }

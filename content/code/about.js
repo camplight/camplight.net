@@ -7,22 +7,29 @@ $(document).ready(function(){
   require("./routes");
   Backbone.history.start({pushState: true, silent: true});
   
-  var screenHeight = $(window).height()-20;
-  var headerHeight = $("#header").height();
-  var bottomHeight = $("#bottom").height()+30;
-  var footerHeight = $("#footer").height();
+  $("#header").css({
+    height: "0px"
+  }).show().animate({
+    height: "224px"
+  });
 
   $("#bottom").css({
-    position: "absolute",
-    top: headerHeight,
-    width: "100%"
-  }).animate({top: screenHeight-bottomHeight-footerHeight});
+    opacity: "0"
+  }).show().delay(1400).animate({
+    opacity: "1"
+  }, 200);
 
   $("#footer").css({
-    position: "absolute",
-    top: headerHeight+bottomHeight,
-    width: "100%"
-  }).animate({top: screenHeight-footerHeight});
+    opacity: "0"
+  }).show().delay(1600).animate({
+    opacity: "1"
+  }, 200);
 
-  $("#content").show();
+  $("#content").css({
+    opacity: "0"
+  }).delay(1800).show().animate({
+    opacity: "1"
+  });
+
+  
 });

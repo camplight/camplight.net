@@ -297,6 +297,7 @@ input[type=image] {vertical-align: middle}
   height: 14em;
   border-bottom: 1px solid #dddddd;
   background: #f9f9f9;
+  display: none;
 }
 
 
@@ -366,15 +367,149 @@ input[type=image] {vertical-align: middle}
 /** @endregion */
 
 
+
+
+/*----------------------------------------------------------------------------*/
+
+
+
+
 /**
- * @region Content
+ * @region Services
  */
-
- #content {
+#skills {
+  margin: 3em 0 0 0;
   display: none;
- }
+  overflow: hidden;
+}
 
-/** @endregion */ 
+
+  #skills ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    min-height: 0;
+    _zoom: 1;
+  }
+  #skills ul:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  #skills li.area {
+    margin: 0 10px;
+    width: 220px;
+    float: left;
+    display: inline;
+  }
+
+
+  #skills li ul {
+    min-height: 9em;
+    _height: 9em;
+  }
+  #skills li li {
+    padding: 0 0 0 15px;
+  }
+  #skills li li:before {
+    margin: 0 0 0 -15px;
+    content: "-";
+    float: left;
+  }
+
+
+  #skills h2 {
+    margin: 0;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+
+
+
+/** @endregion */
+
+
+
+
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/**
+ * @region Team
+ */
+#team {
+  border-top: 1px solid #bbbbbb;
+  background: #dddddd url("../images/team-tile.png");
+  display: none;
+  overflow: hidden;
+}
+
+
+  #team h2 {
+    display: none;
+  }
+
+
+  #team ul {
+    margin: 0;
+    padding: 1.5em 0;
+    list-style: none;
+    min-height: 0;
+    _zoom: 1;
+  }
+  #team ul:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  #team li {
+    margin: .75em 10px;
+    padding: .5em 0 1em 40px;
+    width: 180px;
+    background: url("../images/team-icon.png") 0 0 no-repeat;
+    float: left;
+    display: inline;
+  }
+
+
+  #team h3 {
+    margin: 0;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 500;
+    text-shadow: 1px 1px 0 #ffffff;
+  }
+
+    #team .membername {
+        display: block;
+        font-size: 16px;
+        line-height: 21px;
+        margin: 0px;
+        font-weight: 500;
+        text-shadow: 1px 1px 0 #ffffff;
+
+    }
+    a.membername:visited {
+        text-decoration: none;
+        text-decoration-color: #ffffff;
+
+    }
+
+    #team .role {
+    font-size: 12px;
+    line-height: 21px;
+    text-shadow: 1px 1px 0 #ffffff;
+  }
+
+
+
+
+/** @endregion */
+
+
 
 
 /*----------------------------------------------------------------------------*/
@@ -391,6 +526,7 @@ input[type=image] {vertical-align: middle}
   padding: 2.5em 0 0 0;
   color: #ffffff;
   background: #444444 url("../images/bottom-tile.png") repeat-x;
+  display: none;
 }
 
 
@@ -517,6 +653,7 @@ input[type=image] {vertical-align: middle}
   background: #000000;
   font-size: 12px;
   line-height: 21px;
+  display: none;
 }
 
 
@@ -539,7 +676,21 @@ input[type=image] {vertical-align: middle}
 
 /*----------------------------------------------------------------------------*/
 
+#abouts {
+  margin: 3em 0 0 0;
+  overflow: hidden;
+}
 
+#abouts .span4 {
+  width: 310px;
+  float: left;
+}
+
+#explanations {
+  border-top: 1px solid #bbbbbb;
+  background: #dddddd url("../images/team-tile.png");
+  overflow: hidden;
+}
 
 
 /**

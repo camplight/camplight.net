@@ -5,7 +5,7 @@ var Routes = Backbone.Router.extend({
   },
 
   showIndex: function(){
-    console.log("SHOWING INDEX");
+
     $("#content").animate({
       height: "0px",
       opacity: "0"
@@ -36,16 +36,14 @@ var Routes = Backbone.Router.extend({
   },
 
   showAbout: function(){
-    console.log("SHOWING ABOUT");
+
     $("#content").animate({
-      height: "0px",
-      opacity: "0"
+      height: "0px"
     }, function(){
       $.get("/about?contentOnly=true")
         .success(function(data){
           $("#content").html(data).animate({
-            height: "500px",
-            opacity: "1"
+            height: "900px"
           });
         });
     });

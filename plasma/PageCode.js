@@ -14,7 +14,7 @@ module.exports = function PageCode(plasma, config){
       if(exists) {
         b = browserify({debug: true});
         b.addEntry(process.cwd()+config.root+chemical.page+".js");
-        chemical.code = b.bundle();
+        chemical.code = "<script>"+b.bundle()+"</script>";
         self.emit(chemical);
       } else
         self.emit(chemical);

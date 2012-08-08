@@ -12,7 +12,12 @@ module.exports = function HttpServer(plasma, config){
   var self = this;
 
   if(config.staticFolder)
-    app.use(express.static(process.cwd()+config.staticFolder));
+    if(typeof config.staticFolder == "string")
+      app.use(express.static(process.cwd()+config.staticFolder));
+    else
+      config.staticFolder.forEach(function(folder){
+        app.use(express.static(process.cwd()+folder));
+      });
 
   app.get('*', function(req, res){
     var chemical = new Chemical();
