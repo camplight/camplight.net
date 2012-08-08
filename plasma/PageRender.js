@@ -14,11 +14,12 @@ module.exports = function PageRender(plasma, config){
       return;
     }
   
-    fs.exists(process.cwd()+config.templates+chemical.page+".jade", function(found){
-      if(found)
-        cons.jade(process.cwd()+config.templates+chemical.page+".jade", chemical.data || {}, self.render(chemical));
+    fs.exists(process.cwd()+config.root+chemical.page+".jade", function(found){
+      if(found) {
+        cons.jade(process.cwd()+config.root+chemical.page+".jade", chemical.data || {}, self.render(chemical));
+      }
       else
-        cons.jade(process.cwd()+config.templates+"/404.jade", chemical.data || {}, self.render(chemical));
+        cons.jade(process.cwd()+config.root+"/404.jade", chemical.data || {}, self.render(chemical));
     });
   });
 }
@@ -35,12 +36,11 @@ module.exports.prototype.render = function(chemical) {
       return;
     }
 
-    var response = new Chemical();
-    response.type = "httpResponse";
-    response.data = renderedData;
-    
-    //  pass req to "httpResponse" chemical to return that through httpServer
-    response.req = chemical.req;
-    self.emit(response);
+    if(chemical.layout && !chemical.req.query.contentOnly)
+      chemical.type = "renderPageLayout";
+    else
+      chemical.type = "httpResponse";
+    chemical.data = renderedData;
+    self.emit(chemical);
   }
 }

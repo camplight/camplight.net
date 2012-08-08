@@ -1,0 +1,21 @@
+#header
+  .wrap
+    h1#logo
+      | CampLight
+script
+  $(document).ready(function(){
+  $("#header .wrap").html($("#animatedLogoTemplate").html());
+  $(".logoTop").animate({ opacity: "1", top: "20px" }, 600);
+  $(".logoShadow").animate({ opacity: "1" }, 600);
+  $(".logoCamplightText").delay(800).animate({ opacity: "1" }, 600);
+  });
+script#animatedLogoTemplate(type='xml/html-temaplte')
+  <div class="logo">
+  <img class="logoTop" src="images/animatedLogo/icon.png"></img>
+  <img class="logoShadow" src="images/animatedLogo/shadow.png"></img>
+  <img class="logoCamplightText" src="images/animatedLogo/camplight.png"></img>
+  </div>
+#menu
+  a(href="/") Home
+  | ----
+  a(href="/about") About

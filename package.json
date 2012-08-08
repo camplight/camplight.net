@@ -6,6 +6,7 @@
   "dependencies": {
     "organic": "~0.0.0",
     "express": "latest",
+    "browserify" : "latest",
     "consolidate": "latest",
     "jade": "latest",
     "github-flavored-markdown": "latest"

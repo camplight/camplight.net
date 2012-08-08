@@ -1,0 +1,45 @@
+#bottom
+  .wrap
+    #partners
+      ul
+        li.gamecraft
+          a(href='http://game-craft.com/', rel='co-worker', target='_blank') GameCraft
+        li.shtrak
+          a(href='http://shtrak.eu/it', rel='co-worker', target='_blank') Shtrak!
+        li.sourcerealms
+          a(href='http://sourcerealms.net/', rel='co-worker', target='_blank') Source Realms
+        li.crystalplay
+          a(href='http://crystalplay.com/', rel='co-worker', target='_blank') Crystal Play
+    #about
+      ul
+        li
+          a(href='http://twitter.com/campenlightment', target='_blank', rel='me') twitter
+        li
+          a(href='http://facebook.com/camplight', target='_blank', rel='me') facebook
+        li
+          a(href='http://github.com/camplight', target='_blank', rel='me') github
+        li.mail
+          script
+            function escramble(){
+            var a,b,c,d,e,f,g,h,i
+            a='<a href=\\"mai'
+            b='team'
+            c='\\">'
+            a+='lto:'
+            b+='@'
+            e='</a>'
+            f='team @ camplight.net'
+            b+='camplight.net'
+            g='<img src=\\"'
+            h=''
+            i='\\" alt="Email us." border="0">'
+            if (f) d=f
+            else if (h) d=g+h+i
+            else d=b
+            document.write(a+b+c+d+e)
+            }
+            escramble()
+#footer
+  #wrap
+    p.copy
+      | © 2011-2012 CampLight Ltd.

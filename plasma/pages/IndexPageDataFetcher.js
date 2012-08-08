@@ -12,6 +12,8 @@ module.exports = function IndexPageDataFetcher(plasma, config){
   this.on("renderPage", function(chemical){
     if(chemical.page == "/index") {
       chemical.data = {members: members};
+      this.emit(chemical);
+      return;
     }
 
     return false;// checmical not received.

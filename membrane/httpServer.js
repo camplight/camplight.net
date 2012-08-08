@@ -7,7 +7,7 @@ var Organel = require("organic").Organel;
 module.exports = function HttpServer(plasma, config){
   Organel.call(this, plasma);
 
-  var app = require('express').createServer();
+  var app = express();
   var responseClients = [];
   var self = this;
 

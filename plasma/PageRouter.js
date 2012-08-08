@@ -6,13 +6,16 @@ module.exports = function PageRouter(plasma){
   Organel.call(this, plasma);
 
   this.on("httpRequest", function(chemical){
-    chemical.type = "renderPage";
+    chemical.type = "handlePage";
     
     // default page - index
     chemical.page = "/index";
     
-    if(chemical.req.url != "/")
-      chemical.page = chemical.req.url;
+    // default layout - layout
+    chemical.layout = "/common/layout";
+    
+    if(chemical.req.path != "/")
+      chemical.page = chemical.req.path;
     
     this.emit(chemical);
   });

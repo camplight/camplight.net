@@ -1,4 +1,11 @@
+require("./libs/ga.js");
+_ = require("./libs/underscore");
+Backbone = require("./libs/backbone");
+
 $(document).ready(function(){
+
+  require("./routes");
+  Backbone.history.start({pushState: true, silent: true});
   
   var screenHeight = $(window).height()-20;
   var headerHeight = $("#header").height();

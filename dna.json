@@ -3,18 +3,31 @@
     {
       "path": "/membrane/httpServer",
       "port": "8001",
-      "staticFolder": "/public"
+      "staticFolder": "/content/public"
     }
   ],
   "plasma": [
+    "/plasma/LogHandler",
     "/plasma/PageRouter",
     {
       "path": "/plasma/pages/IndexPageDataFetcher",
       "store": "/data/members.json"
     },
     {
+      "path": "/plasma/PageCode",
+      "root": "/content/code"
+    },
+    {
+      "path": "/plasma/PageStyle",
+      "root": "/content/style"
+    },
+    {
       "path":"/plasma/PageRender",
-      "templates": "/templates"
+      "root": "/content"
+    },
+    {
+      "path": "/plasma/PageLayoutRender",
+      "root": "/content"
     },
     "/plasma/ErrorHandler"
   ]
