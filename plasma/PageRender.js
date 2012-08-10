@@ -3,6 +3,7 @@ var Organel = require("organic").Organel;
 var Chemical = require("organic").Chemical;
 var cons = require("consolidate");
 var fs = require("fs");
+var _ = require("underscore");
 
 module.exports = function PageRender(plasma, config){
   Organel.call(this, plasma);
@@ -19,6 +20,9 @@ module.exports = function PageRender(plasma, config){
         code: chemical.code,
         style: chemical.style
       };
+      if(chemical.data)
+        _.extend(renderData, chemical.data);
+
       if(found)
         cons.jade(process.cwd()+config.root+chemical.page+".jade", renderData, self.render(chemical));
       else

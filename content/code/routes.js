@@ -1,7 +1,12 @@
 var Routes = Backbone.Router.extend({
   routes: {
     "": "showIndex",
-    "about": "showAbout"
+    "about": "showAbout",
+    "shop": "showShop"
+  },
+
+  showShop: function(){
+    window.location.href = "/shop";
   },
 
   showIndex: function(){

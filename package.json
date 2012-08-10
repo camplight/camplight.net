@@ -10,7 +10,8 @@
     "consolidate": "latest",
     "jade": "latest",
     "github-flavored-markdown": "latest",
-    "formidable": "latest"
+    "formidable": "latest",
+    "underscore": "latest"
   },
   "devDependencies": {},
   "scripts": {
