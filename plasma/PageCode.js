@@ -11,13 +11,14 @@ module.exports = function PageCode(plasma, config){
   var self = this;
   this.on("handlePage", function(chemical){
     fs.exists(process.cwd()+config.root+chemical.page+".js", function(exists){
+
       if(exists) {
         b = browserify({debug: true});
         b.addEntry(process.cwd()+config.root+chemical.page+".js");
         chemical.code = "<script>"+b.bundle()+"</script>";
-        self.emit(chemical);
-      } else
-        self.emit(chemical);
+      }
+
+      self.emit(chemical);
     });
   });
 }

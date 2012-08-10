@@ -16,6 +16,9 @@ module.exports = function PageRouter(plasma){
     
     if(chemical.req.path != "/")
       chemical.page = chemical.req.path;
+
+    if(chemical.page == "/shop" || chemical.page == "/shop-requestform" || chemical.page == "/shop-request")
+      chemical.layout = undefined;
     
     this.emit(chemical);
   });

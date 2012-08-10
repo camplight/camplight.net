@@ -17,6 +17,9 @@
       "store": "/data/members.json"
     },
     {
+      "path": "/plasma/pages/ShopRequestHandler"
+    },
+    {
       "path": "/plasma/PageCode",
       "root": "/content/code"
     },

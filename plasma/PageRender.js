@@ -15,11 +15,14 @@ module.exports = function PageRender(plasma, config){
     }
   
     fs.exists(process.cwd()+config.root+chemical.page+".jade", function(found){
-      if(found) {
-        cons.jade(process.cwd()+config.root+chemical.page+".jade", chemical.data || {}, self.render(chemical));
-      }
+      var renderData = {
+        code: chemical.code,
+        style: chemical.style
+      };
+      if(found)
+        cons.jade(process.cwd()+config.root+chemical.page+".jade", renderData, self.render(chemical));
       else
-        cons.jade(process.cwd()+config.root+"/404.jade", chemical.data || {}, self.render(chemical));
+        cons.jade(process.cwd()+config.root+"/404.jade", renderData, self.render(chemical));
     });
   });
 }

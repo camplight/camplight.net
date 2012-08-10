@@ -1,0 +1,3 @@
+ var data_validation = '{"fb-submit-button":{"hover":{"background-image":"url(common/images/hov_btn.png)"}},"item2_email_1":{"email":true,"required":true,"messages":"This field is required.Please, fill data."},"item4_tel_1":{"international":true},"item8_text_1":{"required":true,"messages":"This field is required.Please, fill data."},"reCaptcha":{"captcha":false},"item9_textarea_1":{"maxlength":"10000"},"item19_text_1":{},"item20_text_1":{},"item21_text_1":{}}';
+ var data_jsplugins = '[]';
+ var data_cssplugins = '["http://fonts.googleapis.com/css?family=Snippet"]';

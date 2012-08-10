@@ -9,7 +9,8 @@
     "browserify" : "latest",
     "consolidate": "latest",
     "jade": "latest",
-    "github-flavored-markdown": "latest"
+    "github-flavored-markdown": "latest",
+    "formidable": "latest"
   },
   "devDependencies": {},
   "scripts": {

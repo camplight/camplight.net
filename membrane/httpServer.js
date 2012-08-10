@@ -1,5 +1,6 @@
 var util = require("util");
 var express = require('express');
+var form = require("./connect-form");
 
 var Chemical = require("organic").Chemical;
 var Organel = require("organic").Organel;
@@ -19,7 +20,12 @@ module.exports = function HttpServer(plasma, config){
         app.use(express.static(process.cwd()+folder));
       });
 
-  app.get('*', function(req, res){
+  app.use(form({ 
+    keepExtensions: true,
+    uploadDir: __dirname + '/../tmp'
+  }));
+
+  app.all('*', function(req, res){
     var chemical = new Chemical();
     chemical.req = req;
     chemical.type = "httpRequest";
