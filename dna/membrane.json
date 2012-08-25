@@ -13,7 +13,6 @@
         "data": "/api/get-Members.js",
         "page": "/index"
       },
-
       "/code.js": {
         "chain": [
           "PageCode",
@@ -22,6 +21,7 @@
         "code": "/index.js",
         "content-type": "text/javascript"
       },
+
       "/about" : {
         "chain": [
           "PageRender",
@@ -29,6 +29,37 @@
         ],
         "page": "/about"
       },
+
+      "/shop": {
+        "chain": [
+          "PageRender",
+          "httpResponse"
+        ],
+        "page": "/shop"
+      },
+      "/shop.js": {
+        "chain": [
+          "PageCode",
+          "httpResponse"
+        ],
+        "code": "/shop.js",
+        "content-type": "text/javascript"
+      },
+      "/shop-request": {
+        "chain": [
+          "PageRender",
+          "httpResponse"
+        ],
+        "page": "/shop-request"
+      },
+      "/shop-requestform": {
+        "chain": [
+          "PageRender",
+          "httpResponse"
+        ],
+        "page": "/shop-requestform"
+      },
+
       "*": {
         "chain": [
           "PageRender",

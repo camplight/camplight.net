@@ -7,7 +7,7 @@ body
 	margin: 0 auto;
 	padding: 0;
 	background-color: #595959;
-	background-image: url('images/Page-BgTexture.jpg');
+	background-image: url('/images/Page-BgTexture.jpg');
 	background-repeat: repeat-x;
 	background-attachment: scroll;
 	background-position: top left;
@@ -26,7 +26,7 @@ body
 #art-page-background-gradient
 {
 	position: absolute;
-	background-image: url('images/Page-BgGradient.jpg');
+	background-image: url('/images/Page-BgGradient.jpg');
 	background-repeat: repeat-x;
 	top:0;
 	width:100%;
@@ -126,7 +126,7 @@ div.art-Header-jpeg
 	left: 0;
 	width: 900px;
 	height: 66px;
-	background-image: url('images/Header.jpg');
+	background-image: url('/images/Header.jpg');
 	background-repeat: no-repeat;
 	background-position: center center;
     margin-top: 15px;
@@ -182,7 +182,7 @@ div.art-Header-jpeg
 {
 	width: 14px;
 	height: 14px;
-	background-image: url('images/Block-s.png');
+	background-image: url('/images/Block-s.png');
 }
 
 .art-Block-tl
@@ -218,7 +218,7 @@ div.art-Header-jpeg
 	left: 7px;
 	right: 7px;
 	height: 14px;
-	background-image: url('images/Block-h.png');
+	background-image: url('/images/Block-h.png');
 }
 
 .art-Block-tc
@@ -238,7 +238,7 @@ div.art-Header-jpeg
 	top: 7px;
 	bottom: 7px;
 	width: 14px;
-	background-image: url('images/Block-v.png');
+	background-image: url('/images/Block-v.png');
 }
 
 .art-Block-cr
@@ -301,7 +301,7 @@ font-weight: bold;
 	position:absolute;
 	z-index:-1;
 	height: 30px;
-	background-image: url('images/BlockHeader.png');
+	background-image: url('/images/BlockHeader.png');
 }
 
 .art-BlockHeader .l
@@ -325,7 +325,7 @@ font-weight: bold;
 {
     height: 30px;
 	background-position:left top;
-	background-image: url('images/BlockHeaderIcon.png');
+	background-image: url('/images/BlockHeaderIcon.png');
 	padding:0 0 0 12px;
 	background-repeat: no-repeat;
 	min-height: 12px;
@@ -402,7 +402,7 @@ text-decoration: none;
 .art-BlockContent-body ul li
 {
 	padding:0px 0 0px 13px;
-	background-image: url('images/BlockContentBullets.png');
+	background-image: url('/images/BlockContentBullets.png');
 	background-repeat:no-repeat;
 	margin:0.5em 0 0.5em 0;
 	line-height:1.2em;
@@ -434,7 +434,7 @@ text-decoration: none;
 	margin: 7px;
 }
 
-/* Start images */
+/* Start /images */
 a img
 {
 	border: 0;
@@ -452,7 +452,7 @@ a img
 	vertical-align: middle;
 	margin: 2px;
 }
-/* Finish images */
+/* Finish /images */
 
 /* Start tables */
 
@@ -747,7 +747,7 @@ ol
 
 .art-Post ul li, .art-Post ol ul li 
 {
-	background-image: url('images/PostBullets.png');
+	background-image: url('/images/PostBullets.png');
 	background-repeat:no-repeat;
 	padding-left:13px;
 }
@@ -776,7 +776,7 @@ blockquote,
 		margin:10px 10px 10px 50px;
 	padding:5px 5px 5px 41px;
 	background-color:#E9E4D3;
-	background-image:url('images/PostQuote.png');
+	background-image:url('/images/PostQuote.png');
 	background-position:left top;
 	background-repeat:no-repeat;
 }
@@ -860,7 +860,7 @@ font-weight: normal;
 	position:absolute;
 	z-index:-1;
 	height: 102px;
-	background-image: url('images/Button.png');
+	background-image: url('/images/Button.png');
 }
 
 .art-button-wrapper .l
@@ -913,7 +913,7 @@ font-weight: normal;
 	position:absolute;
 	z-index:-1;
 	background-repeat:no-repeat;
-	background-image: url('images/Footer.png');
+	background-image: url('/images/Footer.png');
 	width: 900px;
 	height: 150px;
 	bottom:0;
