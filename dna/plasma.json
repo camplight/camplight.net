@@ -1,0 +1,17 @@
+{
+  "PageCode": {
+    "source": "node_modules/organic-webapp/plasma/PageCode",
+    "root": "/client"
+  },
+  "PageRender": {
+    "source": "node_modules/organic-webapp/plasma/PageRender",
+    "root": "/client"
+  },
+  "PageData": {
+    "source": "node_modules/organic-webapp/plasma/PageData",
+    "root": "/data"
+  },
+  "ErrorHandler": {
+    "source": "node_modules/organic-webapp/plasma/ErrorHandler"
+  }
+}

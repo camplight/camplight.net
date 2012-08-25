@@ -1,0 +1,81 @@
+!!! 5
+html
+  head
+    title CampLight Ltd.
+    meta(charset='utf-8')
+    meta(name='copyright', content='Camplight Ltd.')
+    meta(name='author', content='Camplight')
+    meta(name='keywords', content='open,source,company,software,hardware,freeware,technologies,freelancers,team,camplight')
+    meta(name='description', content='Software and Hardware development company made by people for people')
+    link(rel='author', href='humans.txt')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Maven+Pro:400,500,700')
+    link(rel='shortcut icon', href='favicon.ico')
+
+    link(rel='stylesheet', href='/style/index.css')
+
+    script(src="/code.js")
+
+  body
+    include ./partials/header
+    #content
+      #skills
+          .wrap
+            ul
+              li.area
+                h2 Frontend
+                ul
+                  li HTML 5
+                  li CSS 3
+                  li Javascript
+                  li Flash/Flex
+              li.area
+                h2 Backend
+                ul
+                  li Node.js
+                  li Ruby
+                  li Python
+                  li Java
+                  li PHP
+              li.area
+                h2 Database
+                ul
+                  li SQL
+                  li MongoDB
+                  li CouchDB
+                  li Redis
+                  li Neo4j
+              li.area
+                h2 Mobile
+                ul
+                  li iOS/Objective C
+                  li Android
+                  li AS3/Flash/Air
+                  li J2ME
+              li.area
+                h2 Desktop
+                ul
+                  li Java
+                  li C#
+                  li C++
+                  li AS3/Air
+              li.area
+                h2 Design
+                ul
+                  li Web
+                  li Identity
+                  li Print
+                  li Illustration
+              li.area
+                h2 Linux
+                ul
+                  li System Administration
+                  li Optimization
+        #team
+          .wrap
+            h2 Team
+            ul
+              each member in members
+                li.vcard
+                  h3.fn= member.name
+                  span.role= member.role
+    include ./partials/footer

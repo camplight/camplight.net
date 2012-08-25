@@ -1,8 +1,7 @@
-require("./libs/ga");
-_ = require("./libs/underscore");
-Backbone = require("./libs/backbone");
+require("ga");
+$ = require("jquery-browserify");
 
-module.exports.animate = function(){
+$(document).ready(function(){
   $("#header").css({
     height: "0px"
   }).show().animate({
@@ -32,12 +31,4 @@ module.exports.animate = function(){
   }).delay(2600).show().animate({
     height: "300px"
   }, 600);
-}
-
-$(document).ready(function(){
-
-  require("./routes");
-  Backbone.history.start({pushState: true, silent: true});
-
-  module.exports.animate();
 });

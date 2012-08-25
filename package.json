@@ -4,14 +4,9 @@
   "main": "index.js",
   "private": true,
   "dependencies": {
-    "organic": "~0.0.0",
-    "express": "latest",
-    "browserify" : "latest",
-    "consolidate": "latest",
-    "jade": "latest",
-    "github-flavored-markdown": "latest",
-    "formidable": "latest",
-    "underscore": "latest"
+    "underscore": "latest",
+    "backbone": "latest",
+    "jquery-browserify": "*"
   },
   "devDependencies": {},
   "scripts": {

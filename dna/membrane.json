@@ -1,0 +1,42 @@
+{
+  "HttpServer": {
+    "source": "node_modules/organic-webapp/membrane/HttpServer",
+    "port": 8080,
+    "staticFolder": "/client/public",
+    "routes": {
+      "/" : {
+        "chain": [
+          "PageData",
+          "PageRender",
+          "httpResponse"
+        ],
+        "data": "/api/get-Members.js",
+        "page": "/index"
+      },
+
+      "/code.js": {
+        "chain": [
+          "PageCode",
+          "httpResponse"
+        ],
+        "code": "/index.js",
+        "content-type": "text/javascript"
+      },
+      "/about" : {
+        "chain": [
+          "PageRender",
+          "httpResponse"
+        ],
+        "page": "/about"
+      },
+      "*": {
+        "chain": [
+          "PageRender",
+          "httpResponse"
+        ],
+        "page": "/404",
+        "statusCode": 404
+      }
+    }
+  }
+}
