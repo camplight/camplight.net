@@ -4,6 +4,7 @@
   "main": "index.js",
   "private": true,
   "dependencies": {
+    "organic-webapp": "latest",
     "underscore": "latest",
     "backbone": "latest",
     "jquery-browserify": "*"
