@@ -15,6 +15,7 @@
 
 #explanations-wrapper {
   border-top: 1px solid #bbbbbb;
+  padding-bottom: 50px;
 }
 
 .how-it-works { float: left; position: relative; width: 280px;}
