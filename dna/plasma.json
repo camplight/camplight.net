@@ -1,11 +1,15 @@
 {
   "PageCode": {
     "source": "node_modules/organic-webcell/plasma/PageCode",
-    "root": "/client"
+    "root": "/client",
+    "useCache": true,
+    "debug": false,
+    "uglify": true
   },
   "PageRender": {
     "source": "node_modules/organic-webcell/plasma/PageRender",
-    "root": "/client"
+    "root": "/client",
+    "useCache": true
   },
   "LogicAction": {
     "source": "node_modules/organic-webcell/plasma/LogicAction"

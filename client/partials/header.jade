@@ -1,7 +1,8 @@
 #header
   .wrap
-    h1#logo
-      | CampLight
+    a(href="/")
+      h1#logo
+        | CampLight
 script
   $(document).ready(function(){
   $("#header .wrap").html($("#animatedLogoTemplate").html());
@@ -9,9 +10,11 @@ script
   $(".logoShadow").animate({ opacity: "1" }, 600);
   $(".logoCamplightText").delay(800).animate({ opacity: "1" }, 600);
   });
-script#animatedLogoTemplate(type='xml/html-temaplte')
-  <div class="logo">
-  <img class="logoTop" src="images/animatedLogo/icon.png"></img>
-  <img class="logoShadow" src="images/animatedLogo/shadow.png"></img>
-  <img class="logoCamplightText" src="images/animatedLogo/camplight.png"></img>
-  </div>
+script#animatedLogoTemplate(type='xml/html-temaplte').
+  <a href="/">
+    <div class="logo">
+    <img class="logoTop" src="images/animatedLogo/icon.png"></img>
+    <img class="logoShadow" src="images/animatedLogo/shadow.png"></img>
+    <img class="logoCamplightText" src="images/animatedLogo/camplight.png"></img>
+    </div>
+  </a>
