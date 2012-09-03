@@ -3,13 +3,6 @@
     a(href="/")
       h1#logo
         | CampLight
-script
-  $(document).ready(function(){
-  $("#header .wrap").html($("#animatedLogoTemplate").html());
-  $(".logoTop").animate({ opacity: "1", top: "20px" }, 600);
-  $(".logoShadow").animate({ opacity: "1" }, 600);
-  $(".logoCamplightText").delay(800).animate({ opacity: "1" }, 600);
-  });
 script#animatedLogoTemplate(type='xml/html-temaplte').
   <a href="/">
     <div class="logo">
