@@ -11,33 +11,30 @@
 
 #abouts .last { margin-left: 50px; width: 300px;}
 
-.info { font-size: 13px; width: 280px;}
+.info { font-size: 15px; width: 280px;}
 
 #explanations-wrapper {
   border-top: 1px solid #bbbbbb;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .how-it-works { float: left; position: relative; width: 280px;}
 
-.prezi { height: 130px; width: 270px; margin-left: 50px; float: left; position: relative;}
+.history { width: 270px; margin-left: 50px; float: left;}
 
-.prezi-player { margin-top: 25px;}
+.history ul {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.history .title {
+  font-size: 18px; width: 280px;
+  padding-top: 10px;
+}
+
+.principles ul {
+  margin-left: 0px;
+  padding-left: 0px;
+}
 
 .principles { width: 300px; float: right;}
-
-/* MEDIA SCREENS RESPONSIVE==========================----------------- */
-
-@media only screen and ( min-width: 768px ) and ( max-width: 960px ) {
-  
-}
-
-@media only screen and ( max-width: 767px ) {
-  
-}
-
-@media only screen and ( max-width: 479px ) {
-    .wrap { width: 360px; padding-left: 15px;}
-    .explanations-container { width: 360px; padding-left: 15px;}
-
-}
