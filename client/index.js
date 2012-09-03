@@ -2,7 +2,7 @@ require("ga");
 $ = require("jquery-browserify");
 
 $(document).ready(function(){
-  $("#header").css({
+  /*$("#header").css({
     height: "0px"
   }).show().animate({
     height: "224px"
@@ -30,5 +30,5 @@ $(document).ready(function(){
     height: "0px"
   }).delay(2600).show().animate({
     height: "300px"
-  }, 600);
+  }, 600);*/
 });

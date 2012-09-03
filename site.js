@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 var util = require("util");
-var Cell = require("organic-webapp/WebAppCell");
+var Cell = require("organic-webcell/WebCell");
 
 module.exports = function(dna) {
   Cell.call(this, dna);

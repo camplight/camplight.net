@@ -297,7 +297,6 @@ input[type=image] {vertical-align: middle}
   height: 14em;
   border-bottom: 1px solid #dddddd;
   background: #f9f9f9;
-  display: none;
 }
 
 
@@ -379,7 +378,6 @@ input[type=image] {vertical-align: middle}
  */
 #skills {
   margin: 3em 0 0 0;
-  display: none;
   overflow: hidden;
 }
 
@@ -443,7 +441,6 @@ input[type=image] {vertical-align: middle}
 #team {
   border-top: 1px solid #bbbbbb;
   background: #dddddd url("../images/team-tile.png");
-  display: none;
   overflow: hidden;
 }
 
@@ -526,7 +523,6 @@ input[type=image] {vertical-align: middle}
   padding: 2.5em 0 0 0;
   color: #ffffff;
   background: #444444 url("../images/bottom-tile.png") repeat-x;
-  display: none;
 }
 
 
@@ -653,7 +649,6 @@ input[type=image] {vertical-align: middle}
   background: #000000;
   font-size: 12px;
   line-height: 21px;
-  display: none;
 }
 
 

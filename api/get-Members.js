@@ -1,9 +1,11 @@
 var fs = require("fs");
-module.exports = function(chemical, config, callback){
-  fs.readFile(__dirname+"/members.json", function(err, data){
-    if(err)
-      throw err;
-    chemical.data.members = JSON.parse(data.toString());
-    callback();
-  });
+var _ = require("underscore");
+
+var data = fs.readFileSync(__dirname+"/members.json");
+var membersSorted = JSON.parse(data.toString());
+membersSorted = _.sortBy(membersSorted, "name");
+
+module.exports = function(chemical, callback){
+  chemical.data = _.extend(chemical.data || {}, { members : membersSorted});
+  callback();
 }

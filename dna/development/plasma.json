@@ -3,6 +3,6 @@
     "debug": true
   },
   "PageRender": {
-    "useCache": true
+    "useCache": false
   }
 }

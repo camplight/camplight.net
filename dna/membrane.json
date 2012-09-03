@@ -1,73 +1,48 @@
 {
   "HttpServer": {
-    "source": "node_modules/organic-webapp/membrane/HttpServer",
+    "source": "node_modules/organic-webcell/membrane/HttpServer",
     "port": 8080,
     "staticFolder": "/client/public",
     "routes": {
       "/" : {
-        "chain": [
-          "PageData",
-          "PageRender",
-          "httpResponse"
-        ],
-        "data": "/api/get-Members.js",
+        "chain": [ "LogicAction", "PageRender", "HttpServer"],
+        "action": "/api/get-Members.js",
         "page": "/index"
       },
       "/code.js": {
-        "chain": [
-          "PageCode",
-          "httpResponse"
-        ],
+        "chain": [ "PageCode", "HttpServer" ],
         "code": "/index.js",
         "content-type": "text/javascript"
       },
 
       "/about" : {
-        "chain": [
-          "PageRender",
-          "httpResponse"
-        ],
+        "chain": [ "PageRender", "HttpServer" ],
         "page": "/about"
       },
 
       "/shop": {
-        "chain": [
-          "PageRender",
-          "httpResponse"
-        ],
+        "chain": [ "PageRender", "HttpServer" ],
         "page": "/shop"
       },
       "/shop.js": {
-        "chain": [
-          "PageCode",
-          "httpResponse"
-        ],
+        "chain": [ "PageCode", "HttpServer" ],
         "code": "/shop.js",
         "content-type": "text/javascript"
       },
       "/shop-request": {
-        "chain": [
-          "PageRender",
-          "httpResponse"
-        ],
+        "chain": [ "PageRender", "HttpServer" ],
         "page": "/shop-request"
       },
       "/shop-requestform": {
-        "chain": [
-          "PageRender",
-          "httpResponse"
-        ],
+        "chain": [ "PageRender", "HttpServer" ],
         "page": "/shop-requestform"
-      },
+      }
+    },
 
-      "*": {
-        "chain": [
-          "PageRender",
-          "httpResponse"
-        ],
+    "notfoundRoute":  {
+        "chain": [ "PageRender", "HttpServer" ],
         "page": "/404",
         "statusCode": 404
       }
     }
-  }
 }

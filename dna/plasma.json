@@ -1,17 +1,16 @@
 {
   "PageCode": {
-    "source": "node_modules/organic-webapp/plasma/PageCode",
+    "source": "node_modules/organic-webcell/plasma/PageCode",
     "root": "/client"
   },
   "PageRender": {
-    "source": "node_modules/organic-webapp/plasma/PageRender",
+    "source": "node_modules/organic-webcell/plasma/PageRender",
     "root": "/client"
   },
-  "PageData": {
-    "source": "node_modules/organic-webapp/plasma/PageData",
-    "root": "/data"
+  "LogicAction": {
+    "source": "node_modules/organic-webcell/plasma/LogicAction"
   },
   "ErrorHandler": {
-    "source": "node_modules/organic-webapp/plasma/ErrorHandler"
+    "source": "node_modules/organic-webcell/plasma/ErrorHandler"
   }
 }
