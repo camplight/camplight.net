@@ -21,14 +21,14 @@ html
       #skills
         .wrap
           ul
-            li.area
+            li.area(effect="dropin")
               h2 Frontend
               ul
                 li HTML 5
                 li CSS 3
                 li Javascript
                 li Flash/Flex
-            li.area
+            li.area(effect="dropin")
               h2 Backend
               ul
                 li Node.js
@@ -36,7 +36,7 @@ html
                 li Python
                 li Java
                 li PHP
-            li.area
+            li.area(effect="dropin")
               h2 Database
               ul
                 li SQL
@@ -44,28 +44,28 @@ html
                 li CouchDB
                 li Redis
                 li Neo4j
-            li.area
+            li.area(effect="dropin")
               h2 Mobile
               ul
                 li iOS/Objective C
                 li Android
                 li AS3/Flash/Air
                 li J2ME
-            li.area
+            li.area(effect="dropin")
               h2 Desktop
               ul
                 li Java
                 li C#
                 li C++
                 li AS3/Air
-            li.area
+            li.area(effect="dropin")
               h2 Design
               ul
                 li Web
                 li Identity
                 li Print
                 li Illustration
-            li.area
+            li.area(effect="dropin")
               h2 Linux
               ul
                 li System Administration
@@ -75,7 +75,7 @@ html
           h2 Team
           ul
             each member in members
-              li.vcard
+              li.vcard(effect="dropin")
                 h3.fn= member.name
                 span.role= member.role
     include ./partials/footer
