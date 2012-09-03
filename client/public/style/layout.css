@@ -1,0 +1,215 @@
+html, body {
+  height: auto;
+  min-height: 100%;
+}
+
+#content {
+  height: 100%;
+  min-height: 100%;
+  background: #DDD url("../images/team-tile.png");
+  padding-bottom: 6.5em;
+}
+
+.wrap {
+  margin: 0 auto;
+  width: 960px;
+  min-height: 0;
+  _zoom: 1;
+}
+.wrap:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+#header {
+  height: 14em;
+  border-bottom: 1px solid #dddddd;
+  background: #f9f9f9;
+}
+
+
+#logo {
+  margin: 0;
+  padding: 130px 0 0 0;
+  background: url("../images/camplight-logo.png") center 10px no-repeat;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+}
+
+
+:root #logo {
+  background:
+    url("../images/camplight-logo.png") center 10px no-repeat,
+    url("../images/camplight-logo-shadow.png") center 117px no-repeat;
+  -ms-animation: header-anim 2s;
+  -moz-animation: header-anim 2s;
+  -webkit-animation: header-anim 2s;
+}
+
+
+@-ms-keyframes header-anim {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes header-anim {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-webkit-keyframes header-anim {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.logo {
+  width: 140px;
+  margin: 0 auto;
+}
+
+.logoTop {
+  margin-left: 23px;
+  display: block;
+  z-index: 3;
+  position: relative;
+  opacity: 0;
+}
+
+.logoShadow {
+  margin-left: 33px;
+  top: 14px;
+  display: block;
+  position: relative;
+  opacity: 0;
+}
+
+.logoCamplightText {
+  top: 20px;
+  position: relative;
+  opacity: 0;
+}
+
+#bottom {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  min-height: 6.5em;
+  padding: 2.5em 0 0 0;
+  color: #ffffff;
+  background: #444444 url("../images/bottom-tile.png") repeat-x;
+}
+
+
+#bottom h2 {
+  margin: 0 0 .75em 0;
+  color: #cccccc;
+  font-size: 18px;
+  line-height: 21px;
+  text-shadow: 0 0 2px #333333;
+}
+
+
+#bottom ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  min-height: 0;
+  _zoom: 1;
+}
+#bottom ul:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+#bottom li {
+  float: left;
+  display: inline;
+}
+
+
+#bottom a {
+  color: #ffffff;
+}
+
+#partners {
+  margin: 0 10px;
+  width: 700px;
+  float: left;
+  display: inline;
+}
+
+
+  #partners ul {
+    margin: 0 -10px;
+  }
+  #partners li {
+    margin: 0 5px;
+    margin-bottom: 10px;
+    width: 145px;
+
+  }
+
+
+  #partners a {
+    line-height: 3.6em;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-indent: -999em;
+    display: block;
+    overflow: hidden;
+  }
+
+
+  #partners .gamecraft a {
+    background-image: url("../images/partners/gamecraft.png");
+  }
+  #partners .shtrak a {
+    background-image: url("../images/partners/shtrak.png");
+  }
+  #partners .sourcerealms a {
+    background-image: url("../images/partners/sourcerealms.png");
+  }
+  #partners .crystalplay a {
+    background-image: url("../images/partners/crystalplay.png");  
+  }
+
+
+#about {
+  margin: 0 10px;
+  width: 220px;
+  float: right;
+  display: inline
+}
+
+
+  #about ul {
+    margin: 0 -10px;
+  }
+  #about li {
+    margin: 0 10px;
+    /*width: 140px;*/
+  }
+
+
+  #about .mail a {
+    color: #99ffff;
+  }
+
+
+#footer {
+  padding: .75em 0;
+  color: #999999;
+  background: #000000;
+  font-size: 12px;
+  line-height: 21px;
+}
+
+
+  #footer p {
+    margin: 0;
+  }
+
+
+  #footer .copy {
+    text-align: center;
+  }
