@@ -1,7 +1,7 @@
 !!! 5
 html
   head
-    title CampLight Ltd.
+    title Camplight Ltd.
     meta(charset='utf-8')
     meta(name='copyright', content='Camplight Ltd.')
     meta(name='author', content='Camplight')
@@ -16,8 +16,8 @@ html
     script(src="/code.js")
 
   body
-    include ./partials/header
     #content
+      include ./partials/header
       #abouts
         .wrap
             .oneline.first
@@ -33,7 +33,7 @@ html
               p.info
                 | <i>We should have better into text for our principles... </i>
       #explanations-wrapper
-        .explanations-container
+        .wrap
           .how-it-works
             h2 How does Camplight work?
             p.info.works
@@ -72,4 +72,4 @@ html
                 h3 Collaboration
                 .details
                   | <i> text for collaboration principle </i>
-    include ./partials/footer
+      include ./partials/footer
