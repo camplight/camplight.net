@@ -4,10 +4,16 @@ html, body {
 }
 
 #content {
-  height: auto;
   min-height: 100%;
   background: #DDD url("../images/team-tile.png");
 }
+
+.main {
+  overflow:auto;
+  padding-bottom: 100px;
+}
+
+html, body {height: 100%;}
 
 .wrap {
   margin: 0 auto;
@@ -90,11 +96,12 @@ html, body {
 
 #bottom {
   position: relative;
-  width: 100%;
-  min-height: 6.5em;
+  height: 100px;
   padding: 2.5em 0 0 0;
   color: #ffffff;
   background: #444444 url("../images/bottom-tile.png") repeat-x;
+  clear:both;
+  overflow: hidden;
 }
 
 

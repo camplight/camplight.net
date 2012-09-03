@@ -13,10 +13,7 @@
 
 .info { font-size: 15px; width: 280px;}
 
-#explanations-wrapper {
-  border-top: 1px solid #bbbbbb;
-  margin-bottom: 50px;
-}
+.main { border-top: 1px solid #bbbbbb; }
 
 .how-it-works { float: left; position: relative; width: 280px;}
 
