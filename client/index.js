@@ -13,13 +13,30 @@ var showAll = function(){
 var hoverAll = function(){
   var target = $('[effect-hover="blink"]');
   target.mouseenter(function(){
-    $(".fn", this)
+    var self = this;
+    $(this)
       .animate({
-        color: "#AAA"
+        opacity: 0
+      }, function(){
+        $(self).addClass("colored");
       })
       .delay(10)
       .animate({
-        color: "#333"
+        opacity: 1
+      });
+  });
+
+  target.mouseleave(function(){
+    var self = this;
+    $(this)
+      .animate({
+        opacity: 0
+      }, function(){
+        $(self).removeClass("colored");
+      })
+      .delay(10)
+      .animate({
+        opacity: 1
       });
   });
 }

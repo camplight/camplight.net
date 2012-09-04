@@ -79,17 +79,15 @@
     background: url("../images/team-icon.png") 0 0 no-repeat;
     float: left;
     display: inline;
-
-    transition: background .45s ease-in-out;
-    -moz-transition: background .45s ease-in-out;
-    -webkit-transition: background .45s ease-in-out;
   }
 
-  #team li:hover {
+  #team li.colored {
+    margin: .75em 10px;
+    padding: .5em 0 1em 40px;
+    width: 180px;
     background: url("../images/team-icon_color.png") 0 0 no-repeat;
-    transition: background .45s ease-in-out;
-    -moz-transition: background .45s ease-in-out;
-    -webkit-transition: background .45s ease-in-out;
+    float: left;
+    display: inline;
   }
 
 
