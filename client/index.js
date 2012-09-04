@@ -33,10 +33,12 @@ var animateWhenIdle = function(){
   $.idleTimer(5000);
   $(document).bind("idle.idleTimer", function(){
     animationIntervalID = setInterval(function(){
+      if(Math.random()*100 > 50)
+        return;
       for(var i = target.length-1; i>=0; i--) {
-        $(".icon.colored", target[i]).delay((target.length-i)*50).fadeIn().delay((target.length-i)*10).fadeOut();
+        $(".icon.colored", target[i]).delay((target.length-i)*Math.random()*50).fadeIn().delay((target.length-i)*10).fadeOut();
       }
-    }, 4000);
+    }, 10000);
   });
   $(document).bind("active.idleTimer", function(){
     if(animationIntervalID)
