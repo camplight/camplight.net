@@ -14,30 +14,12 @@ var hoverAll = function(){
   var target = $('[effect-hover="blink"]');
   target.mouseenter(function(){
     var self = this;
-    $(this)
-      .animate({
-        opacity: 0
-      }, function(){
-        $(self).addClass("colored");
-      })
-      .delay(10)
-      .animate({
-        opacity: 1
-      });
+    $(".icon.colored", this).fadeIn();
   });
 
   target.mouseleave(function(){
     var self = this;
-    $(this)
-      .animate({
-        opacity: 0
-      }, function(){
-        $(self).removeClass("colored");
-      })
-      .delay(10)
-      .animate({
-        opacity: 1
-      });
+    $(".icon.colored", this).fadeOut();
   });
 }
 

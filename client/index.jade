@@ -76,6 +76,8 @@ html
           ul
             each member in members
               li.vcard(effect-show="dropin", effect-hover="blink")
+                .icon.gray
+                .icon.colored
                 - if(member.link)
                     a(href= member.link) 
                       h3.fn= member.name

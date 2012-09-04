@@ -74,22 +74,30 @@
   }
   #team li {
     margin: .75em 10px;
-    padding: .5em 0 1em 40px;
-    width: 180px;
+    padding: .5em 0 .25em 0;
+    width: 220px;
+    float: left;
+    display: inline;
+  }
+
+  #team .gray {
+    margin: -7px 0 0 0;
+    float: left;
+    width: 30px;
+    height: 60px;
     background: url("../images/team-icon.png") 0 0 no-repeat;
-    float: left;
-    display: inline;
+    margin-right: 10px;
   }
 
-  #team li.colored {
-    margin: .75em 10px;
-    padding: .5em 0 1em 40px;
-    width: 180px;
+  #team .colored {
+    position: absolute;
+    display: none;
+    margin: -7px 0 0 0;
+    width: 30px;
+    height: 60px;
     background: url("../images/team-icon_color.png") 0 0 no-repeat;
-    float: left;
-    display: inline;
+    margin-right: 10px;
   }
-
 
   #team h3 {
     margin: 0;
