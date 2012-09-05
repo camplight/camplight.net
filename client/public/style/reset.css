@@ -1,0 +1,294 @@
+
+/**
+ * @region Elements
+ */
+
+/* = RESET =====================================
+============================================= */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+/** Root elements */
+html {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+body {
+  margin: 0;
+  padding: 0;
+  color: #666666;
+  background: transparent;
+  font: 14px/1.5 "Maven Pro", "Segoe UI", "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, Lucida, sans-serif;
+}
+
+
+
+
+/** Block elements */
+div {}
+
+
+p {margin: 1.5em 0}
+pre {margin: 1.5em 0; font-family: monospace; white-space: pre}
+address {margin: 1.5em 0; font-style: italic}
+blockquote {margin: 1.5em 40px}
+
+
+header, nav, footer, article, aside {display: block}
+
+
+
+
+/** Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #333333;
+  font-weight: normal;
+}
+h1 {
+  margin: 0 0 0.6em;
+  font-size: 2.5em;
+  line-height: 1.2;
+}
+h2 {
+  margin: .75em 0 -10px 0;
+  font-size: 19px;
+  line-height: 1;
+}
+h3 {
+   margin: .75em 0 10px 0;
+  font-size: 19px;
+  line-height: 1;
+}
+h4 {
+  margin: 1.2em 0;
+  font-size: 1.25em;
+  line-height: 1.2;
+}
+h5 {
+  margin: 1.5em 0;
+  font-size: 1em;
+  line-height: 1.5;
+  font-weight: bold;
+}
+h6 {
+  margin: 1.5em 0;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+
+
+
+/** Tables */
+table {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-spacing: 2px;
+  border-collapse: separate;
+}
+caption {
+  text-align: center;
+}
+thead, tbody ,tfoot {
+  vertical-align: top;
+}
+th, td {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  vertical-align: inherit;
+}
+th {
+  font-weight: bold;
+}
+td {}
+
+
+
+
+/** Lists */
+ol, ul {
+  margin: 1.5em 0;
+  padding: 0 0 0 40px;
+}
+ol ol, ol ul,
+ul ul, ul ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+li {margin: 0;padding: 0}
+
+
+dl {margin: 1.5em 0}
+dt {}
+dd {margin: 0 0 0 40px}
+
+
+
+
+/** Quotes */
+blockquote {quotes: ""; quotes: none}
+cite {font-style: italic}
+q {quotes: "\201c" "\201d" "\2018" "\2019"}
+
+
+
+
+/** Links */
+a {color: #333333; text-decoration: none;}
+a:visited {text-decoration: none;}
+a:hover {color: #211b12; text-decoration: underline;}
+a:focus {text-decoration: none;}
+a:active {text-decoration: none;}
+
+
+
+
+/** Phrase elements */
+i, em {font-style: italic}
+b, strong {font-weight: bold}
+small {font-size: smaller}
+big {font-size: bigger}
+
+
+sub, sup {font-size: smaller; line-height: normal}
+sub {vertical-align: sub}
+sup {vertical-align: super}
+
+
+tt, code, kbd, samp {font-family: monospace}
+
+
+
+
+/** Images */
+img, a img {
+  border: none;
+  vertical-align: baseline;
+}
+
+
+
+
+/** @endregion */
+
+
+
+
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/**
+ * @region Form elements
+ */
+form {margin: 0; padding: 0}
+input, textarea, button, option, select {margin: 0; padding: 0}
+
+
+
+
+/** Fieldsets */
+fieldset {border: 1px solid #cccccc}
+fieldset > legend {}
+
+
+
+
+/** Textboxes */
+textarea,
+input[type=text],
+input[type=password] {
+  padding: 3px;
+  color: #000000;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  font: inherit;
+}
+
+
+
+
+/** Single / Multiple choice */
+input[type=radio],
+input[type=checkbox] {
+  margin: 0 3px 0 0;
+  vertical-align: middle;
+}
+
+
+
+
+/** Dropdowns */
+select {}
+option {}
+
+
+
+
+/** Buttons */
+button,
+input[type=reset],
+input[type=button],
+input[type=submit] {}
+
+
+input[type=image] {vertical-align: middle}
+
+
+
+
+/** @endregion */

@@ -1,0 +1,9 @@
+{
+  "PageCode": {
+    "debug": true,
+    "useCache": false
+  },
+  "PageRender": {
+    "useCache": false
+  }
+}
