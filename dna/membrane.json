@@ -1,8 +1,11 @@
 {
   "HttpServer": {
-    "source": "node_modules/organic-webcell/membrane/HttpServer",
+    "source": "node_modules/organic-webcell/membrane/ExpressHttpServer",
     "port": 8001,
-    "staticFolder": "/client/public",
+    "middleware": [
+      { "source": "node_modules/organic-webcell/membrane/expressMiddleware/staticFolder", 
+        "staticDir": "client/public/" }
+    ],
     "routes": {
       "/" : {
         "chain": [ "LogicAction", "PageRender", "HttpServer"],
