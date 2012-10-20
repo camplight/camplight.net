@@ -7,6 +7,7 @@ html
     meta(name='author', content='Camplight')
     meta(name='keywords', content='open,source,company,software,hardware,freeware,technologies,freelancers,team,camplight')
     meta(name='description', content='Software and Hardware development company made by people for people')
+    meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
     link(rel='author', href='humans.txt')
     link(rel='shortcut icon', href='favicon.ico')
 
@@ -16,7 +17,7 @@ html
 
   body
 
-    .content
+    #skrollr-body.content
         .background(data-0="position: fixed; top: 20%",
             data-30="position: fixed; top: 0%",
             data-100="position: fixed; top: 0%",
@@ -47,7 +48,7 @@ html
         .clearfix
         .resources.invisible(
             data-450="left: -100%; opacity: 0", 
-            data-550="left: 25%; top: 60%; opacity: 1", 
+            data-550="left: 0%; top: 60%; opacity: 1", 
             data-640="", 
             data-690="top: 0%; opacity: 0")
             h2 Available resources: 
@@ -59,7 +60,7 @@ html
         .clearfix
         .skills.invisible(
             data-450="left: 100%; opacity: 0", 
-            data-550="left: 25%; top: 25%; opacity: 1", 
+            data-550="left: 0%; top: 25%; opacity: 1", 
             data-600="", 
             data-650="top: -35%; opacity: 0")
             h2 Skills
