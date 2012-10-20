@@ -46,11 +46,11 @@ body {
 }
 
 .background {
-  position: fixed;
   background-image: url("../images/background.jpg");
   width: 960px;
   margin: 0 auto;
   height: 720px;
+  z-index: 50;
 }
 
 .content {
