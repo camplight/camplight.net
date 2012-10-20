@@ -17,17 +17,24 @@ html
   body
 
     .content
-        .background(data-0="position: fixed; top: 0%",
+        .background(data-0="position: fixed; top: 20%",
+            data-30="position: fixed; top: 0%",
+            data-100="position: fixed; top: 0%",
+            data-200="position: fixed; top: -10%",
+            data-380="",
+            data-450="position: fixed; top: 0%",
             data-1800="position: fixed; top: -3%")
         .about(
             data-0="top: 100%", 
+            data-30="top: 80%",
+            data-60="",
             data-100="top: -100%")
             h1 Camplight is open, flat heirarchy and distributed software company
         .aboutCamplight.invisible(
             data-100="top: 100%; opacity: 0", 
-            data-200="top: 50%; opacity: 1", 
+            data-200="top: 70%; opacity: 1", 
             data-380="", 
-            data-450="top: -100%; opacity: 0")
+            data-450="top: 100%; opacity: 0")
             .box
               h2 What is Camplight?
               p Camplight is international decentralized 'open' company.
@@ -40,9 +47,9 @@ html
         .clearfix
         .resources.invisible(
             data-450="left: -100%; opacity: 0", 
-            data-550="left: 25%; top: 25%; opacity: 1", 
-            data-600="", 
-            data-650="top: -100%; opacity: 0")
+            data-550="left: 25%; top: 60%; opacity: 1", 
+            data-640="", 
+            data-690="top: 0%; opacity: 0")
             h2 Available resources: 
             ul.resourceList
                 li.resource Design
@@ -51,10 +58,10 @@ html
             a(href="mailto: team@camplight.net").contactusBtn.pull-right Contact us
         .clearfix
         .skills.invisible(
-            data-450="right: -100%; opacity: 0", 
-            data-500="right: 25%; top: 50%; opacity: 1", 
+            data-450="left: 100%; opacity: 0", 
+            data-550="left: 25%; top: 25%; opacity: 1", 
             data-600="", 
-            data-650="top: -100%; opacity: 0")
+            data-650="top: -35%; opacity: 0")
             h2 Skills
             for skill in skills
                 .skillGroup
