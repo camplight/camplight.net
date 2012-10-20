@@ -1,0 +1,88 @@
+
+
+	      ,:,                                                  .                           .ir                  
+	  ,5#@@@@@@B                                               @@h         @@@              @@S                 
+	.G@@@i::rX@@@                                             ,@@@         A@B             .@@@         is      
+	B@@2        &   .;S#Gr    ,, ,;s2S. sA#As    .:.,;ssS,     @@@                ,;sr:,r;  @@G rir;    @@@     
+	@@@.           @@@@@@@@i  #@@@@@@@@@@@@@@@3  r@@@@@@@@@    @@@         @@@  r@@@@@@@@@  @@@@@@@@@   @@@@@@@.
+	@@@:           @.    @@@  B@@.   @@@,   @@@  ;@@5   2@@i   @@@         @@@  @@@    @@#  @@@   r@@G  @@@,:;, 
+	@@@:             i#@@@@@  3@@    X@@    A@@  ,@@r   ,@@i   @@@         @@@  @@@    @@H  @@5    @@G  @@@     
+	@@@r        ,  A@@Ms &@@  5@@.   9@@    H@@  .@@r   ,@@i   @@@         @@@   @@@@@@@@   @@h   .@@X  @@@     
+	r@@@;     ;@@ 2@@;   G@@  2@@,   &@@    M@@  .@@#   i@@r   @@@      ,  @@@  @@.:is.     @@A   .@@3  @@@.   9
+	  @@@@@@@@@@i  @@@@@@@@@  i@@:   2@@,   G@@  .@@@@@@@@&    @@@@@@@@@@  @@@  @@Gr;:XXi   @@@    @@B   @@@@@@@
+	    ,s22i:       ;25;  :    ;      ;      ;  ,@@s.is,        ,:;;;;;    .;   .s239M@@@   ::     :,    .r2i. 
+						     :@@;                           B;     @@@                      
+						     ,@@i                           s##BHH#@A:                         
+			
+
+	/* ABOUT CAMPLIGHT */
+
+
+A new age company build from people for people. 
+No limits, no bariers, total transparency and complete trust are esentiall ingredients of its foundation. 
+Driven by all who contribute their time and skills, decentralized, camplight combines the best of everyone of the team leaving creativity, problem solving and imagination stronger than ever.
+
+We do not work just for someone, we do work with the best. 
+
+Total openess is key factor in forming our living model, and we do follow its patterns by opening every aspect of our organization to those who work with us. 
+
+Web: http://camplight.net
+Twitter: http://twitter.com/camplightment
+Github: http://github.com/camplight
+
+
+	/* TEAM */
+
+
+Name: Mladen Gorchev
+Site: http://mladengorchev.com
+Skills: A very visually creative individual, doing the graphics & web design we & our clients appreciate. He's skilled in photoshop, illustrator & frontend development (html5/css3)
+Location: Varna, Bulgaria
+
+
+Name: Boris Filiov
+Site: http://obi.wizartworx.com
+Skills: His best social skill is that he's able to unite people for a common goal. Highly skilled & competent software engineer, fluent in backend development (node.js, php, java), databases (MySQL, MongoDB, CouchDB) frontend development (as3/flex, html5/css3/js), mobile development (j2me, android) & desktop development (C#)
+Location: Varna, Bulgaria
+
+
+Name: Pavel Dobrev
+Site: Not yet.
+Skills: Really clever, hard working practical developer & our best team player, skilled in backend development (node.js), databases (MongoDB, MySQL), frontend development (as3/flex/flash, 2d/3d animations, games, html5/css3/js), mobile development ( as3/flash/air ) & desktop development (as3/air)
+Location: Varna, Bulgaria
+
+
+Name: Alex Kuklin
+Site: http://sudo.su
+Skills: This is our systems administrator. He's very easy to work & hang out with, skilled in Debian GNU/Linux administration, high load systems architecture & tunning, MySQL optimization & VoIP solutions. Also likes to learn & share his knowledge with the Camplight community.
+Location: Varna, Bulgaria
+
+
+Name: Vasil Kalkov
+Site: http://kalkov.github.com
+Skills: Early adopter, eager about learning & applying new practicle technologies to optimize our workflow. He's skilled in ruby & rails, node.js, html5, css3, databases (MongoDB, CouchDB, Redis, SQL) & microcontrollers.
+Location: Varna, Bulgaria
+
+
+Name: Nevena Ivanova
+Site: Not yet.
+Skills: We all love her. Being the sweetheart of the team, she also has a good background in graphics design (photoshop, illustrator) & hand-drawing. With her organic style she creates works which have a life of their own.
+Location: Varna, Bulgaria
+
+
+Name: Marta Kostova
+Site: http://arta.wizartworx.com
+Skills: She is fluent in backend (node.js), databases (MySQL, MongoDB), frontend (as3/flex, html5/css3/javascript) & mobile (Objective C on iPhones). Her ability to create order out of chaos helps the team maintain a holistic approach to our workflow.
+Location: Varna, Bulgaria
+
+	/* THANKS */
+
+
+
+
+	/* SITE */
+                            
+
+Last update: 2012/10/21
+Standards: XHTML, CSS
+Components: jQuery, Coffe, diversity of text editors

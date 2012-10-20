@@ -1,18 +1,21 @@
 {
-  "PageCode": {
-    "source": "node_modules/organic-webcell/plasma/PageCode",
+  "BundleCode": {
+    "source": "node_modules/organic-webcell/plasma/BundleCode",
     "root": "/client",
     "useCache": true,
     "debug": false,
     "uglify": true
   },
-  "PageRender": {
-    "source": "node_modules/organic-webcell/plasma/PageRender",
-    "root": "/client",
+  "RenderPage": {
+    "source": "node_modules/organic-webcell/plasma/RenderPage",
+    "root": "/templates",
     "useCache": true
   },
-  "LogicAction": {
-    "source": "node_modules/organic-webcell/plasma/LogicAction"
+  "CallAction": {
+    "source": "node_modules/organic-webcell/plasma/CallAction"
+  },
+  "CallChain": {
+    "source": "node_modules/organic-webcell/plasma/CallChain"
   },
   "ErrorHandler": {
     "source": "node_modules/organic-webcell/plasma/ErrorHandler"

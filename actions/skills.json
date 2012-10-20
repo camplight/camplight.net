@@ -1,0 +1,53 @@
+[
+  { 
+    "name":"Frontend",
+    "items": [
+     "HTML 5",
+     "CSS 3",
+     "Javascript",
+     "Flash/Flex"
+  ]},
+  { 
+    "name": "Backend",
+    "items": [
+       "Node.js",
+       "Ruby",
+       "Python",
+       "Java",
+       "PHP"
+  ]},{ 
+    "name": "Database",
+    "items": [
+       "SQL",
+       "MongoDB",
+       "CouchDB",
+       "Redis",
+       "Neo4j"
+  ]},{ 
+    "name": "Mobile",
+    "items": [
+       "iOS/Objective C",
+       "Android",
+       "AS3/Flash/Air",
+       "J2ME"
+  ]},{ 
+    "name": "Desktop",
+    "items":[
+       "Java",
+       "C#",
+       "C++",
+       "AS3/Air"
+  ]},{ 
+    "name": "Design",
+    "items": [
+       "Web",
+       "Identity",
+       "Print",
+       "Illustration"
+  ]},{ 
+    "name": "Linux",
+    "items": [
+       "System Administration",
+       "Optimization"
+  ]}
+]

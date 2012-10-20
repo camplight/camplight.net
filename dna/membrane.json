@@ -4,46 +4,36 @@
     "port": 8001,
     "middleware": [
       { "source": "node_modules/organic-webcell/membrane/expressMiddleware/staticFolder", 
-        "staticDir": "client/public/" }
+        "staticDir": "public/" }
     ],
     "routes": {
       "/" : {
-        "chain": [ "LogicAction", "PageRender", "HttpServer"],
-        "action": "/api/get-Members.js",
-        "page": "/index"
+        "type": "CallChain",
+        "chain": [
+          {
+            "type": "CallAction",
+            "action": "/actions/index"
+          },
+          {
+            "type": "RenderPage",
+            "page": "/index"
+          }
+        ]
       },
       "/code.js": {
-        "chain": [ "PageCode", "HttpServer" ],
-        "code": "/index.js",
+        "type": "BundleCode" ,
+        "code": "/index",
         "content-type": "text/javascript"
       },
 
       "/about" : {
-        "chain": [ "PageRender", "HttpServer" ],
+        "type": "RenderPage",
         "page": "/about"
-      },
-
-      "/shop": {
-        "chain": [ "PageRender", "HttpServer" ],
-        "page": "/shop"
-      },
-      "/shop.js": {
-        "chain": [ "PageCode", "HttpServer" ],
-        "code": "/shop.js",
-        "content-type": "text/javascript"
-      },
-      "/shop-request": {
-        "chain": [ "PageRender", "HttpServer" ],
-        "page": "/shop-request"
-      },
-      "/shop-requestform": {
-        "chain": [ "PageRender", "HttpServer" ],
-        "page": "/shop-requestform"
       }
     },
 
     "notfoundRoute":  {
-        "chain": [ "PageRender", "HttpServer" ],
+        "type": "RenderPage",
         "page": "/404",
         "statusCode": 404
       }

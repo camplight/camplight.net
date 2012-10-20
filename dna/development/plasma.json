@@ -1,9 +1,9 @@
 {
-  "PageCode": {
+  "BundleCode": {
     "debug": true,
     "useCache": false
   },
-  "PageRender": {
+  "RenderPage": {
     "useCache": false
   }
 }
