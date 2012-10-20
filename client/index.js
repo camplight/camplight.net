@@ -8,7 +8,6 @@ $(document).ready(function(){
   require("./vendor/skrollr.min.js");
   require("./vendor/skrollr.mobile");
   skrollr.init({
-    forceHeight: true,
     render: function(data){
       //console.log(data);
     }
