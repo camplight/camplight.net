@@ -1,5 +1,4 @@
 require('shelljs/global');
-var async = require("async");
 
 var p = require("../package.json");
 var newVersion = p.version.split(".");
