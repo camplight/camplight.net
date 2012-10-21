@@ -6,7 +6,6 @@
   "dependencies": {
     "organic-webcell": "0.0.13",
     "underscore": "latest",
-    "backbone": "latest",
     "jquery-browserify": "*"
   },
   "devDependencies": {

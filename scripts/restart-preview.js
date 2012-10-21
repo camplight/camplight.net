@@ -22,7 +22,7 @@ if(exec(remote(stopCommand)).code != 0){
   exit(1);
 }
 
-var startCommand = home+" NODE_ENV=preview forever start camplight.net.js";
+var startCommand = home+" CELL_MODE=preview forever start camplight.net.js";
 if(exec(remote(startCommand)).code != 0){
   echo("Error: failed to start remote "+startCommand);
   exit(1);

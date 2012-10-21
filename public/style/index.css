@@ -26,6 +26,7 @@ html, body {
   padding:0;
   margin:0;
   overflow-x:hidden;
+  font-family: 'Signika Negative', serif;
 }
 
 .skrollable {
@@ -41,8 +42,28 @@ html, body {
   position:static;
 }
 
-body {
-  font-family: 'Signika Negative', serif;
+#menu ul {
+  list-style: none;
+  padding: 0px;
+
+}
+
+#menu li a {
+  color: #000;
+  font-size: 28px;
+  text-decoration: none;
+}
+
+#menu li a.active {
+  color: #F00;
+  font-size: 28px;
+  text-decoration: none;
+}
+
+#menu {
+  position: fixed;
+  right: 100px;
+  top: 50px;
 }
 
 .background {
@@ -51,7 +72,14 @@ body {
   width: 60%;
   height: 720px;
   z-index: 50;
-  left: 20%;
+}
+
+.backgroundColored {
+  background-image: url("../images/backgroundColored.jpg");
+  max-width: 960px;
+  width: 60%;
+  height: 720px;
+  z-index: 51;
 }
 
 .content {
