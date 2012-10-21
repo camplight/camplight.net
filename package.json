@@ -9,7 +9,9 @@
     "backbone": "latest",
     "jquery-browserify": "*"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "shelljs" : "*"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
