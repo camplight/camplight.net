@@ -45,7 +45,6 @@ html, body {
 #menu ul {
   list-style: none;
   padding: 0px;
-
 }
 
 #menu li a {
@@ -64,20 +63,19 @@ html, body {
   position: fixed;
   right: 100px;
   top: 50px;
+  z-index: 101;
 }
 
 .background {
   background-image: url("../images/background.jpg");
-  max-width: 960px;
-  width: 60%;
+  width: 960px;
   height: 720px;
   z-index: 50;
 }
 
 .backgroundColored {
   background-image: url("../images/backgroundColored.jpg");
-  max-width: 960px;
-  width: 60%;
+  width: 960px;
   height: 720px;
   z-index: 51;
 }
@@ -85,16 +83,6 @@ html, body {
 .content {
   width: 960px;
   height: 100%;
-  margin: 0 auto;
-}
-
-.logoTop {
-  width: 100px;
-  margin: 0 auto;
-}
-
-.logoBottom {
-  width: 100px;
   margin: 0 auto;
 }
 
