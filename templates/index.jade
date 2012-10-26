@@ -31,17 +31,17 @@ html
             a(href="#partners") Partners
           li
             a(href="#contacts") Contacts
-      .background(data-0="top: 20%",
+      .background(data-0="top: 20%; opacity: 1",
           data-200="top: 0%",
           data-400="top: -10%",
           data-850="top: -40%",
-          data-7300="top: 10%")
+          data-7300="top: 10%",
+          data-7600="top: 0%; opacity: 0")
       .backgroundColored.invisible(data-0="top: 20%; opacity: 0",
           data-200="top: 0%",
           data-400="top: -10%; opacity: 1",
           data-850="top: -40%; opacity: 0",
-          data-7000="top: 9%; opacity: 0",
-          data-7300="top: 10%; opacity: 1")
+          data-7000="top: 9%; opacity: 0")
       .about.invisible(
           data-120="top: 100%; opacity: 0;transform: scale(0)", 
           data-500="top: 30%; opacity: 1;transform: scale(1)",
@@ -167,13 +167,20 @@ html
               li post office address: 
       .clearfix
       #impress.invisible(
-        data-7300="top: 100%; opacity: 0", 
-        data-7400="top: 50%; opacity: 1; position: fixed;")
-        #step1.step(data-x='400', data-y='800', data-z='0')
-          .welcome Have you noticed that hitting "space bar"
-        #step2.step(data-x='100', data-y='100', data-z='-200', 
-          data-rotate-x="-40", data-rotate-y="10", data-rotate-z="200")
-          .hint will bring you
-        #step3.step(data-x='900', data-y='500', data-z='-100', 
-          data-rotate-x="-400", data-rotate-y="800")
-          .proMode to see the pro mode?
+        data-7400="top: 100%; opacity: 0", 
+        data-7600="top: 50%; opacity: 1; position: fixed;")
+        #step1.step(data-x='400', data-y='800', data-z='50')
+          .welcome hit space bar to see more
+        #step2.step(data-x='100', data-y='740', data-z='-10')
+          .logoImg
+        #step3.step(data-x='0', data-y='1700', data-z='100')
+          .box but you need to be ready
+        #step4.step(data-x='0', data-y='1700', data-z='-100',
+          data-rotate-x="180")
+          .box for some 3d
+        #step5.step(data-x='0', data-y='3700', data-z='0',
+          data-rotate-x="180", data-rotate-y="180")
+          .line and little realtime
+        #step6.step(data-x='0', data-y='3460', data-z='240'
+          data-rotate-x="270", data-rotate-y="180")
+          .line welcome to Camplight

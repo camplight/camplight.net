@@ -190,3 +190,32 @@ html, body {
 #impress .proMode {
   font-size: 56px;
 }
+
+#impress .logoImg {
+  background-image: url("../images/backgroundColored.jpg");
+  width: 960px;
+  height: 720px; 
+}
+
+#impress .box {
+  width: 340px;
+  height: 240px;
+  border: 1px solid #888;
+  box-shadow: 10px 10px 5px #888;
+  border-radius: 25px;
+  text-align: center;
+  line-height: 240px;
+  font-size: 24px;
+  background-color: white;
+}
+
+#impress .line {
+  width: 340px;
+  height: 240px;
+  text-align: center;
+  line-height: 240px;
+  font-size: 24px;
+  -moz-box-shadow: 0 0 10px 5px black, 40px -30px lime, 40px 30px 50px red, -40px 30px yellow, -40px -30px 50px blue;
+  -webkit-box-shadow: 0 0 10px 5px black, 40px -30px lime, 40px 30px 50px red, -40px 30px yellow, -40px -30px 50px blue;
+  box-shadow: 0 0 10px 5px black, 40px -30px lime, 40px 30px 50px red, -40px 30px yellow, -40px -30px 50px blue;
+}
