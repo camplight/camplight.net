@@ -169,3 +169,24 @@ html, body {
   width: 480px;
   margin: 0 auto;
 }
+
+#impress {
+  width: 960px;
+  height: 500px;
+}
+
+#impress .welcome {
+  font-size: 48px;
+}
+
+#impress .welcome {
+  font-size: 48px;
+}
+
+#impress .hint {
+  font-size: 32px;
+}
+
+#impress .proMode {
+  font-size: 56px;
+}

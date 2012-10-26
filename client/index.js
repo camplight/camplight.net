@@ -7,9 +7,14 @@ isMobile = require("./vendor/mobileCheck").isMobile();
 
 $(document).ready(function(){
   $(".invisible").css({"opacity": 0});
-  require("./vendor/skrollr.min.js");
+
+  require("./vendor/skrollr.min");
   require("./vendor/skrollr.mobile");
+  require("./vendor/impress");
+
   var prevActiveMenu;
+  var api = impress();
+  api.init();
 
   s = skrollr.init({
     beforerender: function(data){
@@ -30,11 +35,16 @@ $(document).ready(function(){
       if(data.curTop<3900) 
         prevActiveMenu = $("#menu a[href='#partners']").addClass("active");
       else
-      if(data.curTop>7000) 
+      if(data.curTop>7000 && data.curTop<7200) 
         prevActiveMenu = $("#menu a[href='#contacts']").addClass("active");
-    }
+      else
+      if(data.curTop>7500) {
+        api.next();
+      }
+    },
   });
 
+  
   var setScrollTop = function(top) {
     if(isMobile) {
       skrollr.iscroll.scrollTo(0,-top);
@@ -85,7 +95,6 @@ $(document).ready(function(){
     $(".content").on("click", function(e){
       scrollNext();
     });
-    alert("DONE");
   }
     
 });

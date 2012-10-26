@@ -157,10 +157,23 @@ html
       .clearfix
       .contacts.invisible(
         data-7000="top: 100%; opacity: 0", 
-        data-7300="top: 20%; opacity: 1")
+        data-7300="top: 20%; opacity: 1",
+        data-7800="top: -100%; opacity: 0")
         .box
           h2 Contacts
           p.info
             ul
               li email: team@camplight.net
               li post office address: 
+      .clearfix
+      #impress.invisible(
+        data-7300="top: 100%; opacity: 0", 
+        data-7400="top: 50%; opacity: 1; position: fixed;")
+        #step1.step(data-x='400', data-y='800', data-z='0')
+          .welcome Have you noticed that hitting "space bar"
+        #step2.step(data-x='100', data-y='100', data-z='-200', 
+          data-rotate-x="-40", data-rotate-y="10", data-rotate-z="200")
+          .hint will bring you
+        #step3.step(data-x='900', data-y='500', data-z='-100', 
+          data-rotate-x="-400", data-rotate-y="800")
+          .proMode to see the pro mode?
