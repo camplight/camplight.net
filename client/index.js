@@ -35,12 +35,8 @@ $(document).ready(function(){
       if(data.curTop<3900) 
         prevActiveMenu = $("#menu a[href='#partners']").addClass("active");
       else
-      if(data.curTop>7000 && data.curTop<7200) 
+      if(data.curTop>7000 && data.curTop<7300) 
         prevActiveMenu = $("#menu a[href='#contacts']").addClass("active");
-      else
-      if(data.curTop>7500) {
-        api.next();
-      }
     },
   });
 
