@@ -27,10 +27,16 @@ html, body {
   margin:0;
   overflow-x:hidden;
   font-family: 'Signika Negative', serif;
+  background-color: #f2f2f2;
+}
+
+.content {
+  width: 1060px;
+  margin: 0 auto;
 }
 
 .skrollable {
-  position:fixed;
+  position:absolute;
   z-index:100;
 }
 
@@ -42,48 +48,261 @@ html, body {
   position:static;
 }
 
+#menu {
+  z-index: 101;
+  position: fixed;
+}
+
 #menu ul {
   list-style: none;
   padding: 0px;
 }
 
+#menu ul li {
+  background-color: #ed6458;
+  margin-top: 10px;
+  text-align: right;
+  padding-right: 30px;
+  padding-left: 15px;
+}
+
 #menu li a {
-  color: #000;
-  font-size: 28px;
+  color: #FFF;
+  font-size: 18px;
   text-decoration: none;
 }
 
 #menu li a.active {
   color: #F00;
-  font-size: 28px;
+  font-size: 18px;
   text-decoration: none;
 }
 
-#menu {
-  position: fixed;
-  right: 100px;
-  top: 50px;
-  z-index: 101;
+.camplightLogo {
+  background-image: url("../images/camplight_flame_big.png");
+  width: 220px;
+  height: 354px;
 }
 
-.background {
-  background-image: url("../images/background.jpg");
-  width: 960px;
-  height: 720px;
-  z-index: 50;
+.camplightTitle {
+  background-image: url("../images/CamplightText.png");
+  width: 315px;
+  height: 102px;
 }
 
-.backgroundColored {
-  background-image: url("../images/backgroundColored.jpg");
-  width: 960px;
-  height: 720px;
+.star1 {
+  background-image: url("../images/star1.png");
+  width: 43px;
+  height: 42px;
+}
+.star2 {
+  background-image: url("../images/star2.png");
+  width: 31px;
+  height: 32px;
+}
+.star3 {
+  background-image: url("../images/star3.png");
+  width: 38px;
+  height: 37px;
+}
+.star4 {
+  background-image: url("../images/star4.png");
+  width: 26px;
+  height: 26px;
+}
+
+.planetSaturn {
+  background-image: url("../images/planet_saturn.png");
+  width: 127px;
+  height: 91px;
+}
+
+.moonWithAstronaft {
+  background-image: url("../images/moonWithCosmonaft.png");
+  width: 229px;
+  height: 221px; 
+}
+
+.fallingStar {
+  background-image: url("../images/falling_star.png");
+  width: 121px;
+  height: 70px;  
+}
+
+.ballonBottom {
+  background-image: url("../images/ballon_bottom.png");
+  width: 338px;
+  height: 209px;  
+}
+
+.ballonBottom h1 {
+  margin-top: 80px;
+  margin-left: 10px;
+}
+.ballonBottom p {
+  margin-left: 10px;
+}
+
+.ballonTop {
+  background-image: url("../images/ballon_top.png");
+  width: 374px;
+  height: 229px;  
+}
+
+.ballonTop h1 {
+  margin-left: 10px;
+}
+.ballonTop p {
+  margin-left: 10px;
+}
+
+.spacestation {
+  background-image: url("../images/spacestationWithCosmonaft.png");
+  width: 205px;
+  height: 225px;
+}
+
+.rocket {
+  background-image: url("../images/rocket.png");
+  width: 99px;
+  height: 85px;
+}
+
+.rocketTrail {
+  background-image: url("../images/rocket_trail.png");
+  width: 167px;
+  height: 331px;
+}
+
+.ballonBottomLarger {
+  background-image: url("../images/ballon_bottom_larger.png");
+  width: 474px;
+  height: 220px;  
+}
+
+.ballonBottomLarger h1 {
+  margin-left: 10px;
+  margin-top: 80px;
+}
+.ballonBottomLarger p {
+  margin-left: 10px;
+}
+
+.cloudsTop {
+  background-image: url("../images/clouds_top.png");
+  width: 1060px;
+  height: 164px;
+}
+
+.fluffyCloud1 {
+  background-image: url("../images/fluffy_cloud1.png");
+  width: 400px;
+  height: 168px;
+  text-align: center;
+  line-height: 138px;
+  z-index: 102;
+}
+
+.skills {
+  width: 1060px;
+  background-color: #FFF;
+}
+.skillGroup {
+  margin-top: 150px;
+  float: left;
+  width: 125px;
+}
+.skillList {
+  list-style: none;
+  padding: 0px;
+}
+.skill {
+}
+
+.cloudsBottom {
+  background-image: url("../images/clouds_bottom.png");
+  width: 1060px;
+  height: 177px;
+}
+
+.fluffyCloud2 {
+  background-image: url("../images/fluffy_cloud2.png");
+  width: 293px;
+  height: 166px;
+}
+
+.fluffyCloud3 {
+  background-image: url("../images/fluffy_cloud3.png");
+  width: 457px;
+  height: 218px;
+  text-align: center;
+  line-height: 178px;
+  z-index: 102;
+}
+
+.mountains1 {
+  background-image: url("../images/mountains_top1.png");
+  width: 1060px;
+  height: 125px;
   z-index: 51;
 }
 
-.content {
+.mountains2 {
+  background-image: url("../images/mountains_top2.png");
+  width: 1060px;
+  height: 304px;
+  z-index: 52;
+}
+
+.mountains3 {
+  background-image: url("../images/mountains_top3.png");
+  width: 1060px;
+  height: 330px;
+  z-index: 53;
+}
+
+.mountains4 {
+  background-image: url("../images/mountains_top4.png");
+  width: 1060px;
+  height: 393px;
+  z-index: 54;
+}
+
+.mountains5 {
+  background-image: url("../images/mountains_top5.png");
+  width: 1060px;
+  height: 461px;
+  z-index: 55;
+}
+
+.mountains6 {
+  background-image: url("../images/mountains_top6.png");
+  width: 1060px;
+  height: 267px;
+  z-index: 56;
+}
+
+.mountains7 {
+  background-image: url("../images/mountains_top7.png");
+  width: 1060px;
+  height: 1596px;
+  z-index: 57;
+}
+
+.memberList {
+  list-style: none;
+  padding: 0px;
   width: 960px;
-  height: 100%;
-  margin: 0 auto;
+}
+.member {
+  float: left;
+  width: 150px;
+}
+
+.balloon {
+  background-image: url("../images/balloon.png");
+  width: 123px;
+  height: 234px;
 }
 
 .resourceList {
@@ -114,30 +333,9 @@ html, body {
   padding: 10px 25px 10px 25px;
 }
 
-.skills {
-  width: 960px;
-}
 
-.skillGroup {
-  float: left;
-  width: 125px;
-}
-.skillList {
-  list-style: none;
-  padding: 0px;
-}
-.skill {
-}
 
-.memberList {
-  list-style: none;
-  padding: 0px;
-  width: 960px;
-}
-.member {
-  float: left;
-  width: 150px;
-}
+
 .partners {
   width: 720px;
   margin: 0 auto;

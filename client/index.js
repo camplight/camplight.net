@@ -18,6 +18,7 @@ $(document).ready(function(){
 
   s = skrollr.init({
     beforerender: function(data){
+      console.log(data.curTop);
       if(prevActiveMenu)
         prevActiveMenu.removeClass("active");
       if(data.curTop<850)
@@ -37,7 +38,7 @@ $(document).ready(function(){
       else
       if(data.curTop>7000 && data.curTop<7300) 
         prevActiveMenu = $("#menu a[href='#contacts']").addClass("active");
-    },
+    }
   });
 
   

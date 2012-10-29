@@ -16,171 +16,220 @@ html
     script(src="/code.js")
 
   body
-    #skrollr-body.content
-      #menu
-        ul
-          li 
-            a(href="#") start
-          li 
-            a(href="#about") About
-          li 
-            a(href="#resources") Skills
-          li
-            a(href="#members") Members
-          li
-            a(href="#partners") Partners
-          li
-            a(href="#contacts") Contacts
-      .background(data-0="top: 20%; opacity: 1",
-          data-200="top: 0%",
-          data-400="top: -10%",
-          data-850="top: -40%",
-          data-7300="top: 10%",
-          data-7600="top: 0%; opacity: 0")
-      .backgroundColored.invisible(data-0="top: 20%; opacity: 0",
-          data-200="top: 0%",
-          data-400="top: -10%; opacity: 1",
-          data-850="top: -40%; opacity: 0",
-          data-7000="top: 9%; opacity: 0")
-      .about.invisible(
-          data-120="top: 100%; opacity: 0;transform: scale(0)", 
-          data-500="top: 30%; opacity: 1;transform: scale(1)",
-          data-1000="top: -100%;opacity: 0;transform: scale(0)")
-          h1 "sparks for freedom"
-      .aboutCamplight.invisible(
-          data-600="top: 100%; opacity: 0", 
-          data-1000="top: 40%; opacity: 1", 
-          data-1200="top: 100%; opacity: 0")
-          .box
-            h2 What is Camplight?
-            p Camplight is international decentralized 'open' company.
-          .box
-            h2 Who is behind Camplight?
-            p Ordinary people. Good people. Great craftmans and superb team players.
-          .box
-            h2 What is Camplight's mission?
-            p To provide a solid self-sustainable medium for enjoying life on Earth today and in the future.
-      .clearfix
-      .skills.invisible(
-        data-1200="left: 100%; opacity: 0", 
-        data-1600="left: 0%; top: 25%; opacity: 1", 
-        data-2100="top: -35%; opacity: 0")
-        h2 Skills
-        for skill in skills
-            .skillGroup
-                p= skill.name
-                ul.skillList
-                    for skillName in skill.items
-                        li.skill= skillName
-      .clearfix
-      .resources.invisible(
-          data-1300="left: -100%; opacity: 0", 
-          data-1600="left: 0%; top: 60%; opacity: 1", 
-          data-2100="top: 0%; opacity: 0")
-          h2 Available resources: 
-          ul.resourceList
-              li.resource Design
-              li.resource node.js
-              li.resource PHP
-          a(href="mailto: team@camplight.net").contactusBtn.pull-right Contact us
-      .clearfix
-      .members.invisible(
-          data-2100="top: -100%; opacity: 0", 
-          data-2500="top: 50%; opacity: 1",
-          data-2900="top: 25%",
-          data-3200="top: -100%; opacity: 0")
-          h2 Members
+    .content
+      #skrollr-body
+        #menu(
+          data-0="top: 0px; right: 0px",
+          data-8000="top: 500px; right: 0px")
+          ul
+            li 
+              a(href="#") start
+            li 
+              a(href="#about") About
+            li 
+              a(href="#resources") Skills
+            li
+              a(href="#members") Members
+            li
+              a(href="#partners") Partners
+            li
+              a(href="#contacts") Contacts
+        .camplightLogo(
+          data-0="top: 100px;left: 400px",
+          data-800="top: -600px;left: 400px")
+        .camplightTitle(
+          data-0="top: 400px;left: 370px",
+          data-800="top: -600px;left: 400px")
+        .star1(
+          data-0="top: 200px;left: 270px",
+          data-800="top: -60px; left: 270px")
+        .star2(
+          data-0="top: 600px;left: 470px",
+          data-800="top: -40px; left: 470px")
+        .star3(
+          data-0="top: 400px;left: 770px",
+          data-800="top: -90px; left: 770px")
+        .star4(
+          data-0="top: 100px;left: 470px",
+          data-800="top: -80px; left: 470px")
+        .star2(
+          data-0="top: 200px;left: 170px",
+          data-800="top: -50px; left: 170px")
+        .star3(
+          data-0="top: 700px;left: 570px",
+          data-800="top: -90px; left: 570px")
+        .planetSaturn(
+          data-0="top: 600px; left: 900px",
+          data-800="top: -500px; left: 900px")
+        .moonWithAstronaft(
+          data-0="top: 600px; left: -20px",
+          data-800="top: -800px; left: -20px")
+        .fallingStar(
+          data-0="top:500px;left:50px;transform: rotate(0deg)",
+          data-326="top: 20px;left:170px;transform: rotate(50deg)",
+          data-626="top: 20px;left:100px;transform: rotate(145deg)",
+          data-1000="top: -100px;left:-300px;transform: rotate(245deg)")
+        .ballonBottom.invisible(
+          data-0="opacity: 0; top: 620px; left: 0px; transform: scale(0)",
+          data-73="opacity: 1; top: 550px; left: 70px;  transform: scale(1)",
+          data-1400="top: -300px; left: 100px")
+          h1 What is camplight
+          p Camplight is international decentralized 'open' company
+        .spacestation(
+          data-0="top: 800px; left: 850px;transform: rotate(0deg)",
+          data-1000="top: 100px; left: 550px;transform: rotate(20deg)")
+        .ballonTop.invisible(
+          data-0="opacity: 0; top: 620px; left: 600px; transform: scale(0)",
+          data-273="opacity: 1; top: 550px; left: 600px;  transform: scale(1)",
+          data-1800="top: -300px; left: 500px")
+          h1 Who is behind Camplight
+          p Ordinary people. Good people. Great craftsmans and superb team players.
+        .rocket(data-1000="top: 820px; left: 200px;")
+        .rocketTrail(data-1000="top: 865px; left: 40px")
+        .ballonBottomLarger(data-1000="top: 900px; left: 200px")
+          h1 What is Camplight's mission
+          p To provide a solid self-sustainable medium for enjoing life on Earth today and in the future
+        .cloudsTop(data-1000="top: 1100px; left: 0px")
+        .fluffyCloud1(data-1000="top: 1180px; left: 50px")
+          h1 Skills
+        .skills(data-1300="top: 1220px")
+          for skill in skills
+              .skillGroup
+                  p= skill.name
+                  ul.skillList
+                      for skillName in skill.items
+                          li.skill= skillName
+        .clearfix
+        .cloudsBottom(data-1000="top: 1520px; left: 0px")
+        .fluffyCloud2(data-1000="top: 1550px; left: 770px")
+        .balloon(data-1000="top: 1580px; left: 650px")
+        .fluffyCloud3(data-1000="top: 1780px; left: 0px")
+          h1 Members
+        .mountains1(data-1000="top: 1980px; left: 0px")
+        .mountains2(data-1000="top: 1990px; left: 0px")
+        .mountains3(data-1000="top: 2150px; left: 0px")
+        .mountains4(data-1000="top: 2190px; left: 0px")
+        .mountains5(data-1000="top: 2345px; left: 0px")
+        .mountains6(data-1000="top: 2550px; left: 0px")
+        .mountains7(data-1000="top: 2529px; left: 0px")
+        .members(data-1000="top: 2380px; left: 50px")
           ul.memberList
               for member in members
                   li.member= member.name
-      .clearfix
-      .partners.invisible(
-          data-3200="top: 100%; opacity: 0", 
-          data-3600="top: 50%; opacity: 1",
-          data-3900="top: -100%; opacity: 0")
-          h2 Partners
-          ul.partnerList
-              for partner in partners
-                  li.partner
-                      img(src= partner.logoSrc)
-      .clearfix
-      .aboutCamplightDetails.invisible(
-          data-3900="top: 100%; opacity: 0", 
-          data-4300="top: 50%; opacity: 1", 
-          data-4700="top: 25%", 
-          data-5000="top: -100%; opacity: 0")
-          .box
-              h2 How does Camplight work?
-              p
-                | First we discuss and think, then we do, finally we thrive together. <br /><br />
-                | Camplight is working with people around the globe using the latest innovations in communication technologies to be able to deliver best results to its customers, clients & friends.<br /><br />
-                | You can send us any kind of request by email, we'll be happy to help you out having at hand our expertise. <br /><br />
-      .clearfix
-      .aboutCamplightDetails.invisible(
-          data-5000="top: 100%; opacity: 0", 
-          data-5400="top: 50%; opacity: 1", 
-          data-5900="top: -100%; opacity: 0")
-          .box
-              h2 What are Camplight's principles?
+        .clearfix
+        .aboutCamplight.invisible(
+            data-600="top: 100%; opacity: 0", 
+            data-1000="top: 40%; opacity: 1", 
+            data-1200="top: 100%; opacity: 0")
+            .box
+              h2 What is Camplight?
+              p Camplight is international decentralized 'open' company.
+            .box
+              h2 Who is behind Camplight?
+              p Ordinary people. Good people. Great craftmans and superb team players.
+            .box
+              h2 What is Camplight's mission?
+              p To provide a solid self-sustainable medium for enjoying life on Earth today and in the future.
+        .clearfix
+        
+        .resources.invisible(
+            data-1300="left: -100%; opacity: 0", 
+            data-1600="left: 0%; top: 60%; opacity: 1", 
+            data-2100="top: 0%; opacity: 0")
+            h2 Available resources: 
+            ul.resourceList
+                li.resource Design
+                li.resource node.js
+                li.resource PHP
+            a(href="mailto: team@camplight.net").contactusBtn.pull-right Contact us
+        .clearfix
+        .partners.invisible(
+            data-3200="top: 100%; opacity: 0", 
+            data-3600="top: 50%; opacity: 1",
+            data-3900="top: -100%; opacity: 0")
+            h2 Partners
+            ul.partnerList
+                for partner in partners
+                    li.partner
+                        img(src= partner.logoSrc)
+        .clearfix
+        .aboutCamplightDetails.invisible(
+            data-3900="top: 100%; opacity: 0", 
+            data-4300="top: 50%; opacity: 1", 
+            data-4700="top: 25%", 
+            data-5000="top: -100%; opacity: 0")
+            .box
+                h2 How does Camplight work?
+                p
+                  | First we discuss and think, then we do, finally we thrive together. <br /><br />
+                  | Camplight is working with people around the globe using the latest innovations in communication technologies to be able to deliver best results to its customers, clients & friends.<br /><br />
+                  | You can send us any kind of request by email, we'll be happy to help you out having at hand our expertise. <br /><br />
+        .clearfix
+        .aboutCamplightDetails.invisible(
+            data-5000="top: 100%; opacity: 0", 
+            data-5400="top: 50%; opacity: 1", 
+            data-5900="top: -100%; opacity: 0")
+            .box
+                h2 What are Camplight's principles?
+                p.info
+                  ul
+                    li
+                      h3 Good
+                      p Be good. It is that simple. 
+                    li
+                      h3 Transparent
+                      p Camplighters insist on transparent flow of information, it is key ingredient for doing great work.
+                    li
+                      h3 Collaboration
+                      p In Camplight we believe that collaboration is stronger that competition. And we test it everyday.
+        .clearfix
+        .aboutCamplightDetails.invisible(
+            data-5900="top: 100%; opacity: 0", 
+            data-6300="top: 20%; opacity: 1", 
+            data-6700="top: -100%; opacity: 0")
+            .box
+              h2 Camplight's history
               p.info
                 ul
+                  li 
+                    h3 August, 2012
+                    p Camplight expanded to 37 members.
                   li
-                    h3 Good
-                    p Be good. It is that simple. 
+                    h3 March, 2012
+                    p Camplight expanded to 26 members and 4 partners.
                   li
-                    h3 Transparent
-                    p Camplighters insist on transparent flow of information, it is key ingredient for doing great work.
-                  li
-                    h3 Collaboration
-                    p In Camplight we believe that collaboration is stronger that competition. And we test it everyday.
-      .clearfix
-      .aboutCamplightDetails.invisible(
-          data-5900="top: 100%; opacity: 0", 
-          data-6300="top: 20%; opacity: 1", 
-          data-6700="top: -100%; opacity: 0")
+                    h3 February, 2012
+                    p Camplight Ltd. is registered in Bulgaria.
+                  li 
+                    h3 November, 2011
+                    p A group of people made the first steps towards foundation of Camplight.
+        .clearfix
+        .contacts.invisible(
+          data-7000="top: 100%; opacity: 0", 
+          data-7300="top: 20%; opacity: 1",
+          data-7800="top: -100%; opacity: 0")
           .box
-            h2 Camplight's history
+            h2 Contacts
             p.info
               ul
-                li 
-                  h3 August, 2012
-                  p Camplight expanded to 37 members.
-                li
-                  h3 March, 2012
-                  p Camplight expanded to 26 members and 4 partners.
-                li
-                  h3 February, 2012
-                  p Camplight Ltd. is registered in Bulgaria.
-                li 
-                  h3 November, 2011
-                  p A group of people made the first steps towards foundation of Camplight.
-      .clearfix
-      .contacts.invisible(
-        data-7000="top: 100%; opacity: 0", 
-        data-7300="top: 20%; opacity: 1",
-        data-7800="top: -100%; opacity: 0")
-        .box
-          h2 Contacts
-          p.info
-            ul
-              li email: team@camplight.net
-              li post office address: 
-      .clearfix
-      #impress.invisible(
-        data-7400="top: 100%; opacity: 0", 
-        data-7600="top: 50%; opacity: 1; position: fixed;")
-        #step1.step(data-x='400', data-y='800', data-z='50')
-          .welcome hit space bar to see more
-        #step2.step(data-x='100', data-y='740', data-z='-10')
-          .logoImg
-        #step3.step(data-x='0', data-y='1700', data-z='100')
-          .box but you need to be ready
-        #step4.step(data-x='0', data-y='1700', data-z='-100',
-          data-rotate-x="180")
-          .box for some 3d
-        #step5.step(data-x='0', data-y='3700', data-z='0',
-          data-rotate-x="180", data-rotate-y="180")
-          .line and little realtime
-        #step6.step(data-x='0', data-y='3460', data-z='240'
-          data-rotate-x="270", data-rotate-y="180")
-          .line welcome to Camplight
+                li email: team@camplight.net
+                li post office address: 
+        .clearfix
+        #impress.invisible(
+          data-7400="top: 100%; opacity: 0", 
+          data-7600="top: 50%; opacity: 1; position: fixed;")
+          #step1.step(data-x='400', data-y='800', data-z='50')
+            .welcome hit space bar to see more
+          #step2.step(data-x='100', data-y='740', data-z='-10')
+            .logoImg
+          #step3.step(data-x='0', data-y='1700', data-z='100')
+            .box but you need to be ready
+          #step4.step(data-x='0', data-y='1700', data-z='-100',
+            data-rotate-x="180")
+            .box for some 3d
+          #step5.step(data-x='0', data-y='3700', data-z='0',
+            data-rotate-x="180", data-rotate-y="180")
+            .line and little realtime
+          #step6.step(data-x='0', data-y='3460', data-z='240'
+            data-rotate-x="270", data-rotate-y="180")
+            .line welcome to Camplight
