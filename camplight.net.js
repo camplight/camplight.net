@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+// #!/usr/bin/env node
 var util = require("util");
 var Cell = require("organic-webcell/WebCell");
 
