@@ -21,10 +21,10 @@ $(document).ready(function(){
       console.log(data.curTop);
       if(prevActiveMenu)
         prevActiveMenu.removeClass("active");
-      if(data.curTop<850)
+      if(data.curTop<300)
         prevActiveMenu = $("#menu a[href='#']").addClass("active");
       else
-      if(data.curTop<1200) 
+      if(data.curTop<786) 
         prevActiveMenu = $("#menu a[href='#about']").addClass("active");
       else
       if(data.curTop<2100) 
@@ -38,6 +38,12 @@ $(document).ready(function(){
       else
       if(data.curTop>7000 && data.curTop<7300) 
         prevActiveMenu = $("#menu a[href='#contacts']").addClass("active");
+    },
+    constants: {
+      landing: 0,
+      skills: 1000,
+      members: 1000,
+      bonus: 3500
     }
   });
 
@@ -63,7 +69,7 @@ $(document).ready(function(){
       setScrollTop(0)
     },
     showAbout: function(){
-      setScrollTop(1000);
+      setScrollTop(786);
     },
     showResourcesOrSkills: function(){
       setScrollTop(1600);

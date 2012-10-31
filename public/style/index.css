@@ -305,72 +305,10 @@ html, body {
   height: 234px;
 }
 
-.resourceList {
-  list-style: none;
-  padding: 0px;
-  width: 960px;
-}
-
-.resource {
-  float: left;
-  width: 150px;
-}
-
-.contactusBtn {
-  font-size: 48px;
-  line-height: 48px;
-  text-decoration: none;
-  color: #000;
-  background-color: #DDD;
-  border: 1px solid #FFF;
-  border-radius: 5px;
-  padding: 0 25px 0 25px;
-}
-
-.contactusBtn:hover {
-  font-size: 50px;
-  line-height: 48px;
-  padding: 10px 25px 10px 25px;
-}
-
-
-
-
-.partners {
-  width: 720px;
-  margin: 0 auto;
-  text-align: center;
-}
-.partnerList {
-  list-style: none;
-  padding: 0px;
-  margin: 0 auto;
-  width: 600px;
-}
-.partner {
-  float: left;
-  width: 150px;
-  text-align: center;
-}
-
-
-.aboutCamplight .box {
-  width: 320px;
-  float: left;
-}
-
-.aboutCamplight .box p {
-  width: 310px;
-}
-
-.aboutCamplightDetails .box {
-  width: 480px;
-  margin: 0 auto;
-}
-
 #impress {
   width: 960px;
   height: 500px;
+  margin: 0 auto; 
 }
 
 #impress .welcome {
