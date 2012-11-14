@@ -162,16 +162,23 @@ html, body {
   height: 225px;
 }
 
+.rocketContainer {
+  width: 279px;
+  height: 384px;
+}
+
 .rocket {
   background-image: url("../images/rocket.png");
   width: 99px;
   height: 85px;
+  position: relative;
 }
 
 .rocketTrail {
   background-image: url("../images/rocket_trail.png");
   width: 167px;
   height: 331px;
+  position: relative;
 }
 
 .ballonBottomLarger {
@@ -188,6 +195,12 @@ html, body {
   margin-left: 10px;
 }
 
+.clouds {
+  background-image: url("../images/clouds.png");
+  width: 1920px;
+  height: 550px;
+}
+
 .cloudsTop {
   background-image: url("../images/clouds_top.png");
   width: 1060px;
@@ -200,12 +213,13 @@ html, body {
   height: 168px;
   text-align: center;
   line-height: 138px;
-  z-index: 102;
 }
 
 .skills {
   width: 1060px;
-  background-color: #FFF;
+  left: 600px;
+  top: 110px;
+  position: absolute;
 }
 .skillGroup {
   margin-top: 150px;
@@ -221,71 +235,56 @@ html, body {
 
 .cloudsBottom {
   background-image: url("../images/clouds_bottom.png");
-  width: 1060px;
+  width: 1920px;
   height: 177px;
-}
-
-.fluffyCloud2 {
-  background-image: url("../images/fluffy_cloud2.png");
-  width: 293px;
-  height: 166px;
-}
-
-.fluffyCloud3 {
-  background-image: url("../images/fluffy_cloud3.png");
-  width: 457px;
-  height: 218px;
-  text-align: center;
-  line-height: 178px;
-  z-index: 102;
 }
 
 .mountains1 {
   background-image: url("../images/mountains_top1.png");
-  width: 1060px;
-  height: 125px;
+  width: 1920px;
+  height: 994px;
   z-index: 51;
 }
 
 .mountains2 {
   background-image: url("../images/mountains_top2.png");
-  width: 1060px;
-  height: 304px;
+  width: 1920px;
+  height: 978px;
   z-index: 52;
 }
 
 .mountains3 {
   background-image: url("../images/mountains_top3.png");
-  width: 1060px;
-  height: 330px;
+  width: 1920px;
+  height: 879px;
   z-index: 53;
 }
 
 .mountains4 {
   background-image: url("../images/mountains_top4.png");
-  width: 1060px;
-  height: 393px;
+  width: 1920px;
+  height: 908px;
   z-index: 54;
 }
 
 .mountains5 {
   background-image: url("../images/mountains_top5.png");
-  width: 1060px;
-  height: 461px;
+  width: 1920px;
+  height: 765px;
   z-index: 55;
 }
 
 .mountains6 {
   background-image: url("../images/mountains_top6.png");
-  width: 1060px;
-  height: 267px;
+  width: 1920px;
+  height: 549px;
   z-index: 56;
 }
 
 .mountains7 {
   background-image: url("../images/mountains_top7.png");
-  width: 1060px;
-  height: 1596px;
+  width: 1920px;
+  height: 513px;
   z-index: 57;
 }
 

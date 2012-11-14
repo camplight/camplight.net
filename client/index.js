@@ -41,8 +41,8 @@ $(document).ready(function(){
     },
     constants: {
       landing: 0,
-      skills: 1000,
-      members: 1000,
+      skills: 500,
+      members: 1300,
       bonus: 3500
     }
   });
