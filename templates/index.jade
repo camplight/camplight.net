@@ -17,23 +17,21 @@ html
 
   body
     .content
-      #skrollr-body
+      #skrollr-body(style="width: 1060px")
         #menu(
           data-0="top: 0px; right: 0px",
-          data-end="top: 500px; right: 0px")
+          data-end="top: 300px; right: 0px")
           ul
             li 
-              a(href="#") start
+              a(href="#", data-screenIndex="0") start
             li 
-              a(href="#about") About
+              a(href="#about", data-screenIndex="1") About
             li 
-              a(href="#resources") Skills
+              a(href="#skills", data-screenIndex="4") Skills
             li
-              a(href="#members") Members
+              a(href="#members", data-screenIndex="5") Members
             li
-              a(href="#partners") Partners
-            li
-              a(href="#contacts") Contacts
+              a(href="#partners", data-screenIndex="6") Partners
         .camplightLogo(
           data-_landing-0="top-offset: 100px;left: 400px; transform: scale(1)",
           data-_landing-800="top-offset: -1600px;left: 400px; transform: scale(3)")
@@ -66,48 +64,51 @@ html
           data-_landing-0="top-offset:500px; left: 0px; transform: rotate(0deg) scale(0.8)"
           data-_landing-220="top-offset:400px; left: -150px; transform: rotate(5deg) scale(1)"
           data-_landing-400="top-offset:100px; left: -350px; transform: rotate(10deg) scale(2)")
+        
         .moonWithAstronaft(
-          data-_landing-0="top-offset: 700px; left: -20px; transform: rotate(50deg) scale(0.6)",
-          data-_landing-400="top-offset: 650px;left: -190px; transform: rotate(-20deg) scale(1)",
-          data-_landing-500="top-offset: 100px;left: -400px; transform: rotate(-80deg) scale(2)")
+          data-_about--300="top-offset: 1040px; left: -20px; transform: rotate(50deg) scale(0.6)",
+          data-_about-0="top-offset: 100px;left: 190px; transform: rotate(-20deg) scale(1)",
+          data-_about-500="top-offset: -300px;left: -400px; transform: rotate(-80deg) scale(2)")
         .ballonBottom.invisible(
-          data-_landing-0="opacity: 0; top-offset: 680px; left: 30px; transform: rotate(-50deg) scale(0)",
-          data-_landing-203="opacity: 1; top-offset: 840px; left: -30px; transform: rotate(0deg) scale(1)",
-          data-_landing-430="opacity: 1; top-offset: 880px; left: -80px; transform: rotate(0deg) scale(1)",
-          data-_landing-530="opacity: 1; top-offset: 300px; left: -110px; transform: rotate(0deg) scale(1.3)")
+          data-_about--300="opacity: 0; top-offset: 1040px; left: 30px; transform: rotate(-50deg) scale(0)",
+          data-_about-0="opacity: 1; top-offset: 280px; left: 230px; transform: rotate(0deg) scale(1)",
+          data-_about-430="opacity: 1; top-offset: 280px; left: 80px; transform: rotate(0deg) scale(1)",
+          data-_about-530="opacity: 1; top-offset: -300px; left: -110px; transform: rotate(0deg) scale(1.3)")
           h1 What is camplight
           p Camplight is international decentralized 'open' company
+        
         .spacestation(
-          data-_landing-300="top-offset: 1200px; left: 770px; transform: rotate(10deg) scale(0.2)",
-          data-_landing-420="top-offset: 1220px; left: 750px; transform: rotate(0deg) scale(0.5)",
-          data-_landing-590="top-offset: 900px; left: 700px; transform: rotate(5deg) scale(0.7)",
-          data-_landing-720="top-offset: 400px; left: 850px; transform: rotate(8deg) scale(1.5)")
+          data-_about2--800="top-offset: 1040px; left: 770px; transform: rotate(10deg) scale(0.2)",
+          data-_about2-0="top-offset: 370px; left: 250px; transform: rotate(0deg) scale(0.5)",
+          data-_about2-500="top-offset: 90px; left: 700px; transform: rotate(5deg) scale(0.7)",
+          data-_about2-600="top-offset: 0px; left: 850px; transform: rotate(8deg) scale(1.5)")
         .ballonTop.invisible(
-          data-_landing-50="opacity: 0; top-offset: 1120px; left: 550px; transform: scale(0) rotate(-50deg)",
-          data-_landing-420="opacity: 1; top-offset: 1040px; left: 660px; transform: scale(1) rotate(0deg)",
-          data-_landing-500="opacity: 1; top-offset: 900px; left: 660px; transform: scale(1) rotate(0deg)",
-          data-_landing-600="opacity: 1; top-offset: 0px; left: 730px; transform: scale(1.3) rotate(0deg)")
+          data-_about2--50="opacity: 0; top-offset: 200px; left: 190px; transform: scale(0) rotate(-50deg)",
+          data-_about2-0="opacity: 1; top-offset: 200px; left: 160px; transform: scale(1) rotate(0deg)",
+          data-_about2-500="opacity: 1; top-offset: -80px; left: 590px; transform: scale(1) rotate(0deg)",
+          data-_about2-600="opacity: 1; top-offset: -170px; left: 740px; transform: scale(1.3) rotate(0deg)")
           h1 Who is behind Camplight
           p Ordinary people. Good people. Great craftsmans and superb team players.
+        
         .rocketContainer(
-            data-_landing-400="top-offset: 1265px; left: -190px; transform: scale(0.5) rotate(-16deg)",
-            data-_landing-500="top-offset: 1165px; left: -60px; transform: scale(1.2) rotate(10deg)")
+            data-_about3--800="top-offset: 1060px; left: -1400px; transform: scale(0.1) rotate(-14deg)",
+            data-_about3-0="top-offset:  260px; left: 160px; transform: scale(1) rotate(0)",
+            data-_about3-200="top-offset: 465px; left: -60px; transform: scale(1.2) rotate(10deg)")
           .rocket(
-            data-_landing-400="top: -22px; right: 105px; transform: scale(1) rotate(-10deg)",
-            data-_landing-500="top: -46px; right: 0px; transform: scale(1) rotate(0deg)",
-            data-_landing-533="top: -296px; right: -300px; transform: scale(1) rotate(-10deg)",
-            data-_landing-620="top: -796px; right: -1200px; transform: scale(1.6) rotate(-50deg)")
+            data-_about3--100="top: -22px; right: 105px; transform: scale(1) rotate(-10deg)",
+            data-_about3-0="top: -22px; right: 105px; transform: scale(1) rotate(-10deg)",
+            data-_about3-220="top: -796px; right: -1200px; transform: scale(1.6) rotate(-50deg)")
         .ballonBottomLarger.invisible(
-          data-_landing-400="opacity: 0; top-offset: 1150px; left: -190px; transform: scale(0) rotate(-20deg)",
-          data-_landing-500="opacity: 1; top-offset: 1200px; left: 210px; transform: scale(1) rotate(0deg)",
-          data-_landing-930="opacity: 1; top-offset: 1050px; left: 210px; transform: scale(1) rotate(0deg)",
-          data-_landing-1030="opacity: 1; top-offset: 500px; left: 350px; transform: scale(2) rotate(0deg)")
+          data-_about3--400="opacity: 0; top-offset: 1150px; left: -190px; transform: scale(0) rotate(-20deg)",
+          data-_about3-0="opacity: 1; top-offset:  300px; left: 210px; transform: scale(1) rotate(0deg)",
+          data-_about3-220="opacity: 0; top-offset: 400px; left: 450px; transform: scale(1.8) rotate(0deg)")
           h1 What is Camplight's mission  
           p To provide a solid self-sustainable medium for enjoing life on Earth today and in the future
+        
         .clouds(
-          data-_skills-0="top-offset: 1010px; left: -430px; transform: scale(1)",
-          data-_skills-1300="top-offset: 1050px; left: -480px; transform: scale(1.4)",
-          data-_skills-1500="top-offset: 650px; left: -480px; transform: scale(1.6)")
+          data-_skills--750="top-offset: -200px; left: -430px; transform: scale(1)",
+          data-_skills-0="top-offset: 20px; left: -430px; transform: scale(1)",
+          data-_skills-750="top-offset: 150px; left: -480px; transform: scale(1.6)")
           .skills()
             for skill in skills
                 .skillGroup
@@ -116,69 +117,50 @@ html
                         for skillName in skill.items
                             li.skill= skillName
         .fluffyCloud1(
-          data-_skills-0="top-offset: 1310px; left: 200px; transform: scale(1.2)",
-          data-_skills-750="top-offset: 990px; left: 50px; transform: scale(1.4)",
-          data-_skills-850="top-offset: 500px; left: 0px; transform: scale(2.4)")
+          data-_skills--750="top-offset: -50px; left: -10px; transform: scale(0.6)",
+          data-_skills-0="top-offset: 80px; left: 120px; transform: scale(1)",
+          data-_skills-150="top-offset: -200px; left: 0px; transform: scale(2)")
           h1 Skills
         .clearfix
+
         .fluffyCloud1(
-          data-_skills-600="top-offset: 1550px; left: 720px; transform: scale(0.7)",
-          data-_skills-900="top-offset: 1490px; left: 790px; transform: scale(0.9)",
-          data-_skills-1300="top-offset: 1450px; left: 860px; transform: scale(1.2)",
-          data-_skills-1500="top-offset: 850px; left: 980px; transform: scale(1.8)")
+          data-_skills--150="top-offset: 470px; left: 520px; transform: scale(0.7)",
+          data-_skills-0="top-offset: 410px; left: 590px; transform: scale(0.9)",
+          data-_skills-750="top-offset: 70px; left: 780px; transform: scale(2)")
         .balloon(
-          data-_skills-550="top-offset: 1500px; left: 800px; transform: scale(0.5)",
-          data-_skills-900="top-offset: 1560px; left: 870px; transform: scale(1)",
-          data-_skills-1300="top-offset: 1530px; left: 990px; transform: scale(1.3)",
-          data-_skills-1500="top-offset: 830px; left: 1250px; transform: scale(1.8)")
+          data-_skills--250="top-offset: 420px; left: 600px; transform: scale(0.5)",
+          data-_skills-0="top-offset: 480px; left: 670px; transform: scale(1)",
+          data-_skills-750="top-offset: 90px; left: 1050px; transform: scale(2)")
+
         .fluffyCloud1(
-          data-_members-600="top-offset: 1600px; left: 80px; transform: scale(0.8)",
-          data-_members-900="top-offset: 1480px; left: 0px; transform: scale(1.1)",
-          data-_members-1500="top-offset: 1580px; left: -80px; transform: scale(1.3)")
+          data-_members-0="top-offset: 20px; left: 60px; transform: scale(1.1)")
           h1 Members
         .mountains1(
-          data-_members-100="top-offset: 880px; left: -430px",
-          data-_members-1600="top-offset: 1780px; left: -430px")
+          data-_members-0="top-offset: 230px; left: -430px")
         .mountains2(
-          data-_members-100="top-offset: 1090px; left: -430px",
-          data-_members-1600="top-offset: 1790px; left: -430px")
+          data-_members-0="top-offset: 240px; left: -430px")
         .mountains3(
-          data-_members-100="top-offset: 1350px; left: -430px",
-          data-_members-1600="top-offset: 1950px; left: -430px")
+          data-_members-0="top-offset: 260px; left: -430px")
         .mountains4(
-          data-_members-100="top-offset: 1490px; left: -430px",
-          data-_members-1600="top-offset: 1990px; left: -430px")
+          data-_members-0="top-offset: 270px; left: -430px")
         .mountains5(
-          data-_members-100="top-offset: 1745px; left: -430px",
-          data-_members-1600="top-offset: 2145px; left: -430px")
+          data-_members-0="top-offset: 280px; left: -430px")
         .mountains6(
-          data-_members-100="top-offset: 2050px; left: -430px",
-          data-_members-1600="top-offset: 2350px; left: -430px")
+          data-_members-0="top-offset: 290px; left: -430px")
         .mountains7(
-          data-_members-100="top-offset: 2129px; left: -430px",
-          data-_members-1600="top-offset: 2329px; left: -430px")
+          data-_members-0="top-offset: 300px; left: -430px")
+
         .members(
-          data-_members-100="top-offset: 2560px; left: 150px",
-          data-_members-1600="top-offset: 2660px; left: 150px")
+          data-_members-0="top-offset: 560px; left: 150px")
           ul.memberList
               for member in members
                   li.member= member.name
         .clearfix
-        #impress.invisible(
-          data-_bonus-0="top: 100%; opacity: 0", 
-          data-_bonus-800="top: 50%; opacity: 1; position: fixed;")
-          #step1.step(data-x='100', data-y='800', data-z='50')
-            .welcome hit space bar to see more
-          #step2.step(data-x='100', data-y='740', data-z='-10')
-            .logoImg
-          #step3.step(data-x='0', data-y='1700', data-z='100')
-            .box but you need to be ready
-          #step4.step(data-x='0', data-y='1700', data-z='-100',
-            data-rotate-x="180")
-            .box for some 3d
-          #step5.step(data-x='0', data-y='3700', data-z='0',
-            data-rotate-x="180", data-rotate-y="180")
-            .line and little realtime
-          #step6.step(data-x='0', data-y='3460', data-z='240'
-            data-rotate-x="270", data-rotate-y="180")
-            .line welcome to Camplight
+
+        .parners(
+          data-_partners--400="top-offset: 2560px; left: 150px",
+          data-_partners-0="top-offset: 2660px; left: 150px")
+          ul.memberList
+              for member in members
+                  li.member= member.name
+        .clearfix
