@@ -11,8 +11,11 @@ html
     link(rel='author', href='humans.txt')
     link(rel='shortcut icon', href='favicon.ico')
 
+    link(rel='stylesheet', href='/style/jquery/jquery-ui.css')
     link(rel='stylesheet', href='/style/index.css')
+    link(rel='stylesheet', href='/style/editToolbar.css')
 
+    script(src="/js/jade.js")
     script(src="/code.js")
 
   body
@@ -66,19 +69,20 @@ html
           data-_landing-400="top-offset:100px; left: -350px; transform: rotate(10deg) scale(2)")
         
         .moonWithAstronaft(
-          data-_about--300="top-offset: 1040px; left: -20px; transform: rotate(50deg) scale(0.6)",
+          data-_about--359="top-offset:53.41064453125px; left: 408.7064208984375px; transform: rotate(50deg) scale(0.6)",
+          data-_about--92="top-offset:222.11572265625px; left: 298.6973876953125px; transform: rotate(50deg) scale(0.6)",
           data-_about-0="top-offset: 100px;left: 190px; transform: rotate(-20deg) scale(1)",
-          data-_about-500="top-offset: -300px;left: -400px; transform: rotate(-80deg) scale(2)")
+          data-_about-212="top-offset:-419.09503173828125px; left: 787.966796875px; transform: rotate(-80deg) scale(2)")
         .ballonBottom.invisible(
           data-_about--300="opacity: 0; top-offset: 1040px; left: 30px; transform: rotate(-50deg) scale(0)",
           data-_about-0="opacity: 1; top-offset: 280px; left: 230px; transform: rotate(0deg) scale(1)",
           data-_about-430="opacity: 1; top-offset: 280px; left: 80px; transform: rotate(0deg) scale(1)",
-          data-_about-530="opacity: 1; top-offset: -300px; left: -110px; transform: rotate(0deg) scale(1.3)")
+          data-_about-530="opacity: 1; top-offset: -187px; left: 849px; transform: rotate(0deg) scale(1.3)")
           h1 What is camplight
           p Camplight is international decentralized 'open' company
         
         .spacestation(
-          data-_about2--800="top-offset: 1040px; left: 770px; transform: rotate(10deg) scale(0.2)",
+          data-_about2--463="top-offset:-355.606201171875px; left: 570.2720947265625px; transform: rotate(10deg) scale(0.2)",
           data-_about2-0="top-offset: 370px; left: 250px; transform: rotate(0deg) scale(0.5)",
           data-_about2-500="top-offset: 90px; left: 700px; transform: rotate(5deg) scale(0.7)",
           data-_about2-600="top-offset: 0px; left: 850px; transform: rotate(8deg) scale(1.5)")
@@ -91,7 +95,7 @@ html
           p Ordinary people. Good people. Great craftsmans and superb team players.
         
         .rocketContainer(
-            data-_about3--800="top-offset: 1060px; left: -1400px; transform: scale(0.1) rotate(-14deg)",
+            data-_about3--291="top-offset:-207px; left: -257px; transform: scale(0.1) rotate(90deg)",
             data-_about3-0="top-offset:  260px; left: 160px; transform: scale(1) rotate(0)",
             data-_about3-200="top-offset: 465px; left: -60px; transform: scale(1.2) rotate(10deg)")
           .rocket(
@@ -133,17 +137,24 @@ html
           data-_skills-750="top-offset: 90px; left: 1050px; transform: scale(2)")
 
         .fluffyCloud1(
+          data-_members--1003="top-offset:-325px; left: -378px;  transform: scale(0.1)",
+          data-_members--469="top-offset:-374px; left: -85.10000610351562px; transform: scale(0.5)",
           data-_members-0="top-offset: 20px; left: 60px; transform: scale(1.1)")
           h1 Members
         .mountains1(
+          data-_members--579="top-offset:-175px;",
           data-_members-0="top-offset: 230px; left: -430px")
         .mountains2(
+          data-_members--739="top-offset:-48px;",
           data-_members-0="top-offset: 240px; left: -430px")
         .mountains3(
+          data-_members--739="top-offset:128px;",
           data-_members-0="top-offset: 260px; left: -430px")
         .mountains4(
+          data-_members--739="top-offset:139px;",
           data-_members-0="top-offset: 270px; left: -430px")
         .mountains5(
+          data-_members--739="top-offset:277px;",
           data-_members-0="top-offset: 280px; left: -430px")
         .mountains6(
           data-_members-0="top-offset: 290px; left: -430px")
@@ -151,7 +162,7 @@ html
           data-_members-0="top-offset: 300px; left: -430px")
 
         .members(
-          data-_members-0="top-offset: 560px; left: 150px")
+          data-_members-0="top-offset:576px; left: -112px;")
           ul.memberList
               for member in members
                   li.member= member.name

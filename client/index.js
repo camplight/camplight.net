@@ -1,12 +1,26 @@
-jQuery = $ = require("jquery-browserify");
+require("./vendor/jquery");
+jadeCompile = function(path){
+  var compiled = jade.compile(path);
+  return function(data) {
+    data = data || {};
+    data.t = $.t;
+    return compiled(data);
+  }
+};
+
+
 Backbone = require("./vendor/backbone");
 require("./vendor/ga");
 require("./vendor/jquery.animate-colors-min");
 require("./vendor/jquery.idle-timer");
 isMobile = require("./vendor/mobileCheck").isMobile();
 
+var EditToolbar = require("./views/EditToolbar");
+
 $(document).ready(function(){
   $(".invisible").css({"opacity": 0});
+
+  
 
   require("./vendor/skrollr.min");
   require("./vendor/skrollr.mobile");
@@ -27,7 +41,7 @@ $(document).ready(function(){
     bonus: 1
   };
 
-var screensOrder = [
+  var screensOrder = [
     "landing",
     "about",
     "about2",
@@ -49,9 +63,24 @@ var screensOrder = [
   }
   console.log(screens);
 
+  var currentScreenIndex = 0;
+
+  var updateCurrentScreenIndex = function(top){
+    for(var i = 0; i<screensOrder.length-1; i++)
+      if(top  >= screens[screensOrder[i]] && top < screens[screensOrder[i+1]]) {
+        currentScreenIndex = i;
+        break;
+      }
+    toolbar.updateCurrentScreenIndex(currentScreenIndex);
+  }
+
+  var toolbar = new EditToolbar({screens: screens, screensOrder: screensOrder});
+
   s = skrollr.init({
     beforerender: function(data){
       console.log(data.curTop);
+      updateCurrentScreenIndex(data.curTop);
+      toolbar.updateCurTop(data.curTop);
     },
     constants: screens
   });
@@ -61,9 +90,10 @@ var screensOrder = [
       skrollr.iscroll.scrollTo(0,-top);
     } else
       s.animateTo(top, options);
+    updateCurrentScreenIndex(top);
   }
 
-  var currentScreenIndex = 0;
+  
   var playNextScreen = function(){
     currentScreenIndex += 1;
     if(currentScreenIndex>=screensOrder.length)
@@ -138,4 +168,8 @@ var screensOrder = [
       playNextScreen();
     }
   });
+
+  
+  $("body").append(toolbar.render().el);
+  toolbar.render().$el.hide();
 });

@@ -1,0 +1,29 @@
+.editToolbar {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  background-color: gray;
+  height: 100px;
+  overflow: hidden;
+}
+
+.editToolbar a {
+  background-color: white;
+  line-height: 80px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.editToolbar a:hover {
+  background-color: gray;
+  line-height: 80px;
+}
+
+.editToolbar .data {
+  line-height: 80px;
+  font-size: 14px;
+  color: white;
+  width: 500px;
+  height: 80px;
+  float: left;
+}
