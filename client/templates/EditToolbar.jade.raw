@@ -3,5 +3,9 @@ a.dragBtn() Toggle drag
 a.moveUp() Up
 a.resetBtn() Reset
 a.moveDown() Down
+a.moveLeft() Left
+a.moveRight() Right
 .data asdasdasd
 select.screensSelection
+a.scrollTo() Scroll to
+a.deselectTarget() Deselect target

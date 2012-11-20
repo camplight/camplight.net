@@ -8,7 +8,6 @@ jadeCompile = function(path){
   }
 };
 
-
 Backbone = require("./vendor/backbone");
 require("./vendor/ga");
 require("./vendor/jquery.animate-colors-min");
@@ -17,10 +16,15 @@ isMobile = require("./vendor/mobileCheck").isMobile();
 
 var EditToolbar = require("./views/EditToolbar");
 
+var TransformToolManager = require("./vendor/transform_tool");
+var transformToolManager = new TransformToolManager();
+
+console.log(transformToolManager);
+
 $(document).ready(function(){
   $(".invisible").css({"opacity": 0});
 
-  
+  transformToolManager.prepare();
 
   require("./vendor/skrollr.min");
   require("./vendor/skrollr.mobile");
@@ -74,7 +78,15 @@ $(document).ready(function(){
     toolbar.updateCurrentScreenIndex(currentScreenIndex);
   }
 
-  var toolbar = new EditToolbar({screens: screens, screensOrder: screensOrder});
+  var setScrollTop = function(top, options) {
+    if(isMobile) {
+      skrollr.iscroll.scrollTo(0,-top);
+    } else
+      s.animateTo(top, options);
+    updateCurrentScreenIndex(top);
+  }
+
+  var toolbar = new EditToolbar({screens: screens, screensOrder: screensOrder, transformToolManager: transformToolManager, setScrollTop: setScrollTop});
 
   s = skrollr.init({
     beforerender: function(data){
@@ -85,13 +97,7 @@ $(document).ready(function(){
     constants: screens
   });
   
-  var setScrollTop = function(top, options) {
-    if(isMobile) {
-      skrollr.iscroll.scrollTo(0,-top);
-    } else
-      s.animateTo(top, options);
-    updateCurrentScreenIndex(top);
-  }
+  
 
   
   var playNextScreen = function(){

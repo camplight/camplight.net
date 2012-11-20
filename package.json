@@ -4,7 +4,7 @@
   "main": "index.js",
   "private": true,
   "dependencies": {
-    "organic-webcell": "0.0.13",
+    "organic-webcell": "0.0.18",
     "underscore": "latest",
     "jquery-browserify": "*"
   },

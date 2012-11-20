@@ -7,7 +7,11 @@
     "click .moveUp": "moveUp",
     "click .moveDown": "moveDown",
     "click .resetBtn": "reset",
-    "change .screensSelection": "changeCurrentScreenIndex"
+    "click .moveLeft": "moveLeft",
+    "click .moveRight": "moveRight",
+    "change .screensSelection": "changeCurrentScreenIndex",
+    "click .scrollTo": "scrollTo",
+    "click .deselectTarget": "deselectTarget"
   },
   initialize: function(options){
     var self = this;
@@ -17,10 +21,20 @@
     this.currentScreenIndex = 0;
     this.curTop = 0;
 
+    this.minimal = true;
+    this.setScrollTop = options.setScrollTop;
+    this.transformToolManager = options.transformToolManager;
+
     $(window).keydown(function(e){
       if(e.ctrlKey && e.keyCode == 13)
         self.toggle();
-    })
+    });
+
+   /* this.resizable = true;
+    $(".skrollable").mousedown(function(e) {
+      console.log(e.currentTarget);
+      self.transformToolManager.selectTarget(e.currentTarget);
+    });*/
   },
   updateCurrentScreenIndex: function(index){
     this.currentScreenIndex = index;
@@ -41,6 +55,12 @@
     var data = "data-_"+screenName+"-"+curOffset+"=";
     self.$(".data").html(data);
   },
+  scrollTo : function(e)
+  {
+    var offset = this.screens[this.screensOrder[this.currentScreenIndex]];
+
+    this.setScrollTop(offset);
+  },
   toggle: function(e){
     if(e) e.preventDefault();
     if(!this.minimal) {
@@ -52,20 +72,46 @@
     }
   },
   toggleResize : function(e){
+    var self = this;
+
     e.preventDefault();
     if(!this.resizable) {
       this.resizable = true;
-      $(".skrollable").css({
+      /*$(".skrollable").css({
         border: "1px solid red"
-      }).resizable();
+      }).resizable();*/
+      $(".skrollable").mousedown(function(e) {
+        console.log(e.currentTarget);
+        self.transformToolManager.selectTarget(e.currentTarget);
+      });
     } else {
       this.resizable = false;
-      $(".skrollable").resizable( "destroy" ).css({border: ""});
+      $(".skrollable").mousedown(function(e) {});
+      self.transformToolManager.deselectTarget();
+      //$(".skrollable").resizable( "destroy" ).css({border: ""});
     }
+  },
+  refreshStats : function()
+  {
+    var self = this;
+    var screenName = self.screensOrder[self.currentScreenIndex];
+    var curScreenOffset = Math.round(self.curTop-self.screens[screenName]);
+    var xPos = Math.round( self.transformToolManager.target.offsetLeft);
+    var yPos = Math.round( self.transformToolManager.target.offsetTop-self.screens[screenName]);
+
+    var data = "data-_"+screenName+"-"+curScreenOffset+"="+'"top-offset:'+yPos+'px; left: '+xPos+'px; ' + self.transformToolManager.getTargetTransformInfo() + '"';
+
+    console.log(xPos, yPos, data);
+
+    self.$(".data").html(data);
   },
   toggleDrag : function(e){
     e.preventDefault();
-    var self = this;
+    this.refreshStats();
+
+
+
+    /*var self = this;
     if(!this.draggable) {
       this.draggable = true;
       $(".skrollable").css({
@@ -85,20 +131,38 @@
     } else {
       this.draggable = false;
       $(".skrollable").draggable( "destroy" ).css({border: ""});
-    }
+    }*/
+  },
+  deselectTarget: function()
+  {
+      this.transformToolManager.deselectTarget();
   },
   moveUp: function(){
     if(!this.oldPosition)
       this.oldPosition = $("#skrollr-body").position();
     var p = $("#skrollr-body").position();
-    p.top -= 100;
+    p.top += 100;
     $("#skrollr-body").offset(p);
   },
   moveDown: function(){
     if(!this.oldPosition)
       this.oldPosition = $("#skrollr-body").position();
     var p = $("#skrollr-body").position();
-    p.top += 100;
+    p.top -= 100;
+    $("#skrollr-body").offset(p);
+  },
+  moveLeft: function(){
+    if(!this.oldPosition)
+      this.oldPosition = $("#skrollr-body").position();
+    var p = $("#skrollr-body").position();
+    p.left += 100;
+    $("#skrollr-body").offset(p);
+  },
+  moveRight: function(){
+    if(!this.oldPosition)
+      this.oldPosition = $("#skrollr-body").position();
+    var p = $("#skrollr-body").position();
+    p.left -= 100;
     $("#skrollr-body").offset(p);
   },
   reset: function(){
