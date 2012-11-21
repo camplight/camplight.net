@@ -29,4 +29,10 @@ if(exec("git push").code != 0){
   exit(1);
 }
 
+
+if(exec("git push upstream master").code != 0){
+  echo("Error: failed to git push");
+  exit(1);
+}
+
 require("./restart-preview");

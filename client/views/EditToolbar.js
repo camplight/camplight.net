@@ -3,7 +3,6 @@
   className: "editToolbar",
   events: {
     "click .resizeBtn": "toggleResize",
-    "click .dragBtn": "toggleDrag",
     "click .moveUp": "moveUp",
     "click .moveDown": "moveDown",
     "click .resetBtn": "reset",
@@ -29,12 +28,6 @@
       if(e.ctrlKey && e.keyCode == 13)
         self.toggle();
     });
-
-   /* this.resizable = true;
-    $(".skrollable").mousedown(function(e) {
-      console.log(e.currentTarget);
-      self.transformToolManager.selectTarget(e.currentTarget);
-    });*/
   },
   updateCurrentScreenIndex: function(index){
     this.currentScreenIndex = index;
@@ -77,9 +70,6 @@
     e.preventDefault();
     if(!this.resizable) {
       this.resizable = true;
-      /*$(".skrollable").css({
-        border: "1px solid red"
-      }).resizable();*/
       $(".skrollable").mousedown(function(e) {
         console.log(e.currentTarget);
         self.transformToolManager.selectTarget(e.currentTarget);
@@ -88,7 +78,7 @@
       this.resizable = false;
       $(".skrollable").mousedown(function(e) {});
       self.transformToolManager.deselectTarget();
-      //$(".skrollable").resizable( "destroy" ).css({border: ""});
+      this.refreshStats();
     }
   },
   refreshStats : function()
@@ -104,34 +94,6 @@
     console.log(xPos, yPos, data);
 
     self.$(".data").html(data);
-  },
-  toggleDrag : function(e){
-    e.preventDefault();
-    this.refreshStats();
-
-
-
-    /*var self = this;
-    if(!this.draggable) {
-      this.draggable = true;
-      $(".skrollable").css({
-        border: "1px solid red"
-      }).draggable({
-        drag: function(){
-          var screenName = self.screensOrder[self.currentScreenIndex];
-          var curScreenOffset = Math.round(self.curTop-self.screens[screenName]);
-          var xPos = Math.round($(this).position().left);
-          var yPos = Math.round($(this).position().top-self.screens[screenName]);
-          console.log($(this).position().top, curScreenOffset, self.screens[screenName]);
-
-          var data = "data-_"+screenName+"-"+curScreenOffset+"="+'"top-offset:'+yPos+'px; left: '+xPos+'px;';
-          self.$(".data").html(data);
-        }
-      });
-    } else {
-      this.draggable = false;
-      $(".skrollable").draggable( "destroy" ).css({border: ""});
-    }*/
   },
   deselectTarget: function()
   {

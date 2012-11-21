@@ -27,15 +27,15 @@ html
           data-end="top: 300px; right: 0px")
           ul
             li 
-              a(href="#", data-screenIndex="0") start
+              a(href="#", data-screenName="landing") Top
             li 
-              a(href="#about", data-screenIndex="1") About
+              a(href="#about", data-screenName="about") About
             li 
-              a(href="#skills", data-screenIndex="4") Skills
+              a(href="#skills", data-screenName="skills") Skills
             li
-              a(href="#members", data-screenIndex="5") Members
+              a(href="#members", data-screenName="members") Members
             li
-              a(href="#partners", data-screenIndex="6") Partners
+              a(href="#partners", data-screenName="partners") Partners
         .camplightLogo(
           data-_landing-0="top-offset: 100px;left: 400px; transform: scale(1)",
           data-_landing-800="top-offset: -1600px;left: 400px; transform: scale(3)")
@@ -150,33 +150,56 @@ html
           data-_skills-426="top-offset:74px; left: -445px; transform: scale(2)")
 
         .fluffyCloud1(
-          data-_members--1438="top-offset:-259px; left: -12px; transform: rotate(0deg) scale(0.10012383900928801)",
-          data-_members-0="top-offset:10px; left: 49px; transform: rotate(0deg) scale(1.0978297872340428)",)
+          data-_campland--1438="top-offset:-259px; left: -12px; transform: rotate(0deg) scale(0.10012383900928801)",
+          data-_campland-0="top-offset:10px; left: 49px; transform: rotate(0deg) scale(1.0978297872340428)",)
           h1 Campland
         .mountains2(
-          data-_members--1438="top-offset:-550px; left: -430px; transform: rotate(0deg) scale(1)",
-          data-_members-0="top-offset:131px; left: -430px; transform: rotate(0deg) scale(1)")
+          data-_campland--1438="top-offset:-550px; left: -430px; transform: rotate(0deg) scale(1)",
+          data-_campland-0="top-offset:131px; left: -430px; transform: rotate(0deg) scale(1)")
         .mountains4(
-          data-_members--1438="top-offset:-291px; left: -430px; transform: rotate(0deg) scale(1)",
-          data-_members-0="top-offset:90px; left: -430px; transform: rotate(0deg) scale(1)")
+          data-_campland--1438="top-offset:-291px; left: -430px; transform: rotate(0deg) scale(1)",
+          data-_campland-0="top-offset:90px; left: -430px; transform: rotate(0deg) scale(1)")
         .mountains5(
-          data-_members--1438="top-offset:46px; left: -430px; transform: rotate(0deg) scale(1)",
-          data-_members-0="top-offset:287px; left: -430px; transform: rotate(0deg) scale(1)")
+          data-_campland--1438="top-offset:46px; left: -430px; transform: rotate(0deg) scale(1)",
+          data-_campland-0="top-offset:287px; left: -430px; transform: rotate(0deg) scale(1)")
         .mountains7(
-          data-_members--1438="top-offset:319px; left: -430px; transform: rotate(0deg) scale(1)",
-          data-_members-0="top-offset:349px; left: -430px; transform: rotate(0deg) scale(1)")
-
-        .members(
-          data-_members-0="top-offset:576px; left: -112px;")
-          ul.memberList
-              for member in members
-                  li.member= member.name
-        .clearfix
+          data-_campland--1438="top-offset:319px; left: -430px; transform: rotate(0deg) scale(1)",
+          data-_campland-0="top-offset:349px; left: -430px; transform: rotate(0deg) scale(1)")
+     
+        .whitebackground(
+          data-_members-0="top-offset:200px; left: -430px;")
+        .camplightLogo.fire(
+          data-_members--300="top-offset:135px; left: 400px; opacity: 0; transform: rotate(0deg) scale(1,1)",
+          data-_members-0="top-offset:90px; left: 400px; opacity: 1; transform: rotate(0deg) scale(0.4,0.4)")
+        .member1.member(
+          title="Alex Kuklin",
+          data-_members--100="top-offset:240px; left: 596px; opacity: 0",
+          data-_members-0="top-offset:220px; left: 586px; opacity: 1;")
+        .member2.member(
+          title="Anastas Kalkov",
+          data-_members--200="top-offset:59px; left: 300px; opacity: 0",
+          data-_members-0="top-offset:89px; left: 380px; opacity: 1")
+        .member3.member(
+          title="Angel Angelov",
+          data-_members--120="top-offset:168px; left: 248px; opacity: 0",
+          data-_members-0="top-offset:168px; left: 248px; opacity: 1")
+        .member4.member(
+          title="Antze Kaynier",
+          data-_members--100="top-offset:323px; left: 322px; opacity: 0",
+          data-_members-0="top-offset:323px; left: 322px; opacity: 1")
+        .member5.member(
+          title="Atanas Hristov",
+          data-_members--250="top-offset:373px; left: 590px; opacity: 0",
+          data-_members-0="top-offset:343px; left: 560px; opacity: 1")
+        .member6.member(
+          title="Diana Ivanova",
+          data-_members--100="top-offset:171px; left: 822px; opacity: 0",
+          data-_members-0="top-offset:171px; left: 722px; opacity: 1")
+        .member7.member(
+          title="Emiliyan Kalinov",
+          data-_members--200="top-offset:374px; left: 711px; opacity: 0",
+          data-_members-0="top-offset:374px; left: 711px; opacity: 1")
 
         .parners(
           data-_partners--400="top-offset: 2560px; left: 150px",
           data-_partners-0="top-offset: 2660px; left: 150px")
-          ul.memberList
-              for member in members
-                  li.member= member.name
-        .clearfix

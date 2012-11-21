@@ -1,5 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Signika+Negative);
 @import "./layout.css";
+@import "./members.css";
+@import "./jquery/jquery-betterTooltip.css";
 
 .clearfix {
   clear: both;
@@ -288,16 +290,6 @@ html, body {
   z-index: 57;
 }
 
-.memberList {
-  list-style: none;
-  padding: 0px;
-  width: 960px;
-}
-.member {
-  float: left;
-  width: 150px;
-}
-
 .balloon {
   background-image: url("../images/balloon.png");
   width: 123px;
@@ -354,3 +346,4 @@ html, body {
   -webkit-box-shadow: 0 0 10px 5px black, 40px -30px lime, 40px 30px 50px red, -40px 30px yellow, -40px -30px 50px blue;
   box-shadow: 0 0 10px 5px black, 40px -30px lime, 40px 30px 50px red, -40px 30px yellow, -40px -30px 50px blue;
 }
+

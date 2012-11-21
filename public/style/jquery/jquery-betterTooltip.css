@@ -1,0 +1,11 @@
+.tip {
+  width: 212px;
+  padding-top: 37px;
+  overflow: hidden;
+  display: none;
+  position: absolute;
+  z-index: 500;
+  background: transparent url(images/tipTop.png) no-repeat top;}
+  
+.tipMid {background: transparent url(images/tipMid.png) repeat-y; padding: 0 25px 20px 25px;}
+.tipBtm {background: transparent url(images/tipBtm.png) no-repeat bottom; height: 32px;}

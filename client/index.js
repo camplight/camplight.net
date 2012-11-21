@@ -40,6 +40,7 @@ $(document).ready(function(){
     about2: 0.7,
     about3: {ratio: 0.6, nextDelayWith: 500},
     skills: {ratio: 1, nextDelayWith: 500},
+    campland: 0.9,
     members: 1,
     partners: 1,
     bonus: 1
@@ -51,10 +52,18 @@ $(document).ready(function(){
     "about2",
     "about3",
     "skills",
+    "campland",
     "members",
     "partners",
     "bonus"
   ];  
+
+  var getScreenIndex = function(name){
+    for(var i = 0;i < screensOrder.length;i ++) {
+      if(screensOrder[i] == name)
+        return i;
+    }
+  }
 
   var offset = 0;
   for(var i = 0;i < screensOrder.length;i ++) {
@@ -98,14 +107,41 @@ $(document).ready(function(){
   });
   
   
-
-  
   var playNextScreen = function(){
     currentScreenIndex += 1;
     if(currentScreenIndex>=screensOrder.length)
       currentScreenIndex = 0;
     var top = screens[screensOrder[currentScreenIndex]];
     setScrollTop(top);
+  }
+
+  var fireLoopId;
+  var startFireAnimation = function(){
+    var speed = 3000;
+    var loopDir = true;
+    var func = function(){
+      if(loopDir) {
+        $(".fire").transition({
+          scale: [0.45,0.45],
+          y: "-15px"
+        }, speed);
+      } else {
+        $(".fire").transition({
+          scale: [0.4,0.4],
+          y: "15px"
+        }, speed);
+      }
+      loopDir = !loopDir;
+    };
+    func();
+    setInterval(func, speed);
+  }
+
+  var stopFireAnimation = function(){
+    if(fireLoopId) {
+      clearInterval(fireLoopId);
+      fireLoopId = undefined;
+    }
   }
 
   var playToScreen = function(index, options){
@@ -126,25 +162,25 @@ $(document).ready(function(){
       "contacts": "showContacts"
     },
     start: function(){
-      playToScreen(0);
+      playToScreen(getScreenIndex("landing"));
     },
     showAbout: function(){
-      playToScreen(1);
+      playToScreen(getScreenIndex("about"));
     },
     showAbout2: function(){
-      playToScreen(2);
+      playToScreen(getScreenIndex("about2"));
     },
     showAbout3: function(){
-      playToScreen(3);
+      playToScreen(getScreenIndex("about3"));
     },
     showSkills: function(){
-      playToScreen(4);
+      playToScreen(getScreenIndex("skills"));
     },
     showMembers: function(){
-      playToScreen(5);
+      playToScreen(getScreenIndex("members"));
     },
     showPartners: function(){
-      playToScreen(6);
+      playToScreen(getScreenIndex("partners"));
     }
   });
 
@@ -160,13 +196,29 @@ $(document).ready(function(){
   $("#menu a").click(function(e){
     e.preventDefault();
     var self = this;
-    playToScreen($(this).attr("data-screenIndex"), {
+    playToScreen(getScreenIndex($(this).attr("data-screenName")), {
       done: function(){
         app.router.navigate($(self).attr("href"), false);
       }
     });
     return false;
   })
+
+  $(".member").mouseover(function(e){
+    e.preventDefault();
+    $(this).transition({
+      scale: [1.2, 1.2]
+    });
+  });
+  $(".member").mouseout(function(e){
+    e.preventDefault();
+    $(this).transition({
+      scale: [1, 1]
+    });
+  });
+
+  $(".member").betterTooltip({speed: 150, delay: 100});
+  startFireAnimation();
 
   $(window).mousedown(function(e){
     if(e.ctrlKey) {

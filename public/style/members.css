@@ -1,0 +1,47 @@
+.whitebackground {
+  background-color: white;
+  width: 1920px;
+  height: 600px;
+}
+
+.member1 {
+  background-image: url("../images/members/m1.png");
+  width: 108px;
+  height: 112px; 
+}
+
+.member2 {
+  background-image: url("../images/members/m2.png");
+  width: 108px;
+  height: 112px; 
+}
+
+.member3 {
+  background-image: url("../images/members/m3.png");
+  width: 108px;
+  height: 112px; 
+}
+
+.member4 {
+  background-image: url("../images/members/m4.png");
+  width: 108px;
+  height: 112px; 
+}
+
+.member5 {
+  background-image: url("../images/members/m5.png");
+  width: 108px;
+  height: 112px; 
+}
+
+.member6 {
+  background-image: url("../images/members/m6.png");
+  width: 108px;
+  height: 112px; 
+}
+
+.member7 {
+  background-image: url("../images/members/m7.png");
+  width: 108px;
+  height: 112px; 
+}
