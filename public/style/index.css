@@ -51,7 +51,7 @@ html, body {
 }
 
 #menu {
-  z-index: 101;
+  z-index: 201;
   position: fixed;
 }
 
@@ -241,25 +241,11 @@ html, body {
   height: 177px;
 }
 
-.mountains1 {
-  background-image: url("../images/mountains_top1.png");
-  width: 1920px;
-  height: 994px;
-  z-index: 51;
-}
-
 .mountains2 {
   background-image: url("../images/mountains_top2.png");
   width: 1920px;
   height: 978px;
   z-index: 52;
-}
-
-.mountains3 {
-  background-image: url("../images/mountains_top3.png");
-  width: 1920px;
-  height: 879px;
-  z-index: 53;
 }
 
 .mountains4 {
@@ -276,13 +262,6 @@ html, body {
   z-index: 55;
 }
 
-.mountains6 {
-  background-image: url("../images/mountains_top6.png");
-  width: 1920px;
-  height: 549px;
-  z-index: 56;
-}
-
 .mountains7 {
   background-image: url("../images/mountains_top7.png");
   width: 1920px;
@@ -290,10 +269,52 @@ html, body {
   z-index: 57;
 }
 
-.balloon {
-  background-image: url("../images/balloon.png");
-  width: 123px;
-  height: 234px;
+.cloudsTop {
+  background-image: url("../images/clouds_top.png");
+  width: 1060px;
+  height: 164px;
+}
+
+.tree1 {
+  background-image: url("../images/tree1.png");
+  width: 505px;
+  height: 946px;
+  z-index: 158;
+}
+
+.tree2 {
+  background-image: url("../images/tree2.png");
+  width: 515px;
+  height: 956px;
+  z-index: 159;
+}
+
+.tree3 {
+  background-image: url("../images/tree3.png");
+  width: 556px;
+  height: 773px;
+  z-index: 160;
+}
+
+.tree4 {
+  background-image: url("../images/tree4.png");
+  width: 463px;
+  height: 909px;
+  z-index: 161;
+}
+
+.tree5 {
+  background-image: url("../images/tree5.png");
+  width: 415px;
+  height: 927px;
+  z-index: 162;
+}
+
+.tree6 {
+  background-image: url("../images/tree6.png");
+  width: 496px;
+  height: 753px;
+  z-index: 163;
 }
 
 #impress {
