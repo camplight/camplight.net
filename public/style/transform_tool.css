@@ -48,3 +48,39 @@
 	bottom: -10px;
 	position:absolute;
 }
+
+
+
+
+
+.tlPoint {
+	width: 1px;
+	height: 1px;
+	left: 0px;
+	top: 0px;
+	position:absolute;
+}
+
+.trPoint {
+	width: 1px;
+	height: 1px;
+	right: -1px;
+	top: 0px;
+	position:absolute;
+}
+
+.blPoint {
+	width: 1px;
+	height: 1px;
+	left: 0px;
+	bottom: -px;
+	position:absolute;
+}
+
+.brPoint {
+	width: 1px;
+	height: 1px;
+	right: -1px;
+	bottom: -1px;
+	position:absolute;
+}

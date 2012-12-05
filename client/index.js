@@ -12,6 +12,10 @@ Backbone = require("./vendor/backbone");
 require("./vendor/ga");
 require("./vendor/jquery.animate-colors-min");
 require("./vendor/jquery.idle-timer");
+
+require("./vendor/jquery.freetrans");
+require("./vendor/Matrix");
+
 isMobile = require("./vendor/mobileCheck").isMobile();
 
 var EditToolbar = require("./views/EditToolbar");
@@ -41,7 +45,7 @@ $(document).ready(function(){
     about3: {ratio: 0.6, nextDelayWith: 500},
     skills: {ratio: 1, nextDelayWith: 500},
     campland: 0.9,
-    members: 1,
+    members: {height: 950},
     partners: 1,
     bonus: 1
   };
@@ -69,8 +73,13 @@ $(document).ready(function(){
   for(var i = 0;i < screensOrder.length;i ++) {
     var ratio = screens[screensOrder[i]];
     screens[screensOrder[i]] = offset;
-    if(typeof ratio == "object")
-      offset += $(document).height()*ratio.ratio+ratio.nextDelayWith;  
+    if(typeof ratio == "object") {
+      if (ratio.height)
+        offset += ratio.height;  
+      else
+        offset += $(document).height()*ratio.ratio+ratio.nextDelayWith;
+
+    }
     else
       offset += $(document).height()*ratio;
   }
@@ -84,7 +93,7 @@ $(document).ready(function(){
         currentScreenIndex = i;
         break;
       }
-    toolbar.updateCurrentScreenIndex(currentScreenIndex);
+    //toolbar.updateCurrentScreenIndex(currentScreenIndex);
   }
 
   var setScrollTop = function(top, options) {
@@ -221,10 +230,10 @@ $(document).ready(function(){
   startFireAnimation();
 
   $(window).mousedown(function(e){
-    if(e.ctrlKey) {
+    /*if(e.ctrlKey) {
       e.preventDefault();
       playNextScreen();
-    }
+    }*/
   });
 
   
