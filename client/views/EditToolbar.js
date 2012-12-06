@@ -16,6 +16,7 @@
     var self = this;
 
     this.screens = options.screens;
+    this.screensPositions = options.screensPositions;
     this.screensOrder = options.screensOrder;
     this.currentScreenIndex = 0;
     this.curTop = 0;
@@ -27,7 +28,6 @@
     this.ctrlKey = false;
 
     this.selectTarget = function(e) {
-        console.log("selectTarget", self.ctrlKey);
         if (!self.ctrlKey) {
           self.transformToolManager.selectTarget(e.currentTarget);
           self.refreshStats();
@@ -88,7 +88,7 @@
   },
   scrollTo : function(e)
   {
-    var offset = this.screens[this.screensOrder[this.currentScreenIndex]];
+    var offset = this.screensPositions[this.screensOrder[this.currentScreenIndex]];
 
     this.setScrollTop(offset);
   },
@@ -118,8 +118,6 @@
       $(".skrollable").unbind("click", this.selectTarget);
       self.transformToolManager.deselectTarget();
     }
-
-    console.log("toggleResize:", this.resizable);
   },
   refreshStats : function()
   {
@@ -133,8 +131,6 @@
       var yPos = Math.round( self.transformToolManager.target.offsetTop-self.screens[screenName]);
 
       var data = "data-_"+screenName+"-"+curScreenOffset+"="+'"top-offset:'+yPos+'px; left: '+xPos+'px; ' + self.transformToolManager.getTargetTransformInfo() + '"';
-
-      console.log(xPos, yPos, data);
 
       self.$(".data").html("<input style='width: 800px' type='text' value='" + data + "'>");
     }

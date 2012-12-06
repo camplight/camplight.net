@@ -23,8 +23,6 @@ var EditToolbar = require("./views/EditToolbar");
 var TransformToolManager = require("./vendor/transform_tool");
 var transformToolManager = new TransformToolManager();
 
-console.log(transformToolManager);
-
 $(document).ready(function(){
   $(".invisible").css({"opacity": 0});
 
@@ -45,7 +43,7 @@ $(document).ready(function(){
     about3: {ratio: 0.6, nextDelayWith: 500},
     skills: {ratio: 1, nextDelayWith: 500},
     campland: 0.9,
-    members: {height: 950},
+    members: {height: 950, offsetRatio: 0.26},
     partners: 1,
     bonus: 1
   };
@@ -62,6 +60,8 @@ $(document).ready(function(){
     "bonus"
   ];  
 
+  var screensPositions = [];
+
   var getScreenIndex = function(name){
     for(var i = 0;i < screensOrder.length;i ++) {
       if(screensOrder[i] == name)
@@ -70,20 +70,30 @@ $(document).ready(function(){
   }
 
   var offset = 0;
+  var position = 0;
   for(var i = 0;i < screensOrder.length;i ++) {
     var ratio = screens[screensOrder[i]];
-    screens[screensOrder[i]] = offset;
-    if(typeof ratio == "object") {
-      if (ratio.height)
-        offset += ratio.height;  
-      else
-        offset += $(document).height()*ratio.ratio+ratio.nextDelayWith;
 
+    screens[screensOrder[i]] = offset;
+    screensPositions[screensOrder[i]] = offset;
+
+    if(typeof ratio == "object") {
+
+      var value;
+
+      if (ratio.height)
+        value = ratio.height;  
+      else
+        value = $(document).height() * ratio.ratio + ratio.nextDelayWith;
+
+      offset += value;  
+
+      if (ratio.offsetRatio)
+        screensPositions[screensOrder[i]] += value * ratio.offsetRatio;  
     }
     else
       offset += $(document).height()*ratio;
   }
-  console.log(screens);
 
   var currentScreenIndex = 0;
 
@@ -93,22 +103,28 @@ $(document).ready(function(){
         currentScreenIndex = i;
         break;
       }
-    //toolbar.updateCurrentScreenIndex(currentScreenIndex);
+    toolbar.updateCurrentScreenIndex(currentScreenIndex);
   }
 
   var setScrollTop = function(top, options) {
     if(isMobile) {
-      skrollr.iscroll.scrollTo(0,-top);
+      skrollr.iscroll.scrollTo(0,top);
+      if(options && options.done) options.done();
     } else
       s.animateTo(top, options);
     updateCurrentScreenIndex(top);
   }
 
-  var toolbar = new EditToolbar({screens: screens, screensOrder: screensOrder, transformToolManager: transformToolManager, setScrollTop: setScrollTop});
+  var toolbar = new EditToolbar({
+    screens: screens, 
+    screensPositions: screensPositions, 
+    screensOrder: screensOrder, 
+    transformToolManager: transformToolManager, 
+    setScrollTop: setScrollTop
+  });
 
   s = skrollr.init({
     beforerender: function(data){
-      console.log(data.curTop);
       updateCurrentScreenIndex(data.curTop);
       toolbar.updateCurTop(data.curTop);
     },
@@ -120,42 +136,13 @@ $(document).ready(function(){
     currentScreenIndex += 1;
     if(currentScreenIndex>=screensOrder.length)
       currentScreenIndex = 0;
-    var top = screens[screensOrder[currentScreenIndex]];
+    var top = screensPositions[screensOrder[currentScreenIndex]];
     setScrollTop(top);
-  }
-
-  var fireLoopId;
-  var startFireAnimation = function(){
-    var speed = 3000;
-    var loopDir = true;
-    var func = function(){
-      if(loopDir) {
-        $(".fire").transition({
-          scale: [0.45,0.45],
-          y: "-15px"
-        }, speed);
-      } else {
-        $(".fire").transition({
-          scale: [0.4,0.4],
-          y: "15px"
-        }, speed);
-      }
-      loopDir = !loopDir;
-    };
-    func();
-    setInterval(func, speed);
-  }
-
-  var stopFireAnimation = function(){
-    if(fireLoopId) {
-      clearInterval(fireLoopId);
-      fireLoopId = undefined;
-    }
   }
 
   var playToScreen = function(index, options){
     currentScreenIndex = index;
-    var top = screens[screensOrder[currentScreenIndex]];
+    var top = screensPositions[screensOrder[currentScreenIndex]];
     setScrollTop(top, options); 
   }
 
@@ -200,7 +187,12 @@ $(document).ready(function(){
   window.onerror = function(err){
     alert(err);
   }
-  Backbone.history.start({navigate: true}); 
+  if(isMobile)
+    setTimeout(function(){
+      Backbone.history.start({navigate: true}); 
+    }, 300);
+  else
+    Backbone.history.start({navigate: true}); 
 
   $("#menu a").click(function(e){
     e.preventDefault();
@@ -213,30 +205,6 @@ $(document).ready(function(){
     return false;
   })
 
-  $(".member").mouseover(function(e){
-    e.preventDefault();
-    $(this).transition({
-      scale: [1.2, 1.2]
-    });
-  });
-  $(".member").mouseout(function(e){
-    e.preventDefault();
-    $(this).transition({
-      scale: [1, 1]
-    });
-  });
-
-  $(".member").betterTooltip({speed: 150, delay: 100});
-  startFireAnimation();
-
-  $(window).mousedown(function(e){
-    /*if(e.ctrlKey) {
-      e.preventDefault();
-      playNextScreen();
-    }*/
-  });
-
-  
-  $("body").append(toolbar.render().el);
-  toolbar.render().$el.hide();
+  /*$("body").append(toolbar.render().el);
+  toolbar.render().$el.hide();*/
 });

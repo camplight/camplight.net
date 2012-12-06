@@ -317,11 +317,18 @@ html, body {
   z-index: 163;
 }
 
+.tree7 {
+  background-image: url("../images/tree7.png");
+  width: 1920px;
+  height: 855px;
+  z-index: 163;
+}
+
 .owl {
   background-image: url("../images/owl.png");
   width: 37px;
   height: 46px;
-  z-index: 159;
+  z-index: 150;
 }
 
 .toilet {
@@ -503,6 +510,41 @@ html, body {
   width: 118px;
   height: 118px;
   z-index: 202;
+}
+
+.partner1 {
+  background-image: url("../images/partners/shtrak.png");
+  width: 135px;
+  height: 65px;
+  z-index: 203;
+}
+
+.partner2 {
+  background-image: url("../images/partners/gamecraft.png");
+  width: 268px;
+  height: 69px;
+  z-index: 204;
+}
+
+.partner3 {
+  background-image: url("../images/partners/sourcerealms.png");
+  width: 86px;
+  height: 86px;
+  z-index: 205;
+}
+
+.partner4 {
+  background-image: url("../images/partners/crystalplay.png");
+  width: 246px;
+  height: 90px;
+  z-index: 206;
+}
+
+.partnersBackground {
+  background-color: #FFFFFF;
+  width: 1920px;
+  height: 1090px;
+  z-index: 10;
 }
 
 #impress {

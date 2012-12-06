@@ -49,8 +49,6 @@ module.exports = TransformToolManager = function() {
 
 TransformToolManager.prototype.prepare = function() {
 
-	console.log("-prepare-");
-
 	this.transformTool = document.createElement('div');
 	this.transformTool.setAttribute('id', "transformTool");
 	this.transformTool.setAttribute('class', "transformTool");
@@ -85,7 +83,6 @@ TransformToolManager.prototype.prepare = function() {
 	this.tlBox.onmousedown = function(e) {
 		e.preventDefault();
 		_self.onResizeMouseDownTL(e);
-		//console.log(e);
 	};
 
 	this.trBox = document.getElementById('trBox');
@@ -112,8 +109,6 @@ TransformToolManager.prototype.prepare = function() {
 	this.brPoint = document.getElementById('brPoint');
 
 	var keyDownFn = function(e){
-		console.log(e.keyCode);
-
 		if (e.keyCode == 16)
 			_self.shiftKey = true;
 
@@ -167,8 +162,6 @@ TransformToolManager.prototype.prepare = function() {
 	document.onkeyup= keyUpFn;
 
 	this.transformTool.style.left = "-5000px";
-
-	//console.log("prepare:", _body, tlBox, trBox, blBox, brBox);
 }
 
 TransformToolManager.prototype.selectTarget = function(target) {
@@ -208,29 +201,21 @@ TransformToolManager.prototype.deselectTarget = function() {
 }
 
 TransformToolManager.prototype.onResizeMouseDownTL = function(e) {
-	//console.log("onResizeMouseDownTL");
-
 	this.selectedRect = this.tlBox;
 	this.pocessResizeMouseDown(e);
 }
 
 TransformToolManager.prototype.onResizeMouseDownTR = function(e) {
-	//console.log("onResizeMouseDownTL");
-
 	this.selectedRect = this.trBox;
 	this.pocessResizeMouseDown(e);
 }
 
 TransformToolManager.prototype.onResizeMouseDownBL = function(e) {
-	//console.log("onResizeMouseDownTL");
-
 	this.selectedRect = this.blBox;
 	this.pocessResizeMouseDown(e);
 }
 
 TransformToolManager.prototype.onResizeMouseDownBR = function(e) {
-	//console.log("onResizeMouseDownTL");
-
 	this.selectedRect = this.brBox;
 	this.pocessResizeMouseDown(e);
 }
@@ -264,8 +249,6 @@ TransformToolManager.prototype.rotateMouseDown = function(e) {
 	this.targetRotation = data.rotation;
 
 
-	console.log("rotateMouseDown:", p.x, p.y, cx, cy);
-
 	var _self = this;
 
 	document.onmousemove = function(e) {
@@ -288,20 +271,14 @@ TransformToolManager.prototype.onRotateMouseMove = function(e) {
 	this.targetData.rotation = this.targetRotation + Math.atan2(e.pageY - cy, e.pageX - cx) * (180 / Math.PI) - this.startRotation;	
 	this.transformToolData.rotation = this.targetData.rotation;
 
-	//console.log("onRotateMouseMove:", this.targetRotation, Math.atan2(e.clientY - cy, e.clientX - cx) * (180 / Math.PI), this.startRotation, this.targetRotation + Math.atan2(e.clientY - cy, e.clientX - cx) * (180 / Math.PI) - this.startRotation);
-
 	this.setTransformData(this.target, this.targetData);
 	this.setTransformData(this.transformTool, this.transformToolData);
 
 	if (this.updateFn)
 		this.updateFn();
-
-	console.log("onRotateMouseMove:", p.x, p.y, cx, cy, e.clientX, e.clientY, this.targetData.width, this.targetData.scaleX);
 }
 
 TransformToolManager.prototype.onRotateMouseUp = function() {
-	//console.log("onResizeMouseUp");
-
 	var data = this.getTransformData(this.target);
 	this.targetRotation = data.rotation;
 
@@ -371,14 +348,10 @@ TransformToolManager.prototype.resizeMouseDown = function(e) {
 
 	var points = this.rectPoints(this.tmpP1, this.tmpP2, this.transformToolData.rotation);
 
-	console.log("1.resizeMouseDown:", this.tmpP2.x - this.tmpP1.x, this.tmpP2.y - this.tmpP1.y, this.distance(this.tmpP1, points.point2), this.distance(this.tmpP1, points.point1));
-
 	this.transformToolData.width = this.distance(this.tmpP1, points.point2);
 	this.transformToolData.height = this.distance(this.tmpP1, points.point1);
 
 	this.setTransformData(this.transformTool, this.transformToolData);
-
-	console.log("2.resizeMouseDown:", this.tmpP1, this.tmpP2, points, this.transformTool.offsetWidth, this.transformTool.offsetHeight);
 
 	var _self = this;
 
@@ -402,8 +375,6 @@ TransformToolManager.prototype.rectPoints = function(point1, point2, angle)
 	var y3 = point1.y - r*Math.cos(angle);
 	var x4 = point2.x - r*Math.sin(angle);
 	var y4 = point2.y + r*Math.cos(angle);
-
-	console.log("rectPoints:", angle)
 
 	return {
 		point1: {
@@ -435,8 +406,6 @@ TransformToolManager.prototype.onResizeMouseMove = function(e)
 
 	if (this.selectedRect == this.tlBox)
 	{
-		//console.log("1");
-
 		this.targetData.x = this.tmpTransformToolData.x + w;
 		this.targetData.y = this.tmpTransformToolData.y + h;
 
@@ -446,8 +415,6 @@ TransformToolManager.prototype.onResizeMouseMove = function(e)
 	else
 	if (this.selectedRect == this.trBox)
 	{
-		//console.log("2");
-
 		this.targetData.y = this.tmpTransformToolData.y + h;
 
 		this.targetData.scaleX = (this.tmpTransformToolData.width + w) / this.targetData.width;
@@ -456,8 +423,6 @@ TransformToolManager.prototype.onResizeMouseMove = function(e)
 	else
 	if (this.selectedRect == this.blBox)
 	{
-		//console.log("3");
-
 		this.targetData.x = (this.tmpTransformToolData.x + w);
 
 		this.targetData.scaleX = (this.tmpTransformToolData.width - w) / this.targetData.width;
@@ -466,9 +431,7 @@ TransformToolManager.prototype.onResizeMouseMove = function(e)
 	else
 	if (this.selectedRect == this.brBox)
 	{
-		/*console.log("4", this.shiftKey);
-
-		if (this.shiftKey)
+		/*if (this.shiftKey)
 			hh = this.tmpTransformToolData.height * ((this.tmpTransformToolData.width + w) / this.targetData.width);
 		else
 			hh = (this.tmpTransformToolData.height + h);*/
@@ -484,7 +447,7 @@ TransformToolManager.prototype.onResizeMouseMove = function(e)
 		//this.targetData.scaleX = (this.tmpTransformToolData.width + w) / this.targetData.width;
 		//this.targetData.scaleY = (this.tmpTransformToolData.height + h) / this.targetData.height;
 
-		console.log("1.onResizeMouseMove:", this.transformTool.offsetWidth, this.transformTool.offsetHeight, this.distance(this.tmpP1, points.point2), this.distance(this.tmpP1, points.point1));
+		//console.log("1.onResizeMouseMove:", this.transformTool.offsetWidth, this.transformTool.offsetHeight, this.distance(this.tmpP1, points.point2), this.distance(this.tmpP1, points.point1));
 	}
 
 
@@ -498,8 +461,6 @@ TransformToolManager.prototype.onResizeMouseMove = function(e)
 	this.readTransformToolData();
 	this.setTransformData(this.transformTool, this.transformToolData);
 
-	console.log("onResizeMouseMove", this.targetData, this.transformToolData, this.target.offsetLeft, this.target.offsetTop);*/
-
 	//this.targetData.scaleX = this.transformTool.offsetWidth / this.targetData.width;
 	//this.targetData.scaleY = this.transformTool.offsetHeight / this.targetData.height;
 
@@ -507,9 +468,6 @@ TransformToolManager.prototype.onResizeMouseMove = function(e)
 	this.target.style.top = (this.targetData.y + h / 2) + "px";
 
 	this.setTransformData(this.target, this.targetData);*/
-
-	//console.log(this.getTransformData(this.target));
-	//console.log("onResizeMouseMove", this.shiftKey, w, h, this.targetData.scaleX, this.targetData.scaleY, this.target.offsetLeft, this.target.offsetTop, this.target.offsetWidth, this.target.offsetHeight);
 
 	if (this.updateFn)
 		this.updateFn();
@@ -594,8 +552,6 @@ TransformToolManager.prototype.setTransformData2 = function(target, data) {
 	target.style["-moz-transform"] = str;
 	target.style["-o-transform"] = str;
 	target.style["-ms-transform"] = str;
-
-	console.log("setTransformData:", data, target.style["-moz-transform"], "'" + data.scaleX + "'", "'" + data.scaleY + "'", str);
 }
 
 TransformToolManager.prototype.setTransformData = function(target, data) {
@@ -628,8 +584,6 @@ TransformToolManager.prototype.setTransformData = function(target, data) {
 	target.style["-moz-transform"] = str;
 	target.style["-o-transform"] = str;
 	target.style["-ms-transform"] = str;
-
-	//console.log("setTransformData:", data, target.style, str);
 }
 
 TransformToolManager.prototype.getTransformData = function(target) {
@@ -648,8 +602,6 @@ TransformToolManager.prototype.getTransformData = function(target) {
 	         target.style["-moz-transform"] ||
 	         target.style["-ms-transform"] ||
 	         target.style["-o-transform"];
-
-	//console.log("getTransformData: '" + tr + "'");
 
 	if (tr)
 	{
