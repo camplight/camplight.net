@@ -34,6 +34,7 @@ html, body {
 
 .content {
   width: 1060px;
+  height: 100%;
   margin: 0 auto;
 }
 
@@ -598,3 +599,5 @@ html, body {
   box-shadow: 0 0 10px 5px black, 40px -30px lime, 40px 30px 50px red, -40px 30px yellow, -40px -30px 50px blue;
 }
 
+
+#hut {background:url("../images/hut_aimation.png") no-repeat 0px -6848px;width:172px; height:107px; padding:0; display:block;}

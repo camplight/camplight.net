@@ -12,9 +12,7 @@ Backbone = require("./vendor/backbone");
 require("./vendor/ga");
 require("./vendor/jquery.animate-colors-min");
 require("./vendor/jquery.idle-timer");
-
-require("./vendor/jquery.freetrans");
-require("./vendor/Matrix");
+require("./vendor/jquery.frame.animation.js");
 
 isMobile = require("./vendor/mobileCheck").isMobile();
 
@@ -35,6 +33,8 @@ $(document).ready(function(){
   var prevActiveMenu;
   var api = impress();
   api.init();*/
+
+  $("#hut").frameAnimation({hoverMode:false, repeat:-1});
 
   var screens = {
     landing: 1,
@@ -108,8 +108,7 @@ $(document).ready(function(){
 
   var setScrollTop = function(top, options) {
     if(isMobile) {
-      skrollr.iscroll.scrollTo(0,top);
-      if(options && options.done) options.done();
+      s.animateTo(-top, options);
     } else
       s.animateTo(top, options);
     updateCurrentScreenIndex(top);
@@ -205,6 +204,6 @@ $(document).ready(function(){
     return false;
   })
 
-  /*$("body").append(toolbar.render().el);
-  toolbar.render().$el.hide();*/
+  $("body").append(toolbar.render().el);
+  toolbar.render().$el.hide();
 });
