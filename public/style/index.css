@@ -325,13 +325,6 @@ html, body {
   z-index: 163;
 }
 
-.owl {
-  background-image: url("../images/owl.png");
-  width: 37px;
-  height: 46px;
-  z-index: 150;
-}
-
 .toilet {
   background-image: url("../images/toilet.png");
   width: 71px;
@@ -601,3 +594,4 @@ html, body {
 
 
 #hut {background:url("../images/hut_aimation.png") no-repeat 0px -6848px;width:172px; height:107px; padding:0; display:block;}
+#owl {background:url("../images/owl-animation.png") no-repeat 0px -3864px;width:37px; height:46px; padding:0; display:block;z-index: 150;}

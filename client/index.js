@@ -35,6 +35,7 @@ $(document).ready(function(){
   api.init();*/
 
   $("#hut").frameAnimation({hoverMode:false, repeat:-1});
+  $("#owl").frameAnimation({hoverMode:false, repeat:-1});
 
   var screens = {
     landing: 1,
