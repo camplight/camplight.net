@@ -24,11 +24,6 @@
         "type": "BundleCode" ,
         "code": "/index",
         "content-type": "text/javascript"
-      },
-
-      "/about" : {
-        "type": "RenderPage",
-        "page": "/about"
       }
     },
 

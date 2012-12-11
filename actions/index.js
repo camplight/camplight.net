@@ -1,8 +1,6 @@
 var fs = require("fs");
 var _ = require("underscore");
 
-var strokePath = fs.readFileSync(__dirname+"/strokePath");
-
 var data = fs.readFileSync(__dirname+"/members.json");
 var membersSorted = JSON.parse(data.toString());
 membersSorted = _.sortBy(membersSorted, "name");
@@ -16,7 +14,6 @@ var partners = JSON.parse(data.toString());
 
 module.exports = function(chemical, callback){
   chemical.members = membersSorted;
-  chemical.strokePath = strokePath;
   chemical.skills = skills;
   chemical.partners = partners;
   callback(chemical);
