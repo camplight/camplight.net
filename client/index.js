@@ -201,6 +201,8 @@ $(document).ready(function(){
     return false;
   })
 
+  $("a.anchor").remove();
+
   $("body").append(toolbar.render().el);
   toolbar.render().$el.hide();
 });
