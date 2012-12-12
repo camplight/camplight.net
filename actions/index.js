@@ -2,6 +2,34 @@ var fs = require("fs");
 var _ = require("underscore");
 var $ = require("jquery");
 
+var detectBrowser = function(request) {
+  var ua = request.headers['user-agent'],
+  $ = {};
+
+  if (/mobile/i.test(ua))
+    $.Mobile = true;
+
+  if (/like Mac OS X/.test(ua)) {
+      $.iOS = /CPU( iPhone)? OS ([0-9\._]+) like Mac OS X/.exec(ua)[2].replace(/_/g, '.');
+      $.iPhone = /iPhone/.test(ua);
+      $.iPad = /iPad/.test(ua);
+  }
+
+  if (/Android/.test(ua))
+      $.Android = /Android ([0-9\.]+)[\);]/.exec(ua)[1];
+
+  if (/webOS\//.test(ua))
+      $.webOS = /webOS\/([0-9\.]+)[\);]/.exec(ua)[1];
+
+  if (/(Intel|PPC) Mac OS X/.test(ua))
+      $.Mac = /(Intel|PPC) Mac OS X ?([0-9\._]*)[\)\;]/.exec(ua)[2].replace(/_/g, '.') || true;
+
+  if (/Windows NT/.test(ua))
+      $.Windows = /Windows NT ([0-9\._]+)[\);]/.exec(ua)[1];
+
+  return $;
+}
+
 function trim1 (str) {
   return str.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
 }
@@ -156,8 +184,11 @@ module.exports = function(chemical, callback){
       height: (offset-700)+"px"
     });
     response.data = doc.html();
-    var code = "<script src='/js/jade.js'></script><script src='/code.js'></script>";
-    response.data = response.data.split("</head>").join(code);
+    var browser = detectBrowser(chemical.req);
+    if(!browser.Mobile && !browser.iPhone && !browser.iPad && !browser.Android) {
+      var code = "<script src='/js/jade.js'></script><script src='/code.js'></script>";
+      response.data = response.data.split("</head>").join(code);
+    }
     callback(response);
   });
 }
