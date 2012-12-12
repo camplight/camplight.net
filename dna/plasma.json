@@ -11,11 +11,12 @@
     "root": "/templates/",
     "useCache": true
   },
-  "CallAction": {
-    "source": "node_modules/organic-webcell/plasma/CallAction"
-  },
-  "CallChain": {
-    "source": "node_modules/organic-webcell/plasma/CallChain"
+  "MountHttpPages": {
+    "source": "plasma/MountHttpPages",
+    "cwd": {
+      "pages": "pages",
+      "pageActions": "page-helpers"
+    }
   },
   "ErrorHandler": {
     "source": "node_modules/organic-webcell/plasma/ErrorHandler"

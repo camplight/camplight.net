@@ -1,4 +1,5 @@
-require("./vendor/jquery");
+require("../client/vendor/jquery");
+
 jadeCompile = function(path){
   var compiled = jade.compile(path);
   return function(data) {
@@ -8,17 +9,14 @@ jadeCompile = function(path){
   }
 };
 
-Backbone = require("./vendor/backbone");
-require("./vendor/ga");
-require("./vendor/jquery.animate-colors-min");
-require("./vendor/jquery.idle-timer");
-require("./vendor/jquery.frame.animation.js");
+Backbone = require("../client/vendor/backbone");
+require("../client/vendor/ga");
 
-isMobile = require("./vendor/mobileCheck").isMobile();
+isMobile = require("../client/vendor/mobileCheck").isMobile();
 
-var EditToolbar = require("./views/EditToolbar");
+var EditToolbar = require("../client/views/EditToolbar");
 
-var TransformToolManager = require("./vendor/transform_tool");
+var TransformToolManager = require("../client/vendor/transform_tool");
 var transformToolManager = new TransformToolManager();
 
 $(document).ready(function(){
@@ -26,8 +24,8 @@ $(document).ready(function(){
 
   transformToolManager.prepare();
 
-  require("./vendor/skrollr.min");
-  require("./vendor/skrollr.mobile");
+  require("../client/vendor/skrollr.min");
+  require("../client/vendor/skrollr.mobile");
 
   $("#hut").frameAnimation({hoverMode:false, repeat:-1});
   $("#owl").frameAnimation({hoverMode:false, repeat:-1});

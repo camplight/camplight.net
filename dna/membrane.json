@@ -5,28 +5,6 @@
     "middleware": [
       { "source": "node_modules/organic-webcell/membrane/expressMiddleware/staticFolder", 
         "staticDir": "public/" }
-    ],
-    "routes": {
-      "/" : {
-        "type": "CallChain",
-        "chain": [
-          {
-            "type": "CallAction",
-            "action": "/actions/index"
-          }
-        ]
-      },
-      "/code.js": {
-        "type": "BundleCode" ,
-        "code": "index",
-        "content-type": "text/javascript"
-      }
-    },
-
-    "notfoundRoute":  {
-        "type": "RenderPage",
-        "page": "/404",
-        "statusCode": 404
-      }
-    }
+    ]
+  }
 }
