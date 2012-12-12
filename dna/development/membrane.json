@@ -1,5 +1,6 @@
 {
   "HttpServer": {
-    "logRoutes": true
+    "logRoutes": true,
+    "logMiddleware": true
   }
 }
