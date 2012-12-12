@@ -2,15 +2,41 @@
   z-index: 0;
   position: fixed;
   left: 0px;
-  right: 20px;
+  right: 0px;
   top: 0px;
   bottom: 0px;
-  overflow: hidden;
+  background-color: #555;
+}
+
+.noscriptbox {
+  color: #FFF;
+  text-align: center;
 }
 
 .content {
+  width: 950px;
+  margin: 0 auto;
   z-index: 100;
   position: relative;
+}
+
+.camplightLogo {
+  background-image: url("../images/camplight_flame_big.png");
+  width: 175px;
+  height: 289px;
+  margin: 0 auto;
+}
+
+.camplightTitle {
+  background-image: url("../images/CamplightText.png");
+  width: 315px;
+  height: 102px;
+  margin: 0 auto;
+}
+
+.desc {
+  text-align: center;
+  color: #FFF;
 }
 
 .projects {

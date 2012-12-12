@@ -119,8 +119,8 @@ function createCloud() {
   return div;
 }
 
-window.addEventListener( 'mousewheel', onContainerMouseWheel );
-window.addEventListener( 'DOMMouseScroll', onContainerMouseWheel ); 
+//window.addEventListener( 'mousewheel', onContainerMouseWheel );
+//window.addEventListener( 'DOMMouseScroll', onContainerMouseWheel ); 
 //window.addEventListener( 'deviceorientation', orientationhandler, false );
 //window.addEventListener( 'MozOrientation', orientationhandler, false );
 
@@ -188,12 +188,13 @@ function updateView() {
 function onContainerMouseWheel( event ) {
     
   event = event ? event : window.event;
-  d = d - ( event.detail ? event.detail * -5 : event.wheelDelta / 8 );
+  /*d = d - ( event.detail ? event.detail * -5 : event.wheelDelta / 8 );
   var h = 200;
   if(d>h)
     d=h;
   if(d<0)
-    d=0;
+    d=0;*/
+  d = window.pageYOffset;
   updateView();
   
 }
@@ -229,5 +230,12 @@ function update (){
   requestAnimationFrame( update );
   
 }
+
+setInterval(function(){
+  if(d != window.pageYOffset) {
+    d = window.pageYOffset;
+    updateView();
+  }
+}, 24);
 
 update();
