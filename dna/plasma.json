@@ -1,14 +1,14 @@
 {
   "BundleCode": {
     "source": "node_modules/organic-webcell/plasma/BundleCode",
-    "root": "/client",
+    "root": "/client/",
     "useCache": true,
     "debug": false,
     "uglify": true
   },
   "RenderPage": {
     "source": "node_modules/organic-webcell/plasma/RenderPage",
-    "root": "/templates",
+    "root": "/templates/",
     "useCache": true
   },
   "CallAction": {

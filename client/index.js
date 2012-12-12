@@ -28,11 +28,6 @@ $(document).ready(function(){
 
   require("./vendor/skrollr.min");
   require("./vendor/skrollr.mobile");
-  /*require("./vendor/impress");
-
-  var prevActiveMenu;
-  var api = impress();
-  api.init();*/
 
   $("#hut").frameAnimation({hoverMode:false, repeat:-1});
   $("#owl").frameAnimation({hoverMode:false, repeat:-1});

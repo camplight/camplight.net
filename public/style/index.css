@@ -51,6 +51,13 @@ html, body {
   position:static;
 }
 
+.noscriptbox {
+  text-align: center;
+  color: white;
+  background-color: gray;
+  border: 1px solid green;
+}
+
 #menu {
   z-index: 201;
   position: fixed;

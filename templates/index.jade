@@ -21,7 +21,11 @@ html
 
   body
     .content
+      noscript
+        .center.noscriptbox Your javascript seems turned off, if you want beautiful animations please turn it on...
       #skrollr-body(style="width: 1060px;")
+        
+        a(name="top")
         #menu(
           data-0="top: 0px; right: 0px",
           data-end="top: 300px; right: 0px")
@@ -69,7 +73,7 @@ html
           data-_landing-220="top-offset:400px; left: -150px; transform: rotate(5deg) scale(1)"
           data-_landing-400="top-offset:100px; left: -350px; transform: rotate(10deg) scale(2)")
 
-
+        a(name="about")
         #moon(
           data-_about--1037="top-offset:-160px; left: 514px; transform: rotate(15.580089409996113deg) scale(0.1)",
           data-_about-0="top-offset: 100px; left: 308px; transform: rotate(80deg) scale(1)",
@@ -122,6 +126,7 @@ html
           h1 What is Camplight's mission  
           p To provide a solid self-sustainable medium for enjoing life on Earth today and in the future
         
+        a(name="skills")
         .clouds(
           data-_skills--750="top-offset: -200px; left: -430px; transform: scale(1)",
           data-_skills-0="top-offset: 20px; left: -430px; transform: scale(1)",
@@ -149,6 +154,7 @@ html
           data-_skills-0="top-offset:411px; left:  32px; transform: scale(1)",
           data-_skills-426="top-offset:74px; left: -445px; transform: scale(2)")
 
+        a(name="campland")
         .fluffyCloud1(
           data-_campland--1438="top-offset:-259px; left: -12px; transform: rotate(0deg) scale(0.10012383900928801)",
           data-_campland-0="top-offset:10px; left: 49px; transform: rotate(0deg) scale(1.0978297872340428)",)
@@ -169,6 +175,7 @@ html
         #hut(
           data-_campland--1438="top-offset:363px; left: -22px; transform: rotate(0deg) scale(1)"
           data-_campland-0="top-offset:392px; left: -22px; transform: rotate(0deg) scale(1)")
+
 
         .tree1(
           data-_members--300="top-offset:-235px; left: -420px; opacity: 1; transform: rotate(0deg) scale(1,1)",
@@ -193,9 +200,11 @@ html
           data-_members-220="top-offset:438px; left: -65px; transform: rotate(0deg) scale(1)")
         .toilet(
           data-_members-0="top-offset:482px; left: 1077px; transform: rotate(0deg) scale(1)")
-
+        
+        a(name="members")
         .whitebackground(
           data-_members-0="top-offset:200px; left: -430px;")
+        
         .camplightLogo(
           data-_members--600="top-offset:535px; left: 400px; opacity: 0; transform: rotate(0deg) scale(0.1,0.1)",
           data-_members--300="top-offset:490px; left: 400px; opacity: 1; transform: rotate(0deg) scale(1, 1)")
@@ -228,7 +237,7 @@ html
           data-_members--200="top-offset:623px; left: 223px; opacity: 0; transform: rotate(0deg) scale(1)",
           data-_members-0="top-offset:603px; left: 283px; opacity: 1; transform: rotate(0deg) scale(1)")
         
-
+        a(name="partners")
         .partnersBackground(
           data-_partners-0="top-offset:-150px; left: -430px; transform: rotate(0deg) scale(1)")
         .parners(

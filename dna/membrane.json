@@ -13,16 +13,12 @@
           {
             "type": "CallAction",
             "action": "/actions/index"
-          },
-          {
-            "type": "RenderPage",
-            "page": "/index"
           }
         ]
       },
       "/code.js": {
         "type": "BundleCode" ,
-        "code": "/index",
+        "code": "index",
         "content-type": "text/javascript"
       }
     },
