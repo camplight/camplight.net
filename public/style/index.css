@@ -61,29 +61,39 @@ html, body {
 #menu {
   z-index: 201;
   position: fixed;
+ 
 }
 
 #menu ul {
   list-style: none;
   padding: 0px;
+
+   
 }
 
 #menu ul li {
-  background-color: #ed6458;
   margin-top: 10px;
   text-align: right;
-  padding-right: 30px;
-  padding-left: 15px;
+  
 }
 
 #menu li a {
+  display: block;
   color: #FFF;
   font-size: 18px;
   text-decoration: none;
+  background-color: #ed6458;
+  width: 100px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+#menu li a:hover {
+
 }
 
 #menu li a.active {
-  color: #F00;
+  color: #000;
   font-size: 18px;
   text-decoration: none;
 }

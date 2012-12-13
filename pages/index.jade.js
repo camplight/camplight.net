@@ -119,9 +119,18 @@ $(document).ready(function(){
 
   var getCurrentScreenIndex = function(top) {
     for(var i = 0; i<screensOrder.length-1; i++)
-      if(top  >= screens[screensOrder[i]] && top < screens[screensOrder[i+1]]) {
+      if(top  >= screensPositions[screensOrder[i]] && top < screensPositions[screensOrder[i+1]]) {
         return i;
       }
+    return i;
+  }
+
+  var updateActiveMenuAndUrl = function(){
+    $("#menu a").removeClass("active");
+    var name = getScreenName(currentScreenIndex);
+    var selector = "a[href='#"+name+"']";
+    $(selector).addClass("active");
+    app.router.navigate(name, false);
   }
 
   var toolbar = new EditToolbar({
@@ -135,7 +144,6 @@ $(document).ready(function(){
   calculateScreensAsConstants();
   var s = skrollr.init({
     beforerender: function(data){
-      toolbar.updateCurrentScreenIndex(currentScreenIndex);
       toolbar.updateCurTop(data.curTop);
     },
     constants: screens
@@ -145,13 +153,20 @@ $(document).ready(function(){
     currentScreenIndex += 1;
     if(currentScreenIndex>=screensOrder.length)
       currentScreenIndex = 0;
-    var top = screensPositions[screensOrder[currentScreenIndex]];
-    setScrollTop(top, options);
+    playToScreen(currentScreenIndex, options);
   }
 
   var playToScreen = function(index, options){
     currentScreenIndex = index;
     var top = screensPositions[screensOrder[currentScreenIndex]];
+
+    options = options || {};
+    var done = options.done;
+    options.done = function(){
+      updateActiveMenuAndUrl();
+      if(done)done();
+    }
+
     setScrollTop(top, options); 
     toolbar.updateCurrentScreenIndex(currentScreenIndex);
   }
@@ -171,6 +186,7 @@ $(document).ready(function(){
     } else {
       playing = true;
       var playNextWithDelay = function(delay){
+        updateActiveMenuAndUrl();
         playing = setTimeout(function(){
           playNextScreen({
             done: playNextWithDelay(screensPlaybackDelays[getScreenName(currentScreenIndex)])
@@ -236,11 +252,7 @@ $(document).ready(function(){
     var self = this;
     if(!$(this).attr("data-screenName")) return;
     stopPlayAll();
-    playToScreen(getScreenIndex($(this).attr("data-screenName")), {
-      done: function(){
-        app.router.navigate($(self).attr("href"), false);
-      }
-    });
+    playToScreen(getScreenIndex($(this).attr("data-screenName")));
     return false;
   });
 
