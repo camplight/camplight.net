@@ -55,7 +55,22 @@ $(document).ready(function(){
     "bonus"
   ];  
 
+  var screensPlaybackDelays = {
+    landing: 2500,
+    about: 3500,
+    about2: 3500,
+    about3: 3500,
+    skills: 4500,
+    campland: 5500,
+    members: 5500,
+    partners: 3500,
+    bonus: 1200
+  }
+
   var screensPositions = [];
+
+  var currentScreenIndex = 0;
+  var playing = null;
 
   var getScreenIndex = function(name){
     for(var i = 0;i < screensOrder.length;i ++) {
@@ -64,41 +79,35 @@ $(document).ready(function(){
     }
   }
 
-  var offset = 0;
-  var position = 0;
-  for(var i = 0;i < screensOrder.length;i ++) {
-    var ratio = screens[screensOrder[i]];
-
-    screens[screensOrder[i]] = offset;
-    screensPositions[screensOrder[i]] = offset;
-
-    if(typeof ratio == "object") {
-
-      var value;
-
-      if (ratio.height)
-        value = ratio.height;  
-      else
-        value = $(document).height() * ratio.ratio + ratio.nextDelayWith;
-
-      offset += value;  
-
-      if (ratio.offsetRatio)
-        screensPositions[screensOrder[i]] += value * ratio.offsetRatio;  
-    }
-    else
-      offset += $(document).height()*ratio;
+  var getScreenName = function(currentScreenIndex) {
+    return screensOrder[currentScreenIndex];
   }
 
-  var currentScreenIndex = 0;
+  var calculateScreensAsConstants = function() {
+    var offset = 0;
+    for(var i = 0;i < screensOrder.length;i ++) {
+      var ratio = screens[screensOrder[i]];
 
-  var updateCurrentScreenIndex = function(top){
-    for(var i = 0; i<screensOrder.length-1; i++)
-      if(top  >= screens[screensOrder[i]] && top < screens[screensOrder[i+1]]) {
-        currentScreenIndex = i;
-        break;
+      screens[screensOrder[i]] = offset;
+      screensPositions[screensOrder[i]] = offset;
+
+      if(typeof ratio == "object") {
+
+        var value;
+
+        if (ratio.height)
+          value = ratio.height;  
+        else
+          value = $(document).height() * ratio.ratio + ratio.nextDelayWith;
+
+        offset += value;  
+
+        if (ratio.offsetRatio)
+          screensPositions[screensOrder[i]] += value * ratio.offsetRatio;  
       }
-    toolbar.updateCurrentScreenIndex(currentScreenIndex);
+      else
+        offset += $(document).height()*ratio;
+    }
   }
 
   var setScrollTop = function(top, options) {
@@ -106,7 +115,13 @@ $(document).ready(function(){
       s.animateTo(-top, options);
     } else
       s.animateTo(top, options);
-    updateCurrentScreenIndex(top);
+  }
+
+  var getCurrentScreenIndex = function(top) {
+    for(var i = 0; i<screensOrder.length-1; i++)
+      if(top  >= screens[screensOrder[i]] && top < screens[screensOrder[i+1]]) {
+        return i;
+      }
   }
 
   var toolbar = new EditToolbar({
@@ -117,27 +132,55 @@ $(document).ready(function(){
     setScrollTop: setScrollTop
   });
 
-  s = skrollr.init({
+  calculateScreensAsConstants();
+  var s = skrollr.init({
     beforerender: function(data){
-      updateCurrentScreenIndex(data.curTop);
+      toolbar.updateCurrentScreenIndex(currentScreenIndex);
       toolbar.updateCurTop(data.curTop);
     },
     constants: screens
   });
   
-  
-  var playNextScreen = function(){
+  var playNextScreen = function(options){
     currentScreenIndex += 1;
     if(currentScreenIndex>=screensOrder.length)
       currentScreenIndex = 0;
     var top = screensPositions[screensOrder[currentScreenIndex]];
-    setScrollTop(top);
+    setScrollTop(top, options);
   }
 
   var playToScreen = function(index, options){
     currentScreenIndex = index;
     var top = screensPositions[screensOrder[currentScreenIndex]];
     setScrollTop(top, options); 
+    toolbar.updateCurrentScreenIndex(currentScreenIndex);
+  }
+
+  var stopPlayAll = function(){
+    if(playing === true)
+      s.stopAnimateTo();
+    else
+      clearTimeout(playing);
+    playing = null;
+    $(".playBtn").text("Play");
+  }
+
+  var togglePlayAll = function(){
+    if(playing) {
+      stopPlayAll();
+    } else {
+      playing = true;
+      var playNextWithDelay = function(delay){
+        playing = setTimeout(function(){
+          playNextScreen({
+            done: playNextWithDelay(screensPlaybackDelays[getScreenName(currentScreenIndex)])
+          })
+        }, delay);
+        }
+      playNextScreen({
+        done: playNextWithDelay(screensPlaybackDelays[getScreenName(currentScreenIndex)])
+      });
+    }
   }
 
   var AppRouter = Backbone.Router.extend({
@@ -191,11 +234,23 @@ $(document).ready(function(){
   $("#menu a").click(function(e){
     e.preventDefault();
     var self = this;
+    if(!$(this).attr("data-screenName")) return;
+    stopPlayAll();
     playToScreen(getScreenIndex($(this).attr("data-screenName")), {
       done: function(){
         app.router.navigate($(self).attr("href"), false);
       }
     });
+    return false;
+  });
+
+  $(".playBtn").text("Play").click(function(e){
+    e.preventDefault();
+    togglePlayAll();
+    if(playing)
+      $(this).text("Stop");
+    else
+      $(this).text("Play");
     return false;
   })
 
