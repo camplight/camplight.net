@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Signika+Negative);
 @import "./layout.css";
 @import "./members.css";
+@import "./landtrees.css";
 @import "./jquery/jquery-betterTooltip.css";
 
 .clearfix {
@@ -20,6 +21,12 @@
 }
 
 .invisible {
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 10000;
+  display: none;
 }
 
 html, body {
@@ -349,6 +356,12 @@ html, body {
   z-index: 159;
 }
 
+.whitebackground {
+  background-color: white;
+  width: 1920px;
+  height: 600px;
+}
+
 .map {
   background-image: url("../images/map.png");
   width: 917px;
@@ -554,61 +567,13 @@ html, body {
 .partnersBackground {
   background-color: #FFFFFF;
   width: 1920px;
-  height: 1090px;
+  height: 800px;
   z-index: 10;
 }
 
-#impress {
-  width: 960px;
-  height: 500px;
-  margin: 0 auto; 
+.member {
+  z-index: 300;
 }
-
-#impress .welcome {
-  font-size: 48px;
-}
-
-#impress .welcome {
-  font-size: 48px;
-}
-
-#impress .hint {
-  font-size: 32px;
-}
-
-#impress .proMode {
-  font-size: 56px;
-}
-
-#impress .logoImg {
-  background-image: url("../images/backgroundColored.jpg");
-  width: 960px;
-  height: 720px; 
-}
-
-#impress .box {
-  width: 340px;
-  height: 240px;
-  border: 1px solid #888;
-  box-shadow: 10px 10px 5px #888;
-  border-radius: 25px;
-  text-align: center;
-  line-height: 240px;
-  font-size: 24px;
-  background-color: white;
-}
-
-#impress .line {
-  width: 340px;
-  height: 240px;
-  text-align: center;
-  line-height: 240px;
-  font-size: 24px;
-  -moz-box-shadow: 0 0 10px 5px black, 40px -30px lime, 40px 30px 50px red, -40px 30px yellow, -40px -30px 50px blue;
-  -webkit-box-shadow: 0 0 10px 5px black, 40px -30px lime, 40px 30px 50px red, -40px 30px yellow, -40px -30px 50px blue;
-  box-shadow: 0 0 10px 5px black, 40px -30px lime, 40px 30px 50px red, -40px 30px yellow, -40px -30px 50px blue;
-}
-
 
 #hut {background:url("../images/hut_aimation.png") no-repeat 0px -6848px;width:172px; height:107px; padding:0; display:block;}
 #owl {background:url("../images/owl-animation.png") no-repeat 0px -3864px;width:37px; height:46px; padding:0; display:block;z-index: 150;}

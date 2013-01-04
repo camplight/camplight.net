@@ -132,7 +132,8 @@
 
       var data = "data-_"+screenName+"-"+curScreenOffset+"="+'"top-offset:'+yPos+'px; left: '+xPos+'px; ' + self.transformToolManager.getTargetTransformInfo() + '"';
 
-      self.$(".data").html("<input style='width: 800px' type='text' value='" + data + "'>");
+      self.$("input.data").val(data);
+      self.$("input.target").val(self.transformToolManager.target.className);
     }
   },
   deselectTarget: function()

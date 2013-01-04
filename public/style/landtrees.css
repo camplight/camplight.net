@@ -1,0 +1,15 @@
+.landtree1 {
+  width: 234px;
+  height: 401px;
+  background-image: url("../images/landtrees/tree1.png");
+}
+.landtree2 {
+  width: 343px;
+  height: 580px;
+  background-image: url("../images/landtrees/tree2.png");
+}
+.landtree3 {
+  width: 494px;
+  height: 749px;
+  background-image: url("../images/landtrees/tree3.png");
+}

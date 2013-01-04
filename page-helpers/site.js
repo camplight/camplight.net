@@ -15,8 +15,7 @@ var screensOrder = [
   "skills",
   "campland",
   "members",
-  "partners",
-  "bonus"
+  "partners"
 ];  
 
 var screens = {
@@ -27,8 +26,7 @@ var screens = {
   skills: {ratio: 1, nextDelayWith: 100},
   campland: 0.9,
   members: {height: 950, offsetRatio: 0.26},
-  partners: 1,
-  bonus: 1
+  partners: 1
 }
 
 var screensPositions = [];

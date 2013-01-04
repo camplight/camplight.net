@@ -39,8 +39,7 @@ $(document).ready(function(){
     skills: {ratio: 1, nextDelayWith: 500},
     campland: 0.9,
     members: {height: 950, offsetRatio: 0.26},
-    partners: 1,
-    bonus: 1
+    partners: 1
   };
 
   var screensOrder = [
@@ -51,8 +50,7 @@ $(document).ready(function(){
     "skills",
     "campland",
     "members",
-    "partners",
-    "bonus"
+    "partners"
   ];  
 
   var screensPlaybackDelays = {
@@ -63,14 +61,14 @@ $(document).ready(function(){
     skills: 4500,
     campland: 5500,
     members: 5500,
-    partners: 3500,
-    bonus: 1200
+    partners: 3500
   }
 
   var screensPositions = [];
 
   var currentScreenIndex = 0;
   var playing = null;
+  var updateId = null;
 
   var getScreenIndex = function(name){
     for(var i = 0;i < screensOrder.length;i ++) {
@@ -118,14 +116,21 @@ $(document).ready(function(){
   }
 
   var getCurrentScreenIndex = function(top) {
-    for(var i = 0; i<screensOrder.length-1; i++)
-      if(top  >= screensPositions[screensOrder[i]] && top < screensPositions[screensOrder[i+1]]) {
+    for(var i = 0; i<screensOrder.length-1; i++) {
+      console.log(screensPositions[screensOrder[i]], top, screensPositions[screensOrder[i+1]]);
+      if(top  >= Math.floor(screensPositions[screensOrder[i]]) && top < Math.floor(screensPositions[screensOrder[i+1]])) {
         return i;
       }
+    }
     return i;
   }
 
-  var updateActiveMenuAndUrl = function(){
+  var updateActiveMenuAndUrl = function(top){
+    if(top) {
+      var index = getCurrentScreenIndex(top);
+      if(index == currentScreenIndex) return;
+      currentScreenIndex = index;
+    }
     $("#menu a").removeClass("active");
     var name = getScreenName(currentScreenIndex);
     var selector = "a[href='#"+name+"']";
@@ -145,6 +150,13 @@ $(document).ready(function(){
   var s = skrollr.init({
     beforerender: function(data){
       toolbar.updateCurTop(data.curTop);
+    },
+    render: function(data){
+      if(playing) return;
+      if(updateId) clearTimeout(updateId);
+      updateId = setTimeout(function(){
+        updateActiveMenuAndUrl(data.curTop);
+      }, 500);
     },
     constants: screens
   });
@@ -267,6 +279,23 @@ $(document).ready(function(){
   })
 
   $("a.anchor").remove();
+
+  $(".member").mouseover(function(e){
+    e.preventDefault();
+    var offset = $(this).position();
+    var w = $(this).width();
+    var h = $(this).height();
+    $(".tooltip .title").html($(this).attr("data-title"));
+    $(".tooltip")
+      .css('top', (offset.top-25)+"px")
+      .css('left', (offset.left+w/2+200)+"px")
+      .stop(true, true)
+      .fadeIn();
+  }).mouseout(function(e){
+    $(".tooltip")
+      .stop(true, true)
+      .fadeOut();
+  });
 
   $("body").append(toolbar.render().el);
   toolbar.render().$el.hide();

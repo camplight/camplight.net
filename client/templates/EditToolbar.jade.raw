@@ -1,10 +1,12 @@
+.inputs
+  input(type="text").data
+  input(type="text").target
 a.resizeBtn() Toggle resize
 a.moveUp() Up
 a.resetBtn() Reset
 a.moveDown() Down
 a.moveLeft() Left
 a.moveRight() Right
-.data goes here
 select.screensSelection
 a.scrollTo() Scroll to
 a.deselectTarget() Deselect target
