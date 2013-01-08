@@ -3,7 +3,7 @@ html
   head
     title Camplight Ltd.
     meta(charset='utf-8')
-    meta(name='copyright', content='Camplight Ltd.')
+    meta(name='copyright', content='Camplight - open company')
     meta(name='author', content='Camplight')
     meta(name='keywords', content='open,source,company,software,hardware,freeware,technologies,freelancers,team,camplight')
     meta(name='description', content='Software and Hardware development company made by people for people')
@@ -16,17 +16,12 @@ html
     link(rel='stylesheet', href='/style/editToolbar.css')
     link(rel='stylesheet', href='/style/transform_tool.css')
 
-    script(src="/js/jade.js")
-    script(src="/code.js")
-
   body
     .content
-      .tooltip
-        .title
+      
       noscript
         .center.noscriptbox Your javascript seems turned off, if you want beautiful animations please turn it on...
       #skrollr-body(style="width: 1060px;")
-        
         a.anchor(name="top")
         #menu(
           data-0="top: 0px; right: 0px",
@@ -256,9 +251,6 @@ html
           href="http://www.linkedin.com/pub/todor-panayotov/15/131/347",
           data-_members--200="top-offset:623px; left: 223px; opacity: 0; transform: rotate(0deg) scale(1)",
           data-_members-0="top-offset:603px; left: 283px; opacity: 1; transform: rotate(0deg) scale(1)")
-        a.m8.member(
-          data-title="Georgi Georgiev",
-          data-_members-0="top-offset:834px; left: 949px; transform: rotate(0deg) scale(1.2)")
         a.m9.member(
           data-title="Mladen Gorchev",
           href="http://thenorthmind.com",
@@ -375,3 +367,23 @@ html
         .pathCross(
           data-_partners--100="top-offset:213px; left: 392px; opacity: 0; transform: rotate(0deg) scale(2)"
           data-_partners-0="top-offset:213px; left: 392px; opacity: 1; transform: rotate(0deg) scale(1)")
+        .footer(
+          data-_partners-0="top-offset:729px; left: 143px; transform: rotate(0deg) scale(1)")
+          ul
+            li © 2011-2013 Camplight Ltd.
+            li 
+              a(href="http://wisdom.camplight.net") wisdom
+            li 
+              a(href="http://moneyflow.camplight.net") moneyflow
+            li 
+              a(href="http://blog.camplight.net") blog
+        .shareButtons(
+          data-_partners-0="top-offset:809px; left: 143px; transform: rotate(0deg) scale(1)")
+          .tweetBtn.btn.offset100
+            include ../page-partials/twitterButton
+          .fbBtn.btn
+            include ../page-partials/fbButton
+          .gPlusBtn.btn
+            include ../page-partials/gPlusButton
+        .tooltip
+          .title

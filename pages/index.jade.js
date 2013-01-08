@@ -286,9 +286,11 @@ $(document).ready(function(){
     var w = $(this).width();
     var h = $(this).height();
     $(".tooltip .title").html($(this).attr("data-title"));
+    var tw = $(".tooltip").width();
+    var th = $(".tooltip").height();
     $(".tooltip")
-      .css('top', (offset.top-25)+"px")
-      .css('left', (offset.left+w/2+200)+"px")
+      .css('top', (offset.top-th)+"px")
+      .css('left', (offset.left+w/2-tw/2)+"px")
       .stop(true, true)
       .fadeIn();
   }).mouseout(function(e){

@@ -567,7 +567,7 @@ html, body {
 .partnersBackground {
   background-color: #FFFFFF;
   width: 1920px;
-  height: 800px;
+  height: 850px;
   z-index: 10;
 }
 
@@ -578,3 +578,38 @@ html, body {
 #hut {background:url("../images/hut_aimation.png") no-repeat 0px -6848px;width:172px; height:107px; padding:0; display:block;}
 #owl {background:url("../images/owl-animation.png") no-repeat 0px -3864px;width:37px; height:46px; padding:0; display:block;z-index: 150;}
 #moon {background:url("../images/moon-animation.png") no-repeat 0px -6525px;width:228px; height:225px; padding:0; display:block;}
+
+.shareButtons {
+  width: 800px;
+  z-index: 300;
+  height: 50px;
+}
+
+.shareButtons .btn {
+  float: left;
+  margin-right: 20px;
+  width: 200px;
+  text-align: center;
+}
+
+.offset100 {
+  margin-left: 100px;
+}
+
+.footer {
+  width: 800px;
+  height: 25px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.footer li {
+  display: block;
+  float: left; 
+  width: 200px;
+  text-align: center;
+}

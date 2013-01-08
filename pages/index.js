@@ -31,7 +31,7 @@ module.exports = function(config){
 
         // append script elements into head for browsers with dynamic support
         if(!browser.Mobile && !browser.iPhone && !browser.iPad && !browser.Android) {
-          var code = "<script src='/js/jade.js'></script><script src='/code.js'></script>";
+          var code = "<script src='/js/jade.js'></script><script src='/code.js'></script><script src='/js/social-sdks.js'></script>";
           response.data = response.data.split("</head>").join(code);
         }
 
