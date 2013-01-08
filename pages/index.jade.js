@@ -117,7 +117,6 @@ $(document).ready(function(){
 
   var getCurrentScreenIndex = function(top) {
     for(var i = 0; i<screensOrder.length-1; i++) {
-      console.log(screensPositions[screensOrder[i]], top, screensPositions[screensOrder[i+1]]);
       if(top  >= Math.floor(screensPositions[screensOrder[i]]) && top < Math.floor(screensPositions[screensOrder[i+1]])) {
         return i;
       }

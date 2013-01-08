@@ -183,6 +183,7 @@ html, body {
 
 .ballonTop h1 {
   margin-left: 10px;
+  font-size: 26px;
 }
 .ballonTop p {
   margin-left: 10px;
@@ -223,6 +224,7 @@ html, body {
 .ballonBottomLarger h1 {
   margin-left: 10px;
   margin-top: 80px;
+  font-size: 28px;
 }
 .ballonBottomLarger p {
   margin-left: 10px;
