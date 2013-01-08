@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Signika+Negative);
+@import url(http://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister);
 @import "./layout.css";
 @import "./members.css";
 @import "./landtrees.css";
@@ -35,8 +36,10 @@ html, body {
   padding:0;
   margin:0;
   overflow-x:hidden;
-  font-family: 'Signika Negative', serif;
+  /* font-family: 'Signika Negative', serif; */
+  font-family: 'Love Ya Like A Sister', cursive;
   background-color: #f2f2f2;
+  color: #4b4b4b;
 }
 
 .content {
@@ -168,6 +171,8 @@ html, body {
 }
 .ballonBottom p {
   margin-left: 10px;
+  margin-right: 10px;
+  font-family: 'Signika Negative', serif;
 }
 
 .ballonTop {
@@ -181,6 +186,7 @@ html, body {
 }
 .ballonTop p {
   margin-left: 10px;
+  font-family: 'Signika Negative', serif;
 }
 
 .spacestation {
@@ -220,6 +226,7 @@ html, body {
 }
 .ballonBottomLarger p {
   margin-left: 10px;
+  font-family: 'Signika Negative', serif;
 }
 
 .clouds {
@@ -249,6 +256,7 @@ html, body {
   position: absolute;
 }
 .skillGroup {
+  font-family: 'Signika Negative', serif;
   margin-top: 150px;
   float: left;
   width: 125px;
@@ -362,11 +370,25 @@ html, body {
   height: 600px;
 }
 
+.flameRocks {
+  background-image: url("../images/camplight_flame_rocks.png");
+  width: 155px;
+  height: 68px;
+  z-index: 165;
+}
+
 .map {
   background-image: url("../images/map.png");
   width: 917px;
   height: 599px;
   z-index: 164;
+}
+
+.compas {
+  background-image: url("../images/compas.png");
+  width: 138px;
+  height: 138px;
+  z-index: 165;
 }
 
 .path {
@@ -567,8 +589,24 @@ html, body {
 .partnersBackground {
   background-color: #FFFFFF;
   width: 1920px;
-  height: 850px;
+  height: 860px;
   z-index: 10;
+}
+
+.mapLabel {
+  z-index: 300;
+}
+
+.contactUsLabel {
+  font-size: 18px;
+  margin-top: 120px;
+  margin-left: -20px;
+  text-decoration: none;
+}
+
+a.contactBtn {
+  text-decoration: none;
+  color: #4b4b4b;
 }
 
 .member {
@@ -597,11 +635,21 @@ html, body {
 }
 
 .footer {
-  width: 800px;
+  width: 600px;
   height: 25px;
 }
 
+.footer a {
+  text-decoration: none;
+  color: #4b4b4b;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
 .footer ul {
+  float: left;
   list-style: none;
   padding: 0px;
   margin: 0px;
@@ -612,4 +660,8 @@ html, body {
   float: left; 
   width: 200px;
   text-align: center;
+}
+
+.footer .camplightCopyright {
+  float: right;
 }

@@ -1,13 +1,19 @@
 [
   { 
+    "name": "Design",
+    "items": [
+       "Web",
+       "Identity",
+       "Print",
+       "Illustration"
+  ]}, { 
     "name":"Frontend",
     "items": [
      "HTML 5",
      "CSS 3",
      "Javascript",
      "Flash/Flex"
-  ]},
-  { 
+  ]}, { 
     "name": "Backend",
     "items": [
        "Node.js",
@@ -15,7 +21,7 @@
        "Python",
        "Java",
        "PHP"
-  ]},{ 
+  ]}, { 
     "name": "Database",
     "items": [
        "SQL",
@@ -23,28 +29,20 @@
        "CouchDB",
        "Redis",
        "Neo4j"
-  ]},{ 
+  ]}, { 
     "name": "Mobile",
     "items": [
        "iOS/Objective C",
        "Android",
-       "AS3/Flash/Air",
-       "J2ME"
-  ]},{ 
+       "AS3/Flash/Air"
+  ]}, { 
     "name": "Desktop",
     "items":[
        "Java",
        "C#",
        "C++",
        "AS3/Air"
-  ]},{ 
-    "name": "Design",
-    "items": [
-       "Web",
-       "Identity",
-       "Print",
-       "Illustration"
-  ]},{ 
+  ]}, { 
     "name": "Linux",
     "items": [
        "System Administration",

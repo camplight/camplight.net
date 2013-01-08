@@ -39,7 +39,7 @@ $(document).ready(function(){
     skills: {ratio: 1, nextDelayWith: 500},
     campland: 0.9,
     members: {height: 950, offsetRatio: 0.26},
-    partners: 1
+    contacts: 1
   };
 
   var screensOrder = [
@@ -50,7 +50,7 @@ $(document).ready(function(){
     "skills",
     "campland",
     "members",
-    "partners"
+    "contacts"
   ];  
 
   var screensPlaybackDelays = {
@@ -61,7 +61,7 @@ $(document).ready(function(){
     skills: 4500,
     campland: 5500,
     members: 5500,
-    partners: 3500
+    contacts: 3500
   }
 
   var screensPositions = [];
@@ -219,7 +219,6 @@ $(document).ready(function(){
       "about3": "showAbout3",
       "skills": "showSkills",
       "members": "showMembers",
-      "partners": "showPartners",
       "contacts": "showContacts"
     },
     start: function(){
@@ -240,8 +239,8 @@ $(document).ready(function(){
     showMembers: function(){
       playToScreen(getScreenIndex("members"));
     },
-    showPartners: function(){
-      playToScreen(getScreenIndex("partners"));
+    showContacts: function(){
+      playToScreen(getScreenIndex("contacts"));
     }
   });
 
@@ -297,6 +296,13 @@ $(document).ready(function(){
     $(".tooltip")
       .stop(true, true)
       .fadeOut();
+  }).attr("title", "");
+
+  $(".contactBtn").mouseover(function(e){
+    e.preventDefault();
+    $(this).stop(true, true).transition({ scale: 1.2 });
+  }).mouseout(function(e){
+    $(this).stop(true, true).transition({ scale: 1 });
   });
 
   $("body").append(toolbar.render().el);
