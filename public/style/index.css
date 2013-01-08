@@ -315,6 +315,7 @@ html, body {
   width: 505px;
   height: 946px;
   z-index: 158;
+  pointer-events:none;
 }
 
 .tree2 {
@@ -322,6 +323,7 @@ html, body {
   width: 515px;
   height: 956px;
   z-index: 159;
+  pointer-events:none;
 }
 
 .tree3 {
@@ -329,6 +331,7 @@ html, body {
   width: 556px;
   height: 773px;
   z-index: 160;
+  pointer-events:none;
 }
 
 .tree4 {
@@ -336,6 +339,7 @@ html, body {
   width: 463px;
   height: 909px;
   z-index: 161;
+  pointer-events:none;
 }
 
 .tree5 {
@@ -343,6 +347,7 @@ html, body {
   width: 415px;
   height: 927px;
   z-index: 162;
+  pointer-events:none;
 }
 
 .tree6 {
@@ -350,11 +355,24 @@ html, body {
   width: 496px;
   height: 753px;
   z-index: 163;
+  pointer-events:none;
 }
 
-.tree7 {
-  background-image: url("../images/tree7.png");
-  width: 1920px;
+.tree7left {
+  background-image: url("../images/tree7-left.png");
+  width: 328px;
+  height: 855px;
+  z-index: 163;
+}
+.tree7middle {
+  background-image: url("../images/tree7-middle.png");
+  width: 1270px;
+  height: 256px;
+  z-index: 163;
+}
+.tree7right {
+  background-image: url("../images/tree7-right.png");
+  width: 322px;
   height: 855px;
   z-index: 163;
 }
