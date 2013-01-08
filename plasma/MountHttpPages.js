@@ -110,6 +110,7 @@ module.exports.prototype.mountPageCode = function(app, url, file) {
       code: file, 
       data: _.extend({}, req)
     }, function(c){
+      res.setHeader("content-type", "text/javascript");
       res.send(c.data);
     });
   })

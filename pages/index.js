@@ -31,7 +31,12 @@ module.exports = function(config){
 
         // append script elements into head for browsers with dynamic support
         if(!req.query.noscript && !browser.Mobile && !browser.iPhone && !browser.iPad && !browser.Android) {
-          var code = "<script src='/js/jade.js'></script><script src='/code.js'></script><script src='/js/social-sdks.js'></script>";
+          var sources = ["/js/jade.js", "/code.js", "/js/social-sdks.js", "/js/ga.js"];
+          var code = "<script src='"+sources.join("'></script><script src='")+"'></script>";
+          response.data = response.data.split("</head>").join(code);
+        } else {
+          var sources = ["/js/social-sdks.js", "/js/ga.js"];
+          var code = "<script src='"+sources.join("'></script><script src='")+"'></script>";
           response.data = response.data.split("</head>").join(code);
         }
 

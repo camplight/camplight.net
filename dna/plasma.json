@@ -4,7 +4,10 @@
     "root": "/client/",
     "useCache": true,
     "debug": false,
-    "uglify": true
+    "uglify": true,
+    "plugins": [{
+      "source": "/plasma/BundleCode-addEnv"
+    }]
   },
   "RenderPage": {
     "source": "node_modules/organic-webcell/plasma/RenderPage",

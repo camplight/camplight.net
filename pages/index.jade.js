@@ -9,20 +9,13 @@ jadeCompile = function(path){
   }
 };
 
-Backbone = require("../client/vendor/backbone");
-require("../client/vendor/ga");
+
 
 isMobile = require("../client/vendor/mobileCheck").isMobile();
 
-var EditToolbar = require("../client/views/EditToolbar");
-
-var TransformToolManager = require("../client/vendor/transform_tool");
-var transformToolManager = new TransformToolManager();
 
 $(document).ready(function(){
   $(".invisible").css({"opacity": 0});
-
-  transformToolManager.prepare();
 
   require("../client/vendor/skrollr.min");
   require("../client/vendor/skrollr.mobile");
@@ -54,14 +47,14 @@ $(document).ready(function(){
   ];  
 
   var screensPlaybackDelays = {
-    landing: 2500,
-    about: 3500,
-    about2: 3500,
-    about3: 3500,
-    skills: 4500,
-    campland: 5500,
-    members: 5500,
-    contacts: 3500
+    landing: 7500,
+    about: 7500,
+    about2: 7500,
+    about3: 9500,
+    skills: 2500,
+    campland: 9500,
+    members: 10500,
+    contacts: 10500
   }
 
   var screensPositions = [];
@@ -137,18 +130,31 @@ $(document).ready(function(){
     app.router.navigate(name, false);
   }
 
-  var toolbar = new EditToolbar({
-    screens: screens, 
-    screensPositions: screensPositions, 
-    screensOrder: screensOrder, 
-    transformToolManager: transformToolManager, 
-    setScrollTop: setScrollTop
-  });
+  var toolbar;
+
+  Backbone = require("../client/vendor/backbone");
+
+  if(require("env").CELL_MODE == "development") {
+    var EditToolbar = require("../client/views/EditToolbar");
+
+    var TransformToolManager = require("../client/vendor/transform_tool");
+    var transformToolManager = new TransformToolManager();
+    transformToolManager.prepare();
+
+    toolbar = new EditToolbar({
+      screens: screens, 
+      screensPositions: screensPositions, 
+      screensOrder: screensOrder, 
+      transformToolManager: transformToolManager, 
+      setScrollTop: setScrollTop
+    });
+  }
 
   calculateScreensAsConstants();
   var s = skrollr.init({
     beforerender: function(data){
-      toolbar.updateCurTop(data.curTop);
+      if(toolbar)
+        toolbar.updateCurTop(data.curTop);
     },
     render: function(data){
       if(playing) return;
@@ -179,7 +185,8 @@ $(document).ready(function(){
     }
 
     setScrollTop(top, options); 
-    toolbar.updateCurrentScreenIndex(currentScreenIndex);
+    if(toolbar)
+      toolbar.updateCurrentScreenIndex(currentScreenIndex);
   }
 
   var stopPlayAll = function(){
@@ -304,6 +311,8 @@ $(document).ready(function(){
     $(this).stop(true, true).transition({ scale: 1 });
   });
 
-  $("body").append(toolbar.render().el);
-  toolbar.render().$el.hide();
+  if(toolbar) {
+    $("body").append(toolbar.render().el);
+    toolbar.render().$el.hide();
+  }
 });
