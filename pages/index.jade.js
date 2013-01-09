@@ -315,4 +315,31 @@ $(document).ready(function(){
     $("body").append(toolbar.render().el);
     toolbar.render().$el.hide();
   }
+
+  $(document).keydown(function(e) { 
+    if(e.which == 33        // page up 
+       || e.which == 34     // page dn 
+       || e.which == 32     // spacebar
+       || e.which == 38     // up 
+       || e.which == 40     // down 
+       || (e.ctrlKey && e.which == 36)     // ctrl + home 
+       || (e.ctrlKey && e.which == 35)     // ctrl + end 
+      ) { 
+        if(playing)
+          stopPlayAll();
+      } 
+  }); 
+
+  var  mouseEvent = function(e) { 
+    if(playing)
+      stopPlayAll();
+  } 
+  // detect user scroll through mouse
+  // Mozilla/Webkit 
+  if(window.addEventListener)
+    document.addEventListener('DOMMouseScroll', mouseEvent, false); 
+  else
+  //for IE/OPERA etc 
+    document.onmousewheel = mouseEvent;
+
 });
