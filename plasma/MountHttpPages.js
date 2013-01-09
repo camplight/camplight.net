@@ -9,6 +9,7 @@ module.exports = function HttpPages(plasma, config){
   Organel.call(this, plasma);
 
   this.config = config;
+  this.started = new Date((new Date()).toUTCString());
 
   // bootstrap all actions once httpserver is ready
   this.on("HttpServer", function(chemical){
@@ -110,8 +111,28 @@ module.exports.prototype.mountPageCode = function(app, url, file) {
       code: file, 
       data: _.extend({}, req)
     }, function(c){
-      res.setHeader("content-type", "text/javascript");
-      res.send(c.data);
+      if(process.env.CELL_MODE != "development") {
+        var modified = true;
+        try {
+          var mtime = new Date(req.headers['if-modified-since']);
+          if (mtime.getTime() >= self.started.getTime()) {
+            modified = false;
+          }
+        } catch (e) {
+          console.warn(e);
+        }
+        if (!modified) {
+          res.writeHead(304);
+          res.end();
+        } else {
+          res.setHeader('last-modified', self.started.toUTCString());
+          res.setHeader("content-type", "text/javascript");
+          res.send(c.data);
+        }
+      } else {
+        res.setHeader("content-type", "text/javascript");
+        res.send(c.data);
+      }
     });
   })
 }
