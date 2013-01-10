@@ -16,13 +16,13 @@ if(exec(remote(updateDependenciesCommand)).code != 0){
   exit(1);
 }
 
-var stopCommand = home+" forever stop ~/camplight.net/camplight.net.js";
+var stopCommand = home+" forever stop camplight.net.js";
 if(exec(remote(stopCommand)).code != 0){
   echo("Error: failed to stop remote "+stopCommand);
   exit(1);
 }
 
-var startCommand = home+" CELL_MODE=live forever start ~/camplight.net/camplight.net.js";
+var startCommand = home+" CELL_MODE=live forever start camplight.net.js";
 if(exec(remote(startCommand)).code != 0){
   echo("Error: failed to start remote "+startCommand);
   exit(1);
