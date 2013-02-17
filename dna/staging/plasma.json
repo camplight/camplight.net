@@ -1,0 +1,6 @@
+{
+  "PostCommitHook": {
+    "source": "plasma/PostCommitHook",
+    "log": true
+  }
+}

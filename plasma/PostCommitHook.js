@@ -1,9 +1,4 @@
 var Organel = require("organic").Organel;
-var _ = require("underscore");
-var path = require('path');
-var shelljs = require("shelljs");
-var fs = require('fs');
-var async = require('async');
 
 module.exports = Organel.extend(function PostCommitHook(plasma, config){
   Organel.call(this, plasma, config);
