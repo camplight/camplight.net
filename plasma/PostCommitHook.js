@@ -15,7 +15,8 @@ module.exports = Organel.extend(function PostCommitHook(plasma, config){
     if(config.log)
       console.log("post-commit-hook", config.postCommitUrl);
     c.data.app.post(config.postCommitUrl, function(req, res, next){
-      self.processPostCommit({data: req.body.payload}, self);
+      self.processPostCommit({req: req}, self);
+      res.send({success: true});
     })
     return false;
   })
