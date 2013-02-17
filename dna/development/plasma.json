@@ -5,5 +5,9 @@
   },
   "RenderPage": {
     "useCache": false
+  },
+  "ExpressHttpPages": {
+    "log": true,
+    "debug": true
   }
 }

@@ -4,12 +4,13 @@
   "main": "index.js",
   "private": true,
   "dependencies": {
-    "organic-webcell": "0.1.1",
-    "organic": "0.0.5",
+    "organic-webcell": "0.1.7",
+    "organic": "0.0.10",
+    "organic-cells": "0.0.11",
     "underscore": "latest",
     "jquery": "1.8.3",
     "jquery-browserify": "*",
-    "glob": "latest"
+    "glob": "3.1.14"
   },
   "devDependencies": {
     "shelljs" : "*"

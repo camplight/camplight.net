@@ -11,15 +11,20 @@ if(exec("git pull --ff origin master").code != 0){
   exit(1);
 }
 
+if(exec("git pull --ff upstream master").code != 0){
+  echo("Error: failed to pull upstream master");
+  exit(1);
+}
+
 // TODO find out how to trap errors from sed bellow
 sed('-i', '"version": "'+p.version+'"', '"version": "'+newVersion+'"', "package.json");
 
-if(exec("git add --all").code != 0){
+if(exec("git add package.json").code != 0){
   echo("Error: failed to git add --all");
   exit(1);
 }
 
-if(exec("git commit -am '"+newVersion+" release'").code != 0){
+if(exec('git commit -am "'+newVersion+' release"').code != 0){
   echo("Error: failed to commit version bump");
   exit(1);
 }
@@ -34,5 +39,3 @@ if(exec("git push upstream master").code != 0){
   echo("Error: failed to git push");
   exit(1);
 }
-
-require("./restart-preview");
