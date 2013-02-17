@@ -6,7 +6,7 @@
   "dependencies": {
     "organic-webcell": "0.1.7",
     "organic": "0.0.10",
-    "organic-cells": "0.0.11",
+    "organic-cells": "0.0.12",
     "underscore": "latest",
     "jquery": "1.8.3",
     "jquery-browserify": "*",
