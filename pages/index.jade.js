@@ -15,6 +15,15 @@ isMobile = require("../client/vendor/mobileCheck").isMobile();
 
 
 $(document).ready(function(){
+  require("../client/vendor/jquery/jquery.mousewheel.js");
+  require("../client/vendor/jquery/jquery.simplr.smoothscroll.js");
+  var platform = navigator.platform.toLowerCase();
+  if (platform.indexOf('windows') != -1 || platform.indexOf('linux') != -1) {
+    if ($.browser.webkit) {
+      $.srSmoothscroll();
+    }
+  }
+
   $(".invisible").css({"opacity": 0});
 
   require("../client/vendor/skrollr.min");
