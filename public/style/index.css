@@ -608,6 +608,13 @@ html, body {
   z-index: 206;
 }
 
+.partner5 {
+  background-image: url("../images/partners/3web.png");
+  width: 175px;
+  height: 175px;
+  z-index: 207;
+}
+
 .partnersBackground {
   background-color: #FFFFFF;
   width: 1920px;
