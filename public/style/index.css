@@ -615,6 +615,13 @@ html, body {
   z-index: 207;
 }
 
+.partner6 {
+  background-image: url("../images/partners/map.bg.png");
+  width: 203px;
+  height: 85px;
+  z-index: 208;
+}
+
 .partnersBackground {
   background-color: #FFFFFF;
   width: 1920px;
