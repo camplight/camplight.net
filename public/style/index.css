@@ -622,6 +622,14 @@ html, body {
   z-index: 208;
 }
 
+
+.partner7 {
+  background-image: url("../images/partners/sialo.png");
+  width: 186px;
+  height: 66px;
+  z-index: 209;
+}
+
 .partnersBackground {
   background-color: #FFFFFF;
   width: 1920px;
