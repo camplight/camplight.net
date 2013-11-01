@@ -339,16 +339,17 @@ $(document).ready(function(){
       } 
   }); 
 
-  var  mouseEvent = function(e) { 
+  var  mouseEvent = function(e) {
     if(playing)
       stopPlayAll();
   } 
-  // detect user scroll through mouse
-  // Mozilla/Webkit 
-  if(window.addEventListener)
-    document.addEventListener('DOMMouseScroll', mouseEvent, false); 
-  else
-  //for IE/OPERA etc 
-    document.onmousewheel = mouseEvent;
+  
+  var mousewheelevt = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : "mousewheel" //FF doesn't recognize mousewheel as of FF3.x
+  $(window).bind(mousewheelevt, function(e){
 
+      var evt = window.event || e //equalize event object     
+      evt = evt.originalEvent ? evt.originalEvent : evt; //convert to originalEvent if possible               
+      mouseEvent(evt);
+  });
+  
 });
