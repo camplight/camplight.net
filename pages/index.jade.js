@@ -1,16 +1,5 @@
 require("../client/vendor/jquery");
 
-jadeCompile = function(path){
-  var compiled = jade.compile(path);
-  return function(data) {
-    data = data || {};
-    data.t = $.t;
-    return compiled(data);
-  }
-};
-
-
-
 isMobile = require("../client/vendor/mobileCheck").isMobile();
 
 
