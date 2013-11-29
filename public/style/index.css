@@ -630,6 +630,13 @@ html, body {
   z-index: 209;
 }
 
+.partner8 {
+  background-image: url("../images/partners/mas-consult.png");
+  width: 233px;
+  height: 77px;
+  z-index: 210;
+}
+
 .partnersBackground {
   background-color: #FFFFFF;
   width: 1920px;

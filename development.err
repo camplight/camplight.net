@@ -1,0 +1,9 @@
+
+module.js:340
+    throw err;
+          ^
+Error: Cannot find module 'D:\Work\HTML\camplight\camplight.net\development'
+    at Function.Module._resolveFilename (module.js:338:15)
+    at Function.Module._load (module.js:280:25)
+    at Module.runMain (module.js:492:10)
+    at process.startup.processNextTick.process._tickCallback (node.js:244:9)
