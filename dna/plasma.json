@@ -21,7 +21,8 @@
   },
   "Self": {
     "source": "node_modules/organic-cells/plasma/Self",
-    "tissue": "camplight"
+    "tissue": "camplight",
+    "upgradeCommand": "git pull; npm install --production"
   },
   "ErrorHandler": {
     "source": "node_modules/organic-webcell/plasma/ErrorHandler"

@@ -36,6 +36,6 @@ if(exec("git push").code != 0){
 
 
 if(exec("git push upstream master").code != 0){
-  echo("Error: failed to git push");
+  echo("Error: failed to git push upstream");
   exit(1);
 }

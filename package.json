@@ -1,15 +1,17 @@
 {
   "name": "camplight.net",
-  "version": "0.0.51",
-  "main": "index.js",
+  "version": "0.2.56",
+  "main": "camplight.net.js",
   "private": true,
   "dependencies": {
-    "organic-webcell": "0.1.7",
-    "organic": "0.0.10",
-    "organic-cells": "0.0.12",
-    "underscore": "latest",
+    "organic": "0.1.1",
+    "organic-logger": "0.0.3",
+    "organic-webcell": "0.3.3",
+    "organic-cells": "0.0.17",
+    "jade" : "0.30.0",
+    "underscore": "1.5.2",
     "jquery": "1.8.3",
-    "jquery-browserify": "*",
+    "jquery-browserify": "1.8.1",
     "glob": "3.1.14"
   },
   "devDependencies": {

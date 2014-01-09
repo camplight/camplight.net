@@ -1,5 +1,5 @@
   module.exports = Backbone.View.extend({
-  template: jadeCompile(require("../templates/EditToolbar.jade.raw")),
+  template: require("../templates/EditToolbar.jade.raw"),
   className: "editToolbar",
   events: {
     "click .resizeBtn": "toggleResize",
