@@ -1,6 +1,6 @@
 {
   "name": "camplight.net",
-  "version": "0.2.56",
+  "version": "0.2.57",
   "main": "camplight.net.js",
   "private": true,
   "dependencies": {
