@@ -4,8 +4,7 @@ exports.detect = function(request) {
 
   if (/mobile/i.test(ua))
     $.Mobile = true;
-  $.browser = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(ua.toLowerCase()));
-  if ($.browser=="device")
+  if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(ua.toLowerCase()))
     $.Mobile = true;
   if (/like Mac OS X/.test(ua)) {
       $.iOS = /CPU( iPhone)? OS ([0-9\._]+) like Mac OS X/.exec(ua)[2].replace(/_/g, '.');
