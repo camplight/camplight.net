@@ -6,6 +6,8 @@ isMobile = require("../client/vendor/mobileCheck").isMobile();
 $(document).ready(function(){
   require("../client/vendor/jquery/jquery.mousewheel.js");
   require("../client/vendor/jquery/jquery.simplr.smoothscroll.js");
+  $(".camplightTitleSmall").hide();
+  $(".camplightTitle").show();
   var platform = navigator.platform.toLowerCase();
   if (platform.indexOf('windows') != -1 || platform.indexOf('linux') != -1) {
     if ($.browser.webkit) {

@@ -120,6 +120,11 @@ html, body {
   width: 900px;
   height: 300px;
 }
+.camplightTitleSmall {
+  background-image: url("../images/CamplightText300x100.png"); 
+  width: 300px;
+  height: 100px;
+}
 
 .star1 {
   background-image: url("../images/star1.png");
@@ -642,6 +647,9 @@ html, body {
   width: 1920px;
   height: 860px;
   z-index: 10;
+}
+.hide {
+  display: none;
 }
 
 .mapLabel {
