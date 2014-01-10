@@ -24,5 +24,6 @@
     "type": "git",
     "url": "git://github.com/camplight/camplight.net.git"
   },
-  "license": "BSD"
+  "license": "BSD",
+  "engines" : { "node" : ">=0.10.24" }
 }
