@@ -116,9 +116,9 @@ html, body {
 }
 
 .camplightTitle {
-  background-image: url("../images/CamplightText.png");
-  width: 315px;
-  height: 102px;
+  background-image: url("../images/CamplightTextColored.png");
+  width: 900px;
+  height: 300px;
 }
 
 .star1 {
