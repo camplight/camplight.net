@@ -30,7 +30,7 @@ module.exports = function(config){
         var browser = self.browser.detect(req);
 
         // append script elements into head for browsers with dynamic support
-        if(!req.query.noscript && !browser.Mobile && !browser.iPhone && !browser.iPad && !browser.Android) {
+        if(!req.query.noscript && !browser.Mobile && !browser.iPhone && !browser.iPad && !browser.Android ) {
           var sources = ["/js/jade.js", "/code.js", "/js/social-sdks.js", "/js/ga.js"];
           var code = "<script src='"+sources.join("'></script><script src='")+"'></script>";
           response.data = response.data.split("</head>").join(code);
