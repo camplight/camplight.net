@@ -34,13 +34,10 @@ module.exports = function(config){
           var sources = ["/js/jade.js", "/code.js", "/js/social-sdks.js", "/js/ga.js"];
           var code = "<script src='"+sources.join("'></script><script src='")+"'></script>";
           response.data = response.data.split("</head>").join(code);
-          console.log("opera mini")
         } else {
           var sources = ["/js/social-sdks.js", "/js/ga.js"];
           var code = "<script src='"+sources.join("'></script><script src='")+"'></script>";
           response.data = response.data.split("</head>").join(code);
-          console.log("safari")
-
         }
 
         // send modified page data to browser
