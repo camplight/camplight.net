@@ -725,3 +725,12 @@ a.contactBtn {
 .footer .camplightCopyright {
   float: right;
 }
+
+.portfolio-button {
+  position: fixed; 
+  top: 10px; 
+  left: 10px; 
+  text-align: center;
+  text-decoration: none;
+  color: #111111;
+}

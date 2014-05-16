@@ -273,13 +273,13 @@ $(document).ready(function(){
     return false;
   });
 
-  $(".playBtn").text("Play").click(function(e){
+  $(".playBtn").text("Start tour").click(function(e){
     e.preventDefault();
     togglePlayAll();
     if(playing)
-      $(this).text("Stop");
+      $(this).text("Stop tour");
     else
-      $(this).text("Play");
+      $(this).text("Start tour");
     return false;
   })
 

@@ -23,7 +23,6 @@ html
 
   body
     .content
-      
       noscript
         .center.noscriptbox Your javascript seems turned off, if you want beautiful animations please turn it on...
       #skrollr-body(style="width: 1060px;")
@@ -33,7 +32,9 @@ html
           data-end="top: 300px; right: 0px")
           ul
             li 
-              a.playBtn(href="#") Top
+              a.playBtn(href="#") Tour
+            li 
+              a(href="#landing", data-screenName="landing") Landing
             li 
               a(href="#about", data-screenName="about") About
             li 
@@ -114,7 +115,7 @@ html
           data-_about2-0="top-offset: 150px; left: 160px; opacity: 1;  transform: scale(1) rotate(0deg)",
           data-_about2-300="top-offset: -124px; left: 718px; transform: scale(1.3) rotate(0deg)")
           h1 Who is behind Camplight
-          p Ordinary good people who came in by their own will. We all love creativity, technologies and awesome team play.
+          p Awesome people who came in by their own will. We all love creativity, technologies and awesome team play.
         
         .star4(
           data-_about3--3="top-offset:38px; left: 791px;")        
@@ -242,7 +243,7 @@ html
           data-_members-0="top-offset:808px; left: 423px; opacity: 1; transform: rotate(0deg) scale(1)")
         a.m2.member(
           data-title="Denitsa Todorova",
-          href="http://denitsa-todorova.daportfolio.com/",
+          href="http://bg.linkedin.com/pub/denitsa-todorova/28/530/4a7",
           target="_blank",
           data-_members--200="top-offset:591px; left: 597px; opacity: 0; transform: rotate(0deg) scale(0.1)",
           data-_members-0="top-offset:591px; left: 597px;  opacity: 1; transform: rotate(0deg) scale(1)")        
@@ -254,6 +255,8 @@ html
           data-_members-0="top-offset:549px; left: 759px;  opacity: 1; transform: rotate(0deg) scale(1)")
         a.m4.member(
           data-title="Konstantin Kostov",
+          href="http://bg.linkedin.com/pub/konstantin-kostov/49/852/464",
+          target="_blank",
           data-_members--200="top-offset:444px; left: 363px; opacity: 0; transform: rotate(0deg) scale(0.1)",
           data-_members-0="top-offset:444px; left: 363px; opacity: 1; transform: rotate(0deg) scale(1)")
         a.m5.member(
@@ -265,17 +268,19 @@ html
         a.m6.member(
           data-title="Boris Filipov",
           target="_blank",
-          href="http://obi.wizartworx.com/cv/",
+          href="http://bg.linkedin.com/pub/boris-filipov/2a/a34/700",
           data-_members--100="top-offset:586px; left: 125px; opacity: 0; transform: rotate(0deg) scale(0.1)",
           data-_members-0="top-offset:586px; left: 125px; opacity: 1; transform: rotate(0deg) scale(1)")
         a.m7.member(
           data-title="Vitaliy Filipov",
-          href="https://coderbits.com/altras",
+          href="http://bg.linkedin.com/in/vitaliyfilipov",
           target="_blank",
           data-_members--250="top-offset:584px; left: 311px; opacity: 0; transform: rotate(0deg) scale(0.1)",
           data-_members-0="top-offset:584px; left: 311px; opacity: 1; transform: rotate(0deg) scale(1)")
         a.m8.member(
           data-title="Pavel Dobrev",
+          href="http://bg.linkedin.com/pub/pavel-dobrev/43/785/704",
+          target="_blank",
           data-_members--100="top-offset:792px; left: 268px; opacity: 0; transform: rotate(0deg) scale(0.1)",
           data-_members-0="top-offset:792px; left: 268px; opacity: 1; transform: rotate(0deg) scale(1)")
         a.m9.member(
@@ -287,22 +292,23 @@ html
         a.m14.member(
           data-title="Mladen Gorchev",
           target="_blank",
-          href="http://www.mladengorchev.com/",
+          href="http://uk.linkedin.com/pub/mladen-gorchev/38/597/561",
           data-_members--200="top-offset:440px; left: 785px; opacity: 0; transform: rotate(0deg) scale(0.1)",
           data-_members-0="top-offset:440px; left: 785px; opacity: 1; transform: rotate(0deg) scale(1)")
         a.m11.member(
           data-title="Ivan Kukov",
-          href="http://kukov.net/",
+          href="http://bg.linkedin.com/pub/ivan-kukov/b/aba/8bb",
           target="_blank",
           data-_members--200="top-offset:652px; left: 211px; opacity: 0; transform: rotate(0deg) scale(0.1)",
           data-_members-0="top-offset:652px; left: 211px; opacity: 1; transform: rotate(0deg) scale(1)")
         a.m12.member(
           data-title="Atanas Hristov",
+          href="http://dk.linkedin.com/pub/atanas-christov/55/487/506",
+          target="_blank",
           data-_members--200="top-offset:641px; left: 799px; opacity: 0; transform: rotate(0deg) scale(0.1)",
           data-_members-0="top-offset:641px; left: 799px; opacity: 1; transform: rotate(0deg) scale(1)")
         a.m13.member(
           data-title="Alex Kuklin",
-          href="#",
           data-_members--200="top-offset:440px; left: 658px; opacity: 0; transform: rotate(0deg) scale(0.1)",
           data-_members-0="top-offset:440px; left: 658px; opacity: 1; transform: rotate(0deg) scale(1)")
         a.m10.member(
@@ -452,3 +458,7 @@ html
             include ../page-partials/gPlusButton
         .tooltip
           .title
+    a(href="http://portfolio.camplight.net", class="portfolio-button")
+      img(src="/images/portfolio.png")
+      br
+      | Portfolio 
