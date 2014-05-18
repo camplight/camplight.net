@@ -261,6 +261,10 @@ html, body {
   line-height: 138px;
 }
 
+.sectionTitle {
+  font-size: 28px;
+}
+
 .skills {
   width: 1060px;
   left: 600px;
