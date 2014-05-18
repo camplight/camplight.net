@@ -6,4 +6,6 @@ rsync.yml
 .pydevproject
 .project
 *.pyc
+development.err
+development.out
 node_modules
