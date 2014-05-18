@@ -172,14 +172,17 @@ html, body {
   height: 209px;  
 }
 
-.ballonBottom h1 {
+.ballonBottom .ballonTitle {
   margin-top: 80px;
   margin-left: 10px;
+  font-size: 28px;
 }
-.ballonBottom p {
+.ballonBottom .ballonDescription {
   margin-left: 10px;
   margin-right: 10px;
   font-family: 'Signika Negative', serif;
+  font-size: 16px;
+  font-weight: normal;
 }
 
 .ballonTop {
@@ -188,11 +191,11 @@ html, body {
   height: 229px;  
 }
 
-.ballonTop h1 {
+.ballonTop .ballonTitle {
   margin-left: 10px;
   font-size: 26px;
 }
-.ballonTop p {
+.ballonTop .ballonDescription {
   margin-left: 10px;
   font-family: 'Signika Negative', serif;
 }
@@ -228,12 +231,12 @@ html, body {
   height: 220px;  
 }
 
-.ballonBottomLarger h1 {
+.ballonBottomLarger .ballonTitle {
   margin-left: 10px;
   margin-top: 80px;
   font-size: 28px;
 }
-.ballonBottomLarger p {
+.ballonBottomLarger .ballonDescription {
   margin-left: 10px;
   font-family: 'Signika Negative', serif;
 }
