@@ -12,7 +12,7 @@
   "stop": "{sourceNode} && cd {cwd} && pm2 stop {name}",
   "restart": "{sourceNode} && cd {cwd} && pm2 restart {name}",
   "status": "{sourceNode} && cd {cwd} && pm2 status {name}",
-  "install": "mkdir -p {cwd} && cd {cwd}  && git clone {source} .  && {sourceNode}  && npm install --production && pm2 startup unbutu",
+  "install": "mkdir -p {cwd} && cd {cwd}  && git clone {source} .  && {sourceNode}  && npm install --production && pm2 startup ubuntu",
   "upgrade": " cd {cwd} && git fetch {origin}  && git checkout {branch}  && git pull {origin} {branch}  && {sourceNode} && npm install --production && {restart}",
   "uninstall": "rm -rf {cwd}",
   "logs": "{sourceNode} && pm2 logs {name}"
