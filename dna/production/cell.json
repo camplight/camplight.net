@@ -1,19 +1,19 @@
 {
   "remote": "ssh node@178.79.173.17",
   "name": "camplight.net-production",
-  "sourceNode": ". ~/.nvm/nvm.sh && nvm use v0.8.14",
+  "sourceNode": ". ~/.nvm/nvm.sh && nvm use v0.10.30",
   "cwd": "~/camplight.net",
   "main": "camplight.net-prod.js",
   "source": "git@github.com:camplight/camplight.net.git",
   "branch": "master",
   "origin": "origin",
   "runAngel": "CELL_MODE=production node ./node_modules/.bin/angel",
-  "start": "{sourceNode} && cd {cwd} && CELL_MODE=production forever start {main}",
-  "stop": "{sourceNode} && cd {cwd} && forever stop {main}",
-  "restart": "{sourceNode} && cd {cwd} && forever restart {main}",
-  "status": "{sourceNode} && cd {cwd} && forever list",
+  "start": "{sourceNode} && cd {cwd} && CELL_MODE=production pm2 start {main} --name '{name}' -x",
+  "stop": "{sourceNode} && cd {cwd} && pm2 stop {name}",
+  "restart": "{sourceNode} && cd {cwd} && pm2 restart {name}",
+  "status": "{sourceNode} && cd {cwd} && pm2 status {name}",
   "install": "mkdir -p {cwd} && cd {cwd}  && git clone {source} .  && {sourceNode}  && npm install --production && pm2 startup unbutu",
   "upgrade": " cd {cwd} && git fetch {origin}  && git checkout {branch}  && git pull {origin} {branch}  && {sourceNode} && npm install --production && {restart}",
   "uninstall": "rm -rf {cwd}",
-  "logs": "{sourceNode} && forever logs {main}"
+  "logs": "{sourceNode} && pm2 logs {name}"
 }
