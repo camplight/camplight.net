@@ -10,7 +10,7 @@
     "organic-cells": "0.0.17",
     "jade": "0.30.0",
     "underscore": "1.5.2",
-    "jquery": "1.8.3",
+    "jquery": "3.5.0",
     "jquery-browserify": "1.8.1",
     "glob": "3.1.14"
   },
